@@ -1,0 +1,89 @@
+.footer {
+  background: #f6f7f9;
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 4rem 0;
+  gap: 1.5rem;
+}
+
+.logo {
+  width: 12rem;
+  margin-bottom: 1rem;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.icons a {
+  color: var(--color-black);
+}
+
+.footer__services h2 {
+  margin-bottom: 1rem;
+}
+
+.footer__contact_icon {
+  color: var(--color-blue);
+  margin-right: 1rem;
+}
+
+.footer__newsletter p {
+  margin: 2rem 0;
+}
+
+.form {
+  display: flex;
+}
+
+.footer__newsletter input {
+  height: 3rem;
+  margin-left: 1rem;
+  box-shadow: 1rem 1rem 0.5rem rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
+.mail_icon {
+  background: linear-gradient(90deg, #03228f 0, #0e73e4 100%);
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  color: var(--color-white);
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==================  FOOTER BOTTOM ================= */
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.footer__bottom_links {
+  display: flex;
+  gap: 1rem;
+}
+
+/* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
+
+@media screen and (max-width: 990px) {
+  .footer__top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+  }
+}

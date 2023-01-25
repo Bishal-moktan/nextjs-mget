@@ -1,0 +1,13 @@
+.landing__section {
+  background: url('../public/images/landing.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  width: 98vw;
+  color: var(--color-white);
+  text-align: center;
+  word-spacing: 1rem;
+}

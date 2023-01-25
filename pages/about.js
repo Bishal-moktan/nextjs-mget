@@ -1,13 +1,11 @@
-import Card from '@/components/Card';
-import HeroSection from '@/components/HeroSection';
-import Slider from '@/components/Slider';
+import Landing from '@/components/Landing';
 import Head from 'next/head';
 
-export default function Home() {
+const About = () => {
   return (
     <>
       <Head>
-        <title>Home - Mosst Solar | Solar Panel Installation</title>
+        <title>About - Mosst Solar | Solar Panel Installation</title>
         <meta
           name="description"
           content="Mosst Solar | Solar Panel Installation"
@@ -16,10 +14,9 @@ export default function Home() {
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        <HeroSection />
-        <Card />
-        <Slider />
+        <Landing page="About" />
       </main>
     </>
   );
-}
+};
+export default About;

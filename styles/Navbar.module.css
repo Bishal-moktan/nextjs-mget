@@ -1,0 +1,100 @@
+/* navbar top  */
+.navbar_top {
+  display: flex;
+  justify-content: space-evenly;
+  background: green;
+  color: var(--color-white);
+  padding: 0.7rem;
+}
+
+.navbar_top_item {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.navbar_top_icon {
+  width: 2.5rem;
+}
+
+.navbar_top_socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.navbar_top_socials a {
+  color: var(--color-white);
+}
+
+.navbar_top_content a {
+  color: var(--color-white);
+}
+
+/* navbar bottom  */
+
+.navbar_bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 5rem;
+  border-bottom: 1px solid green;
+  position: sticky;
+  z-index: 999;
+}
+
+.toggle_btn {
+  position: absolute;
+  bottom: 3.8rem;
+  right: 2rem;
+  font-size: 1.7rem;
+  display: none;
+  cursor: pointer;
+  color: var(--color-black);
+}
+
+.logo {
+  width: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
+
+@media screen and (max-width: 990px) {
+  .navbar_top {
+    display: none;
+  }
+
+  .toggle_btn {
+    display: block;
+  }
+
+  .nav_links {
+    position: absolute;
+    flex-direction: column;
+    right: 3rem;
+    top: 7rem;
+    width: 84vw;
+    background: var(--color-white);
+    z-index: 2;
+    padding: 2rem;
+    gap: 1rem;
+    opacity: 0;
+    z-index: -1;
+    transition: var(--transition);
+  }
+
+  .show {
+    opacity: 1;
+    z-index: 999;
+  }
+}

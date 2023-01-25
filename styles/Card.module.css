@@ -1,0 +1,49 @@
+.card__container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  position: relative;
+  top: -3rem;
+  z-index: 2;
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+.card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.9rem;
+  box-shadow: 1rem 1rem 0.9rem rgba(4, 58, 127, 0.1);
+}
+
+.card__container h2 {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.card__container h2:hover {
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+.textLight {
+  color: var(--color-light);
+}
+
+/* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
+
+@media screen and (max-width: 990px) {
+  .card__container {
+    margin-top: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ========================== MEDIA QUERIES FOR SMALL DEVICES =====================  */
+
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,17 @@
+.heroSection {
+  width: 98vw;
+  height: 75vh;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--color-black) !important;
+}
+
+/* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
+
+@media screen and (max-width: 990px) {
+  .heroSection {
+    margin-bottom: -20rem;
+  }
+}
