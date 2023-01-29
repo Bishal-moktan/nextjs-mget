@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <>
       <Head>
-        <title>Contact - Mosst Solar | Solar Panel Installation</title>
+        <title>Contact - MGETENERGY SOLAR POWER SYSTEM</title>
         <meta
           name="description"
           content="Mosst Solar | Solar Panel Installation"

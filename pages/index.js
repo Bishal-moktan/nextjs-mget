@@ -1,13 +1,15 @@
-import Card from '@/components/Card';
+import AccordianSection from '@/components/AccordianSection';
+import ScrollToTop from '@/components/ScrollToTop';
 import HeroSection from '@/components/HeroSection';
 import Slider from '@/components/Slider';
 import Head from 'next/head';
+import CTA from '@/components/CTA';
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Home - Mosst Solar | Solar Panel Installation</title>
+        <title>MGETENERGY SOLAR POWER SYSTEM</title>
         <meta
           name="description"
           content="Mosst Solar | Solar Panel Installation"
@@ -17,8 +19,13 @@ export default function Home() {
       </Head>
       <main>
         <HeroSection />
-        <Card />
         <Slider />
+        <AccordianSection />
+        {/* <CTA
+          title="PLAN TO INSTALL SOLAR"
+          info="Know more, Get Free Consultation!"
+        /> */}
+        <ScrollToTop />
       </main>
     </>
   );

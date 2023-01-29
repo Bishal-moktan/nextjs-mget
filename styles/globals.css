@@ -17,17 +17,17 @@
   --color-white: #fff;
   --color-black: #101010;
   --color-light: #444;
-  --color-primary: #007bff;
-  --color-orange: #fd7e14;
-  --color-pink: #e83e8c;
-  --color-indigo: #6610f2;
-  --color-blue: #007bff;
-  --color-teal: #20c997;
-  --color-info: #17a2b8;
-  --color-darkblue: #03228f;
-  --blue: #106eea;
+  --color-orange: orange;
+  --color-green: #009300;
+  --color-light-green: #03c988;
 
-  --transition: all 0.5s ease;
+  --clr-red-special: #b4345c;
+  --clr-grey-special: #eae6eb;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 html {
@@ -70,6 +70,25 @@ h5 {
 
 .text-light {
   color: var(--color-light);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--color-black) !important;
+  margin: 2rem;
+}
+
+.container {
+  width: var(--container-width-lg);
+}
+
+/* ========================== FOR SWIPER JS ===========================  */
+
+@media screen and (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    margin: 0rem;
+  }
 }
 
 /* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */

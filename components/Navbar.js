@@ -3,19 +3,22 @@ import Image from 'next/image';
 import ClientIcon from '@/public/icons/ClientIcon';
 import EmailIcon from '@/public/icons/EmailIcon';
 import TrustIcon from '@/public/icons/TrustIcon';
-import { FaFacebook } from 'react-icons/fa';
+import { FaFacebook, FaYoutube } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
+import { MdKeyboardArrowDown } from 'react-icons/md';
+
 import { FaBars } from 'react-icons/fa';
 import { GrLinkedin } from 'react-icons/gr';
 import styles from '@/styles/Navbar.module.css';
 import logo from '@/public/images/logo-dark.png';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
+  const [showServices, setShowServices] = useState(false);
   return (
-    <nav className="navbar">
+    <nav className="navbar" id="nav">
       {/* navbar top  */}
       <div className={styles.navbar_top}>
         <div className={styles.navbar_top_item}>
@@ -34,7 +37,7 @@ const Navbar = () => {
           </div>
           <div className={styles.navbar_top_content}>
             <h2>Client Services</h2>
-            <a href="#">+97123456</a>
+            <a href="#">+97 98218 76325</a>
           </div>
         </div>
 
@@ -60,6 +63,9 @@ const Navbar = () => {
           <a href="https://www.linkedin.com" target="_blank">
             <GrLinkedin />
           </a>
+          <a href="https://www.linkedin.com" target="_blank">
+            <FaYoutube />
+          </a>
         </div>
       </div>
 
@@ -69,7 +75,7 @@ const Navbar = () => {
           className={styles.toggle_btn}
           onClick={() => setShowLinks(!showLinks)}
         >
-          <FaBars />
+          <FaBars className={styles.barsIcon} />
         </div>
 
         <div className={styles.logo}>
@@ -82,19 +88,46 @@ const Navbar = () => {
             showLinks ? `${styles.nav_links} ${styles.show}` : styles.nav_links
           }
         >
-          <Link href="/" className="text-light">
+          <Link href="/" className={styles.links}>
             HOME
           </Link>
-          <Link href="/about" className="text-light">
+          <Link href="/about" className={styles.links}>
             ABOUT US
           </Link>
-          <Link href="/services" className="text-light">
+          <div
+            onClick={() => setShowServices(!showServices)}
+            className={`${styles.links} ${styles.dropDown}`}
+          >
             SERVICES
-          </Link>
-          <Link href="/blogs" className="text-light">
+            <MdKeyboardArrowDown className={styles.downArrow} />
+            <ul
+              className={
+                showServices
+                  ? `${styles.dropDown__content} ${styles.showServices}`
+                  : styles.dropDown__content
+              }
+            >
+              <li>
+                <Link href={'/'} className={styles.links}>
+                  Residential Solar System
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className={styles.links}>
+                  Commercial Solar System
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className={styles.links}>
+                  Industrial Solar System
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <Link href="/blogs" className={styles.links}>
             BLOGS
           </Link>
-          <Link href="/contact" className="text-light">
+          <Link href="/contact" className={styles.links}>
             CONTACT US
           </Link>
         </div>

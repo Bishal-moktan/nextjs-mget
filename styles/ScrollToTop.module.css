@@ -1,0 +1,17 @@
+.scrollUp {
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+  bottom: 2rem;
+  cursor: pointer;
+  position: fixed;
+  right: 2rem;
+  z-index: 999;
+  border-radius: 50%;
+  font-size: 2rem;
+  background: linear-gradient(90deg, #03228f 0, #0e73e4 100%);
+}
+
+.scrollUp a {
+  color: var(--color-white);
+}

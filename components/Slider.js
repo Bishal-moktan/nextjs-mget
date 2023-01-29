@@ -15,22 +15,29 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 const Slider = () => {
-  let screenSize;
-  useEffect(() => {
-    screenSize = window.innerWidth;
-  }, []);
-  let slidesPerView = 3;
-  if (screenSize < 990) {
-    slidesPerView = 2;
-  }
-  if (screenSize < 600) {
-    slidesPerView = 1;
-  }
   return (
     <Swiper
       loop={true}
       spaceBetween={50}
-      slidesPerView={slidesPerView}
+      slidesPerView="auto"
+      breakpoints={{
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      }}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,

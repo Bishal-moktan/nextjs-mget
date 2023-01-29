@@ -1,0 +1,36 @@
+.cta {
+  background: var(--color-green);
+}
+
+.cta__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+  color: var(--color-white);
+}
+
+.cta__container h4 {
+  color: var(--color-white);
+}
+
+.button {
+  height: fit-content;
+  width: fit-content;
+  padding: 1rem 2rem;
+  background: rgb(255, 88, 27);
+  border-radius: 2rem;
+  color: var(--color-white);
+  transition: var(--transition);
+}
+
+.button:hover {
+  background: orange;
+}
+
+/* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
+
+@media screen and (max-width: 990px) {
+  .cta__container {
+    flex-direction: column;
+  }
+}

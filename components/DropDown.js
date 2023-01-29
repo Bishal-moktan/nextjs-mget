@@ -1,15 +1,12 @@
 import Link from 'next/link';
 import styles from '@/styles/DropDown.module.css';
+import { MdKeyboardArrowDown } from 'react-icons/md';
 
-const DropDown = ({ name, items, show, setShow }) => {
+const DropDown = ({ name, items }) => {
   return (
-    <div
-      className={styles.dropDown}
-      onMouseEnter={() => setShow('-')}
-      onMouseLeave={() => setShow('+')}
-    >
+    <div className={styles.dropDown}>
       <p>
-        {name} {show}
+        {name} <MdKeyboardArrowDown className={styles.downArrow} />
       </p>
       <div className={styles.dropDown_content}>
         {items.map((item, index) => {

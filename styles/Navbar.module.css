@@ -2,7 +2,7 @@
 .navbar_top {
   display: flex;
   justify-content: space-evenly;
-  background: green;
+  background: var(--color-green);
   color: var(--color-white);
   padding: 0.7rem;
 }
@@ -27,8 +27,12 @@
 
 .navbar_top_socials a {
   color: var(--color-white);
+  transition: var(--transition);
 }
 
+.navbar_top_socials a:hover {
+  color: orange;
+}
 .navbar_top_content a {
   color: var(--color-white);
 }
@@ -39,9 +43,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0rem 5rem;
-  border-bottom: 1px solid green;
-  position: sticky;
-  z-index: 999;
+  position: relative;
 }
 
 .toggle_btn {
@@ -52,6 +54,15 @@
   display: none;
   cursor: pointer;
   color: var(--color-black);
+  transition: var(--transition);
+}
+
+.barsIcon {
+  transition: var(--transition);
+}
+
+.barsIcon:hover {
+  transform: rotate(90deg);
 }
 
 .logo {
@@ -67,6 +78,48 @@
   gap: 3rem;
 }
 
+.links {
+  color: var(--color-light);
+  transition: var(--transition);
+}
+
+.dropDown {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.dropDown:hover .downArrow {
+  transform: rotate(180deg);
+}
+
+.dropDown__content {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  background: white;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.19);
+  position: absolute;
+  top: 2rem;
+  left: -2rem;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease-in-out;
+  gap: 1rem;
+}
+
+.dropDown:hover .dropDown__content {
+  visibility: visible;
+  opacity: 999;
+}
+
 /* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
 
 @media screen and (max-width: 990px) {
@@ -74,27 +127,49 @@
     display: none;
   }
 
+  .navbar_bottom {
+    flex-direction: column;
+  }
+
   .toggle_btn {
     display: block;
+    top: 1.5rem;
   }
 
   .nav_links {
-    position: absolute;
+    display: none;
+  }
+
+  .dropDown {
+    display: flex;
     flex-direction: column;
-    right: 3rem;
-    top: 7rem;
-    width: 84vw;
-    background: var(--color-white);
-    z-index: 2;
-    padding: 2rem;
+    align-items: center;
     gap: 1rem;
-    opacity: 0;
-    z-index: -1;
+    position: relative;
+  }
+
+  .downArrow {
+    position: absolute;
+    top: 0rem;
+    right: -2rem;
+  }
+
+  .dropDown__content {
+    all: unset;
+    display: none;
     transition: var(--transition);
   }
 
+  .showServices {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   .show {
-    opacity: 1;
-    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 }

@@ -5,7 +5,7 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>About - Mosst Solar | Solar Panel Installation</title>
+        <title>About - MGETENERGY SOLAR POWER SYSTEM</title>
         <meta
           name="description"
           content="Mosst Solar | Solar Panel Installation"
