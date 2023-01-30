@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import Image from 'next/image';
 
-import image1 from '@/public/images/1.gif';
-import image2 from '@/public/images/2.gif';
-import image3 from '@/public/images/3.gif';
-import image4 from '@/public/images/4.gif';
+import image1 from '@/public/images/home/1.jpg';
+import image2 from '@/public/images/home/2.jpg';
+import image3 from '@/public/images/home/6.jpg';
+import image4 from '@/public/images/home/7.jpg';
 import styles from '@/styles/Slider.module.css';
 
 // Import Swiper React components
@@ -45,16 +45,16 @@ const Slider = () => {
       className={styles.container}
     >
       <SwiperSlide className={styles.slide}>
-        <Image src={image1} alt="image1" />
+        <Image src={image1} height={300} alt="image1" />
       </SwiperSlide>
       <SwiperSlide className={styles.slide}>
-        <Image src={image2} alt="image2" />
+        <Image src={image2} height={300} alt="image2" />
       </SwiperSlide>
       <SwiperSlide className={styles.slide}>
-        <Image src={image3} alt="image3" />
+        <Image src={image3} height={300} alt="image3" />
       </SwiperSlide>
       <SwiperSlide className={styles.slide}>
-        <Image src={image4} alt="image4" />
+        <Image src={image4} height={300} alt="image4" />
       </SwiperSlide>
     </Swiper>
   );

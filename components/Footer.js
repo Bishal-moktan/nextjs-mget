@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { FaFacebook } from 'react-icons/fa';
+import { FaFacebook, FaYoutube } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import { GrLinkedin } from 'react-icons/gr';
 import { BsEnvelope } from 'react-icons/bs';
@@ -32,6 +32,9 @@ const Footer = () => {
               </a>
               <a href="https://www.linkedin.com" target="_blank">
                 <GrLinkedin />
+              </a>
+              <a href="https://www.youtube.com" target="_blank">
+                <FaYoutube />
               </a>
             </div>
           </div>

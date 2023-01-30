@@ -1,16 +1,10 @@
 .dropDown {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   position: relative;
   cursor: pointer;
   transition: var(--transition);
-}
-
-.dropDown p {
-  color: var(--color-black);
-  font-weight: 600;
-}
-
-.dropDown p:hover {
-  color: var(--color-primary);
 }
 
 .downArrow {
@@ -21,7 +15,7 @@
   transform: rotate(180deg);
 }
 
-.dropDown_content {
+.dropDown__content {
   display: flex;
   flex-direction: column;
   width: 15rem;
@@ -30,6 +24,7 @@
   position: absolute;
   top: 2rem;
   left: -2rem;
+  z-index: 999;
   justify-content: center;
   align-items: center;
   padding: 1rem;
@@ -39,11 +34,42 @@
   gap: 1rem;
 }
 
-.dropDown_content .link {
-  display: block;
+.links {
+  color: var(--color-light);
+  transition: var(--transition);
 }
 
-.dropDown:hover .dropDown_content {
+.dropDown:hover .dropDown__content {
   visibility: visible;
-  opacity: 1;
+  opacity: 999;
+}
+
+/* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
+
+@media screen and (max-width: 990px) {
+  .dropDown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .downArrow {
+    position: absolute;
+    top: 0rem;
+    right: -2rem;
+  }
+
+  .dropDown__content {
+    all: unset;
+    display: none;
+    transition: var(--transition);
+  }
+
+  .show {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 }

@@ -27,7 +27,7 @@ const AccordianSection = () => {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <h2>Our Services</h2>
+        <h2>Our Solutions</h2>
         <section className={styles.info}>
           {accordianContent.map((content) => {
             return <Accordian key={content.id} {...content} />;

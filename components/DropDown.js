@@ -1,22 +1,35 @@
 import Link from 'next/link';
 import styles from '@/styles/DropDown.module.css';
 import { MdKeyboardArrowDown } from 'react-icons/md';
+import { useState } from 'react';
 
-const DropDown = ({ name, items }) => {
+const DropDown = ({ name, options }) => {
+  const [show, setShow] = useState(false);
   return (
-    <div className={styles.dropDown}>
-      <p>
-        {name} <MdKeyboardArrowDown className={styles.downArrow} />
-      </p>
-      <div className={styles.dropDown_content}>
-        {items.map((item, index) => {
+    <div
+      onClick={() => setShow(!show)}
+      className={`${styles.links} ${styles.dropDown}`}
+    >
+      {name}
+      <MdKeyboardArrowDown className={styles.downArrow} />
+      <ul
+        className={
+          show
+            ? `${styles.dropDown__content} ${styles.show}`
+            : styles.dropDown__content
+        }
+      >
+        {options.map((option, index) => {
+          const { title, path } = option;
           return (
-            <Link key={index} className={styles.link} href={item.path}>
-              {item.title}
-            </Link>
+            <li key={index}>
+              <Link href={`/${path}`} className={styles.links}>
+                {title}
+              </Link>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </div>
   );
 };

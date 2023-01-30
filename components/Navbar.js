@@ -13,10 +13,43 @@ import styles from '@/styles/Navbar.module.css';
 import logo from '@/public/images/logo-dark.png';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import DropDown from './DropDown';
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
-  const [showServices, setShowServices] = useState(false);
+  const solutions = [
+    {
+      title: 'On-grid Solar System',
+      path: 'OnGridSolarPowerSystem',
+    },
+    {
+      title: 'Off-grid Solar System',
+      path: 'OffGridSolarPowerSystem',
+    },
+    {
+      title: 'Hybrid Solar System',
+      path: 'HybridSolarSystem',
+    },
+    {
+      title: 'Solar Water Pump',
+      path: 'SolarWaterPump',
+    },
+  ];
+
+  const services = [
+    {
+      title: 'Residential Solar',
+      path: 'ResidentialSolar',
+    },
+    {
+      title: 'Commercial Solar',
+      path: 'CommercialSolar',
+    },
+    {
+      title: 'Industrial Solar',
+      path: 'IndustrialSolar',
+    },
+  ];
   return (
     <nav className="navbar" id="nav">
       {/* navbar top  */}
@@ -79,53 +112,25 @@ const Navbar = () => {
         </div>
 
         <div className={styles.logo}>
-          <div className={styles.img_container}>
+          <Link href={'/'} className={styles.img_container}>
             <Image src={logo} alt="mgetenergy logo" />
-          </div>
+          </Link>
         </div>
         <div
           className={
             showLinks ? `${styles.nav_links} ${styles.show}` : styles.nav_links
           }
         >
-          <Link href="/" className={styles.links}>
-            HOME
-          </Link>
           <Link href="/about" className={styles.links}>
             ABOUT US
           </Link>
-          <div
-            onClick={() => setShowServices(!showServices)}
-            className={`${styles.links} ${styles.dropDown}`}
-          >
-            SERVICES
-            <MdKeyboardArrowDown className={styles.downArrow} />
-            <ul
-              className={
-                showServices
-                  ? `${styles.dropDown__content} ${styles.showServices}`
-                  : styles.dropDown__content
-              }
-            >
-              <li>
-                <Link href={'/'} className={styles.links}>
-                  Residential Solar System
-                </Link>
-              </li>
-              <li>
-                <Link href={'/'} className={styles.links}>
-                  Commercial Solar System
-                </Link>
-              </li>
-              <li>
-                <Link href={'/'} className={styles.links}>
-                  Industrial Solar System
-                </Link>
-              </li>
-            </ul>
-          </div>
+          <DropDown name={'SOLUTIONS'} options={solutions} />
+          <DropDown name={'SERVICES'} options={services} />
           <Link href="/blogs" className={styles.links}>
             BLOGS
+          </Link>
+          <Link href="/" className={styles.links}>
+            TESTINOMIALS
           </Link>
           <Link href="/contact" className={styles.links}>
             CONTACT US

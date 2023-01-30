@@ -5,7 +5,6 @@ const Landing = ({ page }) => {
     <div className={styles.landing__section}>
       <div>
         <h1>{page}</h1>
-        <h5>Home / {page}</h5>
       </div>
     </div>
   );

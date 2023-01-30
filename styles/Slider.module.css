@@ -6,7 +6,6 @@
 
 .slide {
   background-color: var(--color-white);
-  padding: 0.4rem;
   border-radius: 0.9rem;
   box-shadow: 1rem 1rem 0.9rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
