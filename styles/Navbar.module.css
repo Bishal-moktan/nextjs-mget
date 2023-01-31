@@ -120,6 +120,10 @@
   opacity: 999;
 }
 
+.tel {
+  display: block;
+}
+
 /* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
 
 @media screen and (max-width: 990px) {

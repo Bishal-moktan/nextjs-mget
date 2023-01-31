@@ -70,7 +70,10 @@ const Navbar = () => {
           </div>
           <div className={styles.navbar_top_content}>
             <h2>Client Services</h2>
-            <a href="#">+97 98218 76325</a>
+            <a href="tel:+919821876325" className={styles.tel}>
+              +91 98218 76325
+            </a>
+            <a href="tel:+919818666325">+91 98186 66325</a>
           </div>
         </div>
 
@@ -129,7 +132,7 @@ const Navbar = () => {
           <Link href="/blogs" className={styles.links}>
             BLOGS
           </Link>
-          <Link href="/" className={styles.links}>
+          <Link href="/testinomials" className={styles.links}>
             TESTINOMIALS
           </Link>
           <Link href="/contact" className={styles.links}>
