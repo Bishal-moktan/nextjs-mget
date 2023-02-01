@@ -7,16 +7,16 @@ import styles from '@/styles/HeroSection.module.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import image1 from '@/public/images/home/1.jpg';
-import image2 from '@/public/images/home/2.jpg';
-import image3 from '@/public/images/home/3.jpg';
-import image4 from '@/public/images/home/4.jpg';
-import image5 from '@/public/images/home/5.jpg';
-import image6 from '@/public/images/home/6.jpg';
-import image7 from '@/public/images/home/7.jpg';
+import image1 from '@/public/images/home/1.webp';
+import image2 from '@/public/images/home/2.webp';
+import image3 from '@/public/images/home/3.webp';
+import image4 from '@/public/images/home/4.webp';
+import image5 from '@/public/images/home/5.webp';
+import image6 from '@/public/images/home/6.webp';
+import image7 from '@/public/images/home/7.webp';
 
 // import required modules
-import { Navigation, Mousewheel, Keyboard } from 'swiper';
+import { Navigation, Mousewheel, Keyboard, Autoplay } from 'swiper';
 
 export default function App() {
   const carousel = [
@@ -64,7 +64,7 @@ export default function App() {
         navigation={true}
         mousewheel={true}
         keyboard={true}
-        modules={[Navigation, Mousewheel, Keyboard]}
+        modules={[Navigation, Mousewheel, Keyboard, Autoplay]}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,

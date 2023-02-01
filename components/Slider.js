@@ -1,10 +1,9 @@
-import { useEffect } from 'react';
 import Image from 'next/image';
 
-import image1 from '@/public/images/home/1.jpg';
-import image2 from '@/public/images/home/2.jpg';
-import image3 from '@/public/images/home/6.jpg';
-import image4 from '@/public/images/home/7.jpg';
+import image1 from '@/public/images/home/1.webp';
+import image2 from '@/public/images/home/2.webp';
+import image3 from '@/public/images/home/6.webp';
+import image4 from '@/public/images/home/7.webp';
 import styles from '@/styles/Slider.module.css';
 
 // Import Swiper React components
@@ -39,7 +38,7 @@ const Slider = () => {
         },
       }}
       autoplay={{
-        delay: 2500,
+        delay: 1000,
         disableOnInteraction: false,
       }}
       className={styles.container}

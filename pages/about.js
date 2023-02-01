@@ -1,4 +1,5 @@
-import Landing from '@/components/Landing';
+import Carousel from '@/components/Carousel';
+import Partners from '@/components/Partners';
 import Head from 'next/head';
 
 const About = () => {
@@ -14,7 +15,9 @@ const About = () => {
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        <Landing page="About" />
+        {/* <Landing page="About" /> */}
+        <Carousel />
+        <Partners />
       </main>
     </>
   );

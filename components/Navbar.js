@@ -132,11 +132,14 @@ const Navbar = () => {
           <Link href="/blogs" className={styles.links}>
             BLOGS
           </Link>
-          <Link href="/testinomials" className={styles.links}>
-            TESTINOMIALS
+          <Link href="/testimonials" className={styles.links}>
+            TESTIMONIALS
           </Link>
           <Link href="/contact" className={styles.links}>
             CONTACT US
+          </Link>
+          <Link href="/contact" className={styles.links}>
+            CAREERS
           </Link>
         </div>
       </div>
