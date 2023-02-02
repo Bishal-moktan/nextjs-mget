@@ -6,8 +6,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Mousewheel, Keyboard, Autoplay } from 'swiper';
 
-import image1 from '@/public/images/about/about1.webp';
-import image2 from '@/public/images/about/about2.webp';
+import image1 from '@/public/images/home/7.webp';
+import image2 from '@/public/images/about/about1.webp';
 import image3 from '@/public/images/about/about3.webp';
 import image4 from '@/public/images/about/about4.webp';
 

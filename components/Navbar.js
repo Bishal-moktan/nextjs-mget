@@ -20,34 +20,34 @@ const Navbar = () => {
   const solutions = [
     {
       title: 'On-grid Solar System',
-      path: 'OnGridSolarPowerSystem',
+      path: 'solutions/onGridSolarSystem',
     },
     {
       title: 'Off-grid Solar System',
-      path: 'OffGridSolarPowerSystem',
+      path: 'solutions/offGridSolarSystem',
     },
     {
       title: 'Hybrid Solar System',
-      path: 'HybridSolarSystem',
+      path: 'solutions/hybridSolarSystem',
     },
     {
       title: 'Solar Water Pump',
-      path: 'SolarWaterPump',
+      path: 'solutions/solarWaterPump',
     },
   ];
 
   const services = [
     {
       title: 'Residential Solar',
-      path: 'ResidentialSolar',
+      path: 'services/residentialSolar',
     },
     {
       title: 'Commercial Solar',
-      path: 'CommercialSolar',
+      path: 'services/commercialSolar',
     },
     {
       title: 'Industrial Solar',
-      path: 'IndustrialSolar',
+      path: 'services/industrialSolar',
     },
   ];
   return (
@@ -132,14 +132,8 @@ const Navbar = () => {
           <Link href="/blogs" className={styles.links}>
             BLOGS
           </Link>
-          <Link href="/testimonials" className={styles.links}>
-            TESTIMONIALS
-          </Link>
           <Link href="/contact" className={styles.links}>
             CONTACT US
-          </Link>
-          <Link href="/contact" className={styles.links}>
-            CAREERS
           </Link>
         </div>
       </div>

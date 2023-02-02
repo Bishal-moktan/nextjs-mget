@@ -1,5 +1,6 @@
 .carousel__container {
   height: 90vh;
+  width: 100vw;
   overflow: hidden;
 }
 

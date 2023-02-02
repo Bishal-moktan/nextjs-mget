@@ -17,6 +17,11 @@
   justify-content: center;
 }
 
+.image > img {
+  height: 7rem;
+  width: 7rem;
+}
+
 /* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
 
 @media screen and (max-width: 990px) {

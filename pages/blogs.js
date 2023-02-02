@@ -4,7 +4,7 @@ const blog = () => {
   return (
     <>
       <Head>
-        <title>Blog - MGETENERGY SOLAR POWER SYSTEM</title>
+        <title>BEST SOLAR POWER SYSTEM INSTALLATION COMPANY</title>
         <meta
           name="description"
           content="Mosst Solar | Solar Panel Installation"

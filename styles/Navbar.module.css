@@ -42,7 +42,7 @@
 .navbar_bottom {
   display: flex;
   justify-content: space-between;
-  padding: 0rem 5rem;
+  padding: 0rem 3rem;
   position: relative;
 }
 

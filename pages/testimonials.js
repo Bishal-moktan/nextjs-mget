@@ -4,7 +4,7 @@ const blog = () => {
   return (
     <>
       <Head>
-        <title>Blog - MGETENERGY SOLAR POWER SYSTEM</title>
+        <title>BEST SOLAR POWER SYSTEM INSTALLATION COMPANY</title>
         <meta
           name="description"
           content="Mosst Solar | Solar Panel Installation"
@@ -13,7 +13,7 @@ const blog = () => {
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        <h1>Blog</h1>
+        <h1>Testinomials</h1>
       </main>
     </>
   );
