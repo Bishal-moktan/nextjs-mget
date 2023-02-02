@@ -73,14 +73,16 @@ const Content = ({ title, img, description, items }) => {
           into direct current (DC) electricity. The inverter then converts the
           DC electricity into alternating current (AC) electricity, which is the
           type of electricity that is used in homes and businesses.
-          <div className={styles.container__image}>
-            <Image
-              src={image1}
-              alt={
-                'mgetenegry, man on the solar installing solar panel on the roof'
-              }
-            />
-          </div>
+        </p>
+        <div className={styles.container__image}>
+          <Image
+            src={image1}
+            alt={
+              'mgetenegry, man on the solar installing solar panel on the roof'
+            }
+          />
+        </div>
+        <p>
           Mgetenergy will typically conduct a site assessment to determine the
           best location and orientation for the solar panels to optimize energy
           production. Then design the system and install the panels, wiring, and

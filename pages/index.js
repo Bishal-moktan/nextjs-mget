@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>MGETENERGY SOLAR POWER SYSTEM</title>
+        <title>BEST SOLAR POWER SYSTEM INSTALLATION COMPANY</title>
         <meta
           name="description"
           content="Mosst Solar | Solar Panel Installation"

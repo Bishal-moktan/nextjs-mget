@@ -9,6 +9,7 @@
 .content__container p,
 .content__container img {
   margin: 1rem;
+  text-align: justify;
 }
 
 .content__description h1 {
@@ -152,5 +153,11 @@
 
   .content__container_brochures {
     margin-bottom: 8rem;
+  }
+
+  .container__image > img {
+    height: 15rem;
+    width: 25rem;
+    margin: 2rem auto;
   }
 }

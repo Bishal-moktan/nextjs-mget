@@ -28,6 +28,10 @@
   .container__client_images {
     grid-template-columns: repeat(2, 1fr);
   }
+  .image > img {
+    height: 12rem;
+    width: 12rem;
+  }
 }
 
 /* ========================== MEDIA QUERIES FOR SMALL DEVICES =====================  */
