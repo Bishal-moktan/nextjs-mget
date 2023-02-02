@@ -1,59 +1,16 @@
-import { FaCheckCircle, FaFilePdf, FaPhoneAlt } from 'react-icons/fa';
-import { MdKeyboardArrowRight } from 'react-icons/md';
+import { FaCheckCircle } from 'react-icons/fa';
 import { Link } from 'next/link';
-import styles from '@/styles/Content.module.css';
+import styles from '@/styles/AboutContent.module.css';
 import Image from 'next/image';
 import image1 from '@/public/images/about/about10.webp';
-const Content = ({ title, img, description, items }) => {
+
+const AboutContent = ({ title, description, img }) => {
   return (
     <div className="container">
-      <div className={`${styles.content__container}`}>
-        <div className={styles.content__container_desc}>
-          <h1>{title}</h1>
-          <p>{description}</p>
-          <div className={styles.container__image}>
-            <Image src={img} alt={title} />
-          </div>
-        </div>
-        {/* <div className="content__container-resources">
-          <div className={styles.content__container_navigator}>
-            {items?.map((item, index) => {
-              return (
-                <div key={index}>
-                  <h3>
-                    <Link
-                      to={`/${item.path}`}
-                      className={styles.navigate_title}
-                    >
-                      {item.title}{' '}
-                    </Link>{' '}
-                  </h3>
-                  <MdKeyboardArrowRight />
-                </div>
-              );
-            })}
-          </div>
-
-          <div className={styles.content__container_contact}>
-            <div className={styles.phone_icon}>
-              <FaPhoneAlt />
-            </div>
-            <h2>Have any Questions? </h2>
-            <h2>Call us Today!</h2>
-            <a href="tel:+91 98218 76325">+91 98218 76325</a>
-          </div>
-
-          <div className={styles.content__container_brochures}>
-            <h2>Brochures</h2>
-            <p>
-              For more information about the projects and services, you can
-              click here:
-            </p>
-            <button>
-              Download Now <FaFilePdf />{' '}
-            </button>
-          </div>
-        </div> */}
+      <h1>{title}</h1>
+      <p>{description}</p>
+      <div className={styles.container__image}>
+        <Image src={img} alt={title} />
       </div>
       <div className={styles.content__description}>
         <p>
@@ -142,4 +99,4 @@ const Content = ({ title, img, description, items }) => {
     </div>
   );
 };
-export default Content;
+export default AboutContent;

@@ -1,7 +1,7 @@
 .content__container {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 65% 30%;
-  gap: 5%;
+  gap: 5%; */
   margin-top: 4rem;
 }
 

@@ -1,0 +1,21 @@
+.container__image > img {
+  height: 30rem;
+  width: 50rem;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin: 1rem 0;
+}
+
+.content__description h1 {
+  margin: 1rem 0;
+}
+
+/* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
+
+@media screen and (max-width: 990px) {
+  .container__image > img {
+    height: 15rem;
+    width: 25rem;
+    margin: 2rem auto;
+  }
+}
