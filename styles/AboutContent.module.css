@@ -6,7 +6,11 @@
   margin: 1rem 0;
 }
 
-.content__description h1 {
+.content_description p {
+  display: block;
+}
+
+.para {
   margin: 1rem 0;
 }
 

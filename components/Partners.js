@@ -16,8 +16,7 @@ const Partners = () => {
   return (
     <section className={styles.container__client}>
       <div className="container">
-        <h5>CLIENTS</h5>
-        <h1>Our Clients</h1>
+        <h1>RECENT WORK</h1>
 
         <div className={styles.container__client_images}>
           <div className={styles.image}>
