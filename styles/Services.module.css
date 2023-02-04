@@ -1,0 +1,8 @@
+.margin {
+  margin: 1rem 0;
+}
+
+.strong {
+  color: var(--color-orangered);
+  font-size: 1.2rem;
+}

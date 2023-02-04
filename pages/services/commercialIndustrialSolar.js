@@ -1,21 +1,21 @@
 import Head from 'next/head';
 
-const SolarWaterPump = () => {
+const commercialIndustrialSolar = () => {
   return (
     <>
       <Head>
-        <title>BEST SOLAR WATER PUMP</title>
+        <title>BEST COMMERCIAL AND INDUSTRIAL SOLAR</title>
         <meta
           name="description"
-          content="Mosst Solar | Solar Panel Installation, best solar water pump"
+          content="Mosst Solar | Solar Panel Installation, best commerical and industrial solar"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        <h1>SOLAR WATER PUMP</h1>
+        <h1>COMMERCIAL AND INDUSTRIAL SOLAR</h1>
       </main>
     </>
   );
 };
-export default SolarWaterPump;
+export default commercialIndustrialSolar;

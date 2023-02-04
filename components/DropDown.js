@@ -10,8 +10,10 @@ const DropDown = ({ name, options }) => {
       onClick={() => setShow(!show)}
       className={`${styles.links} ${styles.dropDown}`}
     >
-      {name}
-      <MdKeyboardArrowDown className={styles.downArrow} />
+      <Link href="/services" className={styles.links}>
+        {name}
+        <MdKeyboardArrowDown className={styles.downArrow} />
+      </Link>
       <ul
         className={
           show
@@ -22,7 +24,7 @@ const DropDown = ({ name, options }) => {
         {options.map((option, index) => {
           const { title, path } = option;
           return (
-            <li key={index}>
+            <li key={index} className={styles.dropDown__item}>
               <Link href={`/${path}`} className={styles.links}>
                 {title}
               </Link>

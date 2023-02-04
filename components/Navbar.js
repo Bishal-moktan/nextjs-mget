@@ -28,7 +28,7 @@ const Navbar = () => {
     },
     {
       title: 'Hybrid Solar System',
-      path: 'solutions/hybridSolarSystem',
+      path: 'solutions/hybridSolarPump',
     },
     {
       title: 'Solar Water Pump',
@@ -42,12 +42,8 @@ const Navbar = () => {
       path: 'services/residentialSolar',
     },
     {
-      title: 'Commercial Solar',
-      path: 'services/commercialSolar',
-    },
-    {
-      title: 'Industrial Solar',
-      path: 'services/industrialSolar',
+      title: 'Commercial & Industrial Solar',
+      path: 'services/commercialIndustrialSolar',
     },
   ];
   return (
@@ -71,7 +67,7 @@ const Navbar = () => {
           <div className={styles.navbar_top_content}>
             <h2>Client Services</h2>
             <a href="tel:+919821876325" className={styles.tel}>
-              +91 98218 76325
+              +91 98218 76325 ,
             </a>
             <a href="tel:+919818666325">+91 98186 66325</a>
           </div>
@@ -116,7 +112,12 @@ const Navbar = () => {
 
         <div className={styles.logo}>
           <Link href={'/'} className={styles.img_container}>
-            <Image src={logo} alt="mgetenergy logo" />
+            <Image
+              src={logo}
+              alt="mgetenergy logo"
+              height={'auto'}
+              width={'auto'}
+            />
           </Link>
         </div>
         <div
@@ -125,7 +126,7 @@ const Navbar = () => {
           }
         >
           <Link href="/about" className={styles.links}>
-            ABOUT US
+            INTRO
           </Link>
           <DropDown name={'SOLUTIONS'} options={solutions} />
           <DropDown name={'SERVICES'} options={services} />

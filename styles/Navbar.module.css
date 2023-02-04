@@ -72,6 +72,10 @@
   align-items: center;
 }
 
+.img_container > img {
+  height: 5.5rem;
+}
+
 .nav_links {
   display: flex;
   align-items: center;
@@ -121,7 +125,7 @@
 }
 
 .tel {
-  display: block;
+  margin-right: 0.3rem;
 }
 
 /* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */

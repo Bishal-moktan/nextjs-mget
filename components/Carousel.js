@@ -30,15 +30,27 @@ const Carousel = () => {
         }}
       >
         <SwiperSlide className={styles.carousel__container}>
-          <Image src={image1} alt="image1" />
+          <Image src={image1} alt="image1" height={'auto'} width={'auto'} />
         </SwiperSlide>
-        <SwiperSlide className={styles.carousel__container}>
+        <SwiperSlide
+          className={styles.carousel__container}
+          height={'auto'}
+          width={'auto'}
+        >
           <Image src={image2} alt="image2" />
         </SwiperSlide>
-        <SwiperSlide className={styles.carousel__container}>
+        <SwiperSlide
+          className={styles.carousel__container}
+          height={'auto'}
+          width={'auto'}
+        >
           <Image src={image3} alt="image3" />
         </SwiperSlide>
-        <SwiperSlide className={styles.carousel__container}>
+        <SwiperSlide
+          className={styles.carousel__container}
+          height={'auto'}
+          width={'auto'}
+        >
           <Image src={image4} alt="image4" />
         </SwiperSlide>
       </Swiper>
