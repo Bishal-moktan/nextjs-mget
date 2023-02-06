@@ -3,6 +3,8 @@ import Partners from '@/components/Partners';
 import Head from 'next/head';
 import img from '@/public/images/about/about12.webp';
 import AboutContent from '@/components/AboutContent';
+import Footer from '@/components/Footer';
+import Scroll from '@/components/ScrollToTop';
 
 const About = () => {
   return (
@@ -21,6 +23,8 @@ const About = () => {
         <Carousel />
         <AboutContent title="INTRO" img={img} />
         <Partners />
+        <Footer />
+        <Scroll />
       </main>
     </>
   );

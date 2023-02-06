@@ -1,6 +1,6 @@
 .carousel__container {
   width: 100vw;
-  height: 70vh;
+  height: 75vh;
   overflow: hidden;
 }
 
@@ -8,5 +8,5 @@
   width: 100%;
   height: inherit;
   object-fit: cover;
-  object-position: 0 10%;
+  object-position: 50% 10%;
 }

@@ -4,7 +4,7 @@
   justify-content: space-evenly;
   background: var(--color-green);
   color: var(--color-white);
-  padding: 0.7rem;
+  padding: 0.3rem;
 }
 
 .navbar_top_item {
@@ -73,7 +73,7 @@
 }
 
 .img_container > img {
-  height: 5.5rem;
+  height: 4.5rem;
 }
 
 .nav_links {

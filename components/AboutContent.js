@@ -126,12 +126,12 @@ const AboutContent = ({ title }) => {
       <table>
         <tbody>
           <tr>
-            <td>Krishna Singh </td>
-            <td>- Founder- Managing Director</td>
+            <td>Bhupendra Singh </td>
+            <td>- Founder - CTO</td>
           </tr>
           <tr>
-            <td>Bhupendra Singh </td>
-            <td>- Founder -CTO</td>
+            <td>Krishna Singh </td>
+            <td>- Founder - Director</td>
           </tr>
         </tbody>
       </table>

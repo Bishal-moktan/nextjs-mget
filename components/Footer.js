@@ -18,11 +18,6 @@ const Footer = () => {
         <div className={styles.footer__top}>
           <div className={styles.footer__socials}>
             <Image src={logo} alt="logo" className={styles.logo} />
-            <p>
-              Maxoptimus is a turnkey, renewable energy solution provider;
-              providing cleaner, greener electricity solutions that is most
-              reliable and cost effective "Unlimited Clean Energy Forever".
-            </p>
             <div className={styles.icons}>
               <a href="https://www.facebook.com" target="_blank">
                 <FaFacebook />
@@ -38,55 +33,117 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className={styles.footer__services}>
-            <h2>Services Offering</h2>
+          <div>
+            <h3>Quick links</h3>
             <ul>
-              <li className="text-light">Solar for Housing</li>
-              <li className="text-light">Solar for Industries</li>
-              <li className="text-light">Solar for Agriculture</li>
-              <li className="text-light">Solar for Healthcare</li>
-              <li className="text-light">Solar for IT Company</li>
-              <li className="text-light">Solar for Institutes</li>
+              <li>
+                <Link className="text_light" href={'/about'}>
+                  Intro
+                </Link>
+              </li>
+              <li>
+                <Link className="text_light" href={'/services'}>
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text_light"
+                  href={'/solutions/onGridSolarSystem'}
+                >
+                  Solutions
+                </Link>
+              </li>
+              <li>
+                <Link className="text_light" href={'/blogs'}>
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link className="text_light" href={'/contact'}>
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link className="text_light" href={'/sitemap'}>
+                  Sitemap
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.footer__services}>
+            <h3>Services</h3>
+            <ul>
+              <li>
+                <Link className="text_light" href={'/'}>
+                  Solar for Housing
+                </Link>
+              </li>
+              <li>
+                <Link className="text_light" href={'/'}>
+                  Solar for Industries
+                </Link>
+              </li>
+              <li>
+                <Link className="text_light" href={'/'}>
+                  Solar for Agriculture
+                </Link>
+              </li>
+              <li>
+                <Link className="text_light" href={'/'}>
+                  Solar for Healthcare
+                </Link>
+              </li>
+              <li>
+                <Link className="text_light" href={'/'}>
+                  Solar for IT Company
+                </Link>
+              </li>
+              <li>
+                <Link className="text_light" href={'/'}>
+                  Solar for Institutes
+                </Link>
+              </li>
             </ul>
           </div>
           <div className={styles.footer__contact}>
-            <h2>Contact Information</h2>
+            <h3>Available Locations</h3>
             <ul>
               <li>
                 <SlLocationPin className={styles.footer__contact_icon} />
-                <span className="text-light">Greater Noida - 201306, UP</span>
+                <span className="text_light">Greater Noida</span>
               </li>
               <li>
                 <SlLocationPin className={styles.footer__contact_icon} />
-                <span className="text-light">Mumbai - 400059, MH</span>
-              </li>
-              <li>
-                <FiPhoneCall className={styles.footer__contact_icon} />
-                <a href="tel:+91 98186 66325" className="text-light">
-                  +91 98186 66325
-                </a>
-              </li>
-              <li>
-                <FiPhoneCall className={styles.footer__contact_icon} />
-                <a href="tel:+91 98186 66325" className="text-light">
-                  +91 98186 66325
-                </a>
-              </li>
-              <li>
-                <BsEnvelope className={styles.footer__contact_icon} />
-                <a href="mailto:wecare@mgetenergy.com" className="text-light">
-                  wecare@mgetenergy.com
-                </a>
-              </li>
-              <li>
-                <AiOutlineClockCircle className={styles.footer__contact_icon} />
-                <span className="text-light">Opening Hours: 09:30 - 18:00</span>
+                <span className="text_light">Mumbai</span>
               </li>
             </ul>
           </div>
           <div className={styles.footer__newsletter}>
-            <h2>News Letter</h2>
-            <p>
+            <ul>
+              <li>
+                <FiPhoneCall className={styles.footer__contact_icon} />
+                <Link href="tel:+91 98186 66325" className="text_light">
+                  +91 98186 66325
+                </Link>
+              </li>
+              <li>
+                <FiPhoneCall className={styles.footer__contact_icon} />
+                <Link href="tel:+91 98186 66325" className="text_light">
+                  +91 98186 66325
+                </Link>
+              </li>
+              <li>
+                <BsEnvelope className={styles.footer__contact_icon} />
+                <Link
+                  href="mailto:wecare@mgetenergy.com"
+                  className="text_light"
+                >
+                  wecare@mgetenergy.com
+                </Link>
+              </li>
+            </ul>
+            <p className="text_light">
               To suscribe our newslaters and latest updates, enter your email
               address.
             </p>
@@ -99,17 +156,10 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.footer__bottom}>
-          <div className="footer__bottom-copyright">
-            <p>
-              &copy; ALL Reserved | MAXOPTIMUS GREEN ENERGY TECHNOLOGY PVT. LTD
-            </p>
-          </div>
-          <div className={styles.footer__bottom_links}>
-            <Link href="/">Services</Link>
-            <Link href="/">FAQ</Link>
-            <Link href="/">Testinomial</Link>
-            <Link href="/">Privacy Policy</Link>
-          </div>
+          <p>
+            &copy; ALL Reserved, {new Date().getFullYear()} | MAXOPTIMUS GREEN
+            ENERGY TECHNOLOGY PVT. LTD
+          </p>
         </div>
       </div>
     </footer>

@@ -68,7 +68,7 @@ h5 {
   font-weight: 500;
 }
 
-.text-light {
+.text_light {
   color: var(--color-light);
 }
 
@@ -84,6 +84,11 @@ h5 {
 
 .margin {
   margin: 1rem 0;
+}
+
+strong {
+  color: var(--color-orangered);
+  font-size: 1.2rem;
 }
 
 /* ========================== FOR SWIPER JS ===========================  */

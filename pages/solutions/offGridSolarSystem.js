@@ -175,7 +175,7 @@ const OffGridSolarSystem = () => {
   return (
     <>
       <Head>
-        <title>BEST OFF GRID SOLAR SYSTEM</title>
+        <title>BEST OFF GRID SOLAR POWER SYSTEM INSTALLATION</title>
         <meta
           name="description"
           content="Mosst Solar | Solar Panel Installation, best off grid solar power system"

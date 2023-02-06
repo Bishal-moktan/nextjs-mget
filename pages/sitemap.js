@@ -1,21 +1,21 @@
 import Head from 'next/head';
 
-const SolarWaterPump = () => {
+const sitemap = () => {
   return (
     <>
       <Head>
-        <title>BEST SOLAR WATER PUMP INSTALLATION</title>
+        <title>MGET ENERGY SITEMAP</title>
         <meta
           name="description"
-          content="Mosst Solar | Solar Panel Installation, best solar water pump"
+          content="Mosst Solar | Solar Panel Installation"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        <h1>SOLAR WATER PUMP</h1>
+        <h1>Sitemap</h1>
       </main>
     </>
   );
 };
-export default SolarWaterPump;
+export default sitemap;

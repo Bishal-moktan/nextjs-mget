@@ -82,7 +82,7 @@ const OnGridSolarSystem = () => {
   return (
     <>
       <Head>
-        <title>BEST ON GRID SOLAR SYSTEM</title>
+        <title>BEST ON GRID SOLAR POWER SYSTEM INSTALLATION</title>
         <meta
           name="description"
           content="Mosst Solar | Solar Panel Installation, best on grid solar power system"

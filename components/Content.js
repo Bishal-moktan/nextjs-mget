@@ -27,9 +27,7 @@ const Content = ({ title, description, items }) => {
             );
           })}
         </div>
-        <div className="content__description">
-          <p>{description}</p>
-        </div>
+        <div className="content__description">{description}</div>
       </div>
     </div>
   );

@@ -95,7 +95,7 @@ const HybridSolarPump = () => {
   return (
     <>
       <Head>
-        <title>BEST HYBRID SOLAR PUMP</title>
+        <title>BEST HYBRID SOLAR PUMP INSTALLATION</title>
         <meta
           name="description"
           content="Mosst Solar | Solar Panel Installation, best hybrid solar pump"
