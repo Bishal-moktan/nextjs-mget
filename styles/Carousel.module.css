@@ -7,6 +7,6 @@
 .carousel__container > img {
   width: 100%;
   height: inherit;
-  object-fit: cover;
-  object-position: 50% 10%;
+  object-fit: contain;
+  /* object-position: 50% 10%; */
 }

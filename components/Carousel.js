@@ -32,12 +32,12 @@ const Carousel = () => {
   return (
     <div className={styles.carousel}>
       <Swiper
+        modules={[Navigation, Mousewheel, Keyboard, Autoplay]}
         loop={true}
         cssMode={true}
-        navigation={true}
+        navigation
         mousewheel={true}
         keyboard={true}
-        modules={[Navigation, Mousewheel, Keyboard, Autoplay]}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,

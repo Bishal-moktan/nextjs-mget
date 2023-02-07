@@ -7,7 +7,7 @@ const LandingForm = () => {
     <div className={styles.landingForm}>
       <div className={`container ${styles.landingForm__container}`}>
         <div className={styles.landingForm__image}>
-          <Image src={image} alt="solar panel" />
+          <Image src={image} alt="solar panel" layout="responsive" />
         </div>
         <div className={styles.landingForm__container_form}>
           <h5>GET IN TOUCH</h5>
