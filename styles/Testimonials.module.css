@@ -1,0 +1,72 @@
+.testinomials__container {
+  background: var(--color-orange);
+  color: var(--color-white);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.testinomials__container__content .info {
+  background: var(--color-orangered);
+  padding: 3rem;
+}
+
+.info__icon {
+  font-size: 4rem;
+  margin-bottom: 4rem;
+}
+
+.info p {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.author {
+  position: relative;
+}
+
+.author__img {
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  top: -5rem;
+  left: 45%;
+}
+
+.author__img > img {
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author__info {
+  margin-top: 1rem;
+}
+
+.author__info p {
+  font-size: 1rem;
+  color: var(--color-white);
+}
+
+.author__info h2 {
+  padding-top: 2.5rem;
+}
+
+/* ======================== MEDIA QUERY FOR TABLET ==========================  */
+
+@media (max-width: 990px) {
+  .author__info {
+    margin-bottom: -6rem;
+  }
+  .author__img {
+    left: 35%;
+  }
+}
+/* ======================== MEDIA QUERY FOR MOBILE ==========================  */
+
+@media (max-width: 600px) {
+  .author__info {
+    margin-bottom: -10rem;
+  }
+}

@@ -4,6 +4,7 @@ import Head from 'next/head';
 import img from '@/public/images/about/about12.webp';
 import AboutContent from '@/components/AboutContent';
 import Scroll from '@/components/ScrollToTop';
+import Testinomials from '@/components/Testimonials';
 
 const About = () => {
   return (
@@ -22,6 +23,7 @@ const About = () => {
         <Carousel />
         <AboutContent title="INTRO" img={img} />
         <Partners />
+        <Testinomials />
         <Scroll />
       </main>
     </>

@@ -18,6 +18,7 @@ const Footer = () => {
         <div className={styles.footer__top}>
           <div className={styles.footer__socials}>
             <Image src={logo} alt="logo" className={styles.logo} />
+
             <div className={styles.icons}>
               <a href="https://www.facebook.com" target="_blank">
                 <FaFacebook />
@@ -69,6 +70,11 @@ const Footer = () => {
                   Sitemap
                 </Link>
               </li>
+              <li>
+                <Link className="text_light" href={'/'}>
+                  Careers
+                </Link>
+              </li>
             </ul>
           </div>
           <div className={styles.footer__services}>
@@ -107,7 +113,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className={styles.footer__contact}>
-            <h3>Available Locations</h3>
+            <h3>Office Locations</h3>
             <ul>
               <li>
                 <SlLocationPin className={styles.footer__contact_icon} />
@@ -117,14 +123,20 @@ const Footer = () => {
                 <SlLocationPin className={styles.footer__contact_icon} />
                 <span className="text_light">Mumbai</span>
               </li>
+              <li>
+                <AiOutlineClockCircle className="navbar__socials-icon" />
+                <span className="text_light"> 09:30am - 5:30pm</span>
+                <p className="text_light">Monday to Saturday</p>
+              </li>
             </ul>
           </div>
           <div className={styles.footer__newsletter}>
+            <h3>Contact</h3>
             <ul>
               <li>
                 <FiPhoneCall className={styles.footer__contact_icon} />
-                <Link href="tel:+91 98186 66325" className="text_light">
-                  +91 98186 66325
+                <Link href="tel:+91 98218 76325" className="text_light">
+                  +91 98218 76325
                 </Link>
               </li>
               <li>
@@ -157,8 +169,8 @@ const Footer = () => {
         </div>
         <div className={styles.footer__bottom}>
           <p>
-            &copy; ALL Reserved, {new Date().getFullYear()} | MAXOPTIMUS GREEN
-            ENERGY TECHNOLOGY PVT. LTD
+            Copyright &copy; {new Date().getFullYear()} Maxoptimus Green Energy
+            Technology Pvt Ltd . All rights reserved
           </p>
         </div>
       </div>

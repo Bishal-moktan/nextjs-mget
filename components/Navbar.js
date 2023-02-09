@@ -117,6 +117,7 @@ const Navbar = () => {
               alt="mgetenergy logo"
               height={'auto'}
               width={'auto'}
+              layout="responsive"
             />
           </Link>
         </div>

@@ -45,12 +45,6 @@ a {
   text-decoration: none;
 }
 
-img {
-  display: block;
-  width: 100%;
-  object-fit: contain;
-}
-
 .container {
   width: var(--container-width-lg);
   margin: 0 auto;
