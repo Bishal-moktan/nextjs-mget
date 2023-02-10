@@ -1,3 +1,4 @@
+import Testinomials from '@/components/Testimonials';
 import Head from 'next/head';
 
 const blog = () => {
@@ -13,7 +14,7 @@ const blog = () => {
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        <h1>Testinomials</h1>
+        <Testinomials />
       </main>
     </>
   );

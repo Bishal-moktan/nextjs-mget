@@ -23,7 +23,6 @@ const About = () => {
         <Carousel />
         <AboutContent title="INTRO" img={img} />
         <Partners />
-        <Testinomials />
         <Scroll />
       </main>
     </>

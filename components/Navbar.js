@@ -111,7 +111,7 @@ const Navbar = () => {
         </div>
 
         <div className={styles.logo}>
-          <Link href={'/'} className={styles.img_container}>
+          <Link href={'/about'} className={styles.img_container}>
             <Image
               src={logo}
               alt="mgetenergy logo"
@@ -131,6 +131,9 @@ const Navbar = () => {
           </Link>
           <DropDown name={'SOLUTIONS'} options={solutions} />
           <DropDown name={'SERVICES'} options={services} />
+          <Link href="/testimonials" className={styles.links}>
+            TESTIMONIALS
+          </Link>
           <Link href="/blogs" className={styles.links}>
             BLOGS
           </Link>

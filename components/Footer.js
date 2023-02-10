@@ -43,16 +43,21 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link className="text_light" href={'/services'}>
-                  Services
-                </Link>
-              </li>
-              <li>
                 <Link
                   className="text_light"
                   href={'/solutions/onGridSolarSystem'}
                 >
                   Solutions
+                </Link>
+              </li>
+              <li>
+                <Link className="text_light" href={'/services'}>
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link className="text_light" href={'/testimonials'}>
+                  Testimonials
                 </Link>
               </li>
               <li>
@@ -155,16 +160,12 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-            <p className="text_light">
-              To suscribe our newslaters and latest updates, enter your email
-              address.
-            </p>
-            <div className={styles.form}>
+            {/* <div className={styles.form}>
               <input type="text" placeholder="Your email address" />
               <div className={styles.mail_icon}>
                 <SiMinutemailer />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className={styles.footer__bottom}>
