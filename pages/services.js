@@ -15,6 +15,7 @@ const Services = () => {
       path: 'services/commercialIndustrialSolar',
     },
   ];
+
   const content = (
     <div className="">
       <strong className={styles.strong}>

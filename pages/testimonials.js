@@ -1,5 +1,6 @@
 import Testinomials from '@/components/Testimonials';
 import Head from 'next/head';
+import { testimonials } from '@/components/data/testimonials';
 
 const blog = () => {
   return (
@@ -14,7 +15,7 @@ const blog = () => {
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        <Testinomials />
+        <Testinomials testimonials={testimonials} showAll={true} />
       </main>
     </>
   );

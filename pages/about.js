@@ -5,8 +5,9 @@ import img from '@/public/images/about/about12.webp';
 import AboutContent from '@/components/AboutContent';
 import Scroll from '@/components/ScrollToTop';
 import Testinomials from '@/components/Testimonials';
-
+import { testimonials } from '@/components/data/testimonials';
 const About = () => {
+  const aboutTestimonials = testimonials.slice(0, 3);
   return (
     <>
       <Head>
@@ -23,6 +24,7 @@ const About = () => {
         <Carousel />
         <AboutContent title="INTRO" img={img} />
         <Partners />
+        <Testinomials testimonials={aboutTestimonials} showAll={false} />
         <Scroll />
       </main>
     </>
