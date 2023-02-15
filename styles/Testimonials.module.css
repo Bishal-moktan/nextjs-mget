@@ -40,7 +40,7 @@
 
 .info button {
   cursor: pointer;
-  padding: 0.3rem;
+  padding: 0.7rem;
   color: var(--color-white);
   background: var(--color-orangered);
   font-size: 1rem;
@@ -48,7 +48,9 @@
 }
 
 .info button:hover {
-  background-color: #f25b24;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-orangered);
+  color: var(--color-orangered);
   transition: var(--transition);
 }
 

@@ -36,7 +36,7 @@
 
 .footer__contact_icon {
   color: var(--color-blue);
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 
 .footer__newsletter p {
@@ -45,26 +45,6 @@
 
 .form {
   display: flex;
-}
-
-.footer__newsletter input {
-  height: 3rem;
-  margin-left: 1rem;
-  box-shadow: 1rem 1rem 0.5rem rgba(0, 0, 0, 0.2);
-  border-radius: 2rem;
-  padding: 1rem;
-}
-
-.mail_icon {
-  background: linear-gradient(90deg, #03228f 0, #0e73e4 100%);
-  border-radius: 50%;
-  height: 3rem;
-  width: 3rem;
-  color: var(--color-white);
-  font-size: 1.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* ==================  FOOTER BOTTOM ================= */
