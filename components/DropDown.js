@@ -3,14 +3,14 @@ import styles from '@/styles/DropDown.module.css';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { useState } from 'react';
 
-const DropDown = ({ name, options }) => {
+const DropDown = ({ name, options, path }) => {
   const [show, setShow] = useState(false);
   return (
     <div
       onClick={() => setShow(!show)}
       className={`${styles.links} ${styles.dropDown}`}
     >
-      <Link href="/services" className={styles.links}>
+      <Link href={path} className={styles.links}>
         {name}
         <MdKeyboardArrowDown className={styles.downArrow} />
       </Link>

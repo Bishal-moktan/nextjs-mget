@@ -1,6 +1,7 @@
 import Testinomials from '@/components/Testimonials';
 import Head from 'next/head';
 import { testimonials } from '@/components/data/testimonials';
+import Scroll from '@/components/ScrollToTop';
 
 const blog = () => {
   return (
@@ -16,6 +17,7 @@ const blog = () => {
       </Head>
       <main>
         <Testinomials testimonials={testimonials} showAll={true} />
+        <Scroll />
       </main>
     </>
   );

@@ -82,7 +82,7 @@ export default function App() {
                 <div className={styles.carousel__image}>
                   <Image src={img} height={350} alt={'Solar panel'} />
                 </div>
-                <div className={styles.wave}>
+                {/* <div className={styles.wave}>
                   <svg
                     data-name="Layer 1"
                     xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ export default function App() {
                       className={styles.shapefill}
                     ></path>
                   </svg>
-                </div>
+                </div> */}
               </div>
             </SwiperSlide>
           );

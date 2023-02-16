@@ -471,8 +471,7 @@ const Services = () => {
       </Head>
       <main className="container">
         <div className={styles.title}>
-          <h2>Services Offerred</h2>
-          <div className={styles.underline}></div>
+          <h2>Services Offered</h2>
         </div>
         {description.map((content, index) => {
           return <Accordian key={index} {...content} />;

@@ -8,7 +8,6 @@ const Content = ({ title, description, items }) => {
     <div className="container">
       <div className={styles.title}>
         <h2>{title}</h2>
-        <div className={styles.underline}></div>
       </div>
       <div className={styles.content__container}>
         <div className={styles.content__title}>

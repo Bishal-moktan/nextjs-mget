@@ -15,7 +15,7 @@
 .carousel__image > img {
   border-radius: 1rem;
 }
-
+/* 
 .wave {
   position: absolute;
   bottom: 0;
@@ -37,7 +37,7 @@
 
 .shapefill {
   fill: var(--color-light-green);
-}
+} */
 
 /* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
 

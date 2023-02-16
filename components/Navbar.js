@@ -47,7 +47,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="navbar" id="nav">
+    <nav className={styles.navbar} id="nav">
       {/* navbar top  */}
       <div className={styles.navbar_top}>
         <div className={styles.navbar_top_item}>
@@ -102,44 +102,48 @@ const Navbar = () => {
       </div>
 
       {/* navbar bottom  */}
-      <div className={styles.navbar_bottom}>
-        <div
-          className={styles.toggle_btn}
-          onClick={() => setShowLinks(!showLinks)}
-        >
-          <FaBars className={styles.barsIcon} />
-        </div>
+      <div className={styles.navbar_bottom_wrapper}>
+        <div className={styles.navbar_bottom}>
+          <div
+            className={styles.toggle_btn}
+            onClick={() => setShowLinks(!showLinks)}
+          >
+            <FaBars className={styles.barsIcon} />
+          </div>
 
-        <div className={styles.logo}>
-          <Link href={'/about'} className={styles.img_container}>
-            <Image
-              src={logo}
-              alt="mgetenergy logo"
-              height={'auto'}
-              width={'auto'}
-              layout="responsive"
-            />
-          </Link>
-        </div>
-        <div
-          className={
-            showLinks ? `${styles.nav_links} ${styles.show}` : styles.nav_links
-          }
-        >
-          <Link href="/about" className={styles.links}>
-            INTRO
-          </Link>
-          <DropDown name={'SOLUTIONS'} options={solutions} />
-          <DropDown name={'SERVICES'} options={services} />
-          <Link href="/testimonials" className={styles.links}>
-            TESTIMONIALS
-          </Link>
-          <Link href="/blogs" className={styles.links}>
-            BLOGS
-          </Link>
-          <Link href="/contact" className={styles.links}>
-            CONTACT US
-          </Link>
+          <div className={styles.logo}>
+            <Link href={'/about'} className={styles.img_container}>
+              <Image
+                src={logo}
+                alt="mgetenergy logo"
+                height={'auto'}
+                width={'auto'}
+                layout="responsive"
+              />
+            </Link>
+          </div>
+          <div
+            className={
+              showLinks
+                ? `${styles.nav_links} ${styles.show}`
+                : styles.nav_links
+            }
+          >
+            <Link href="/about" className={styles.links}>
+              INTRO
+            </Link>
+            <DropDown name={'SOLUTIONS'} options={solutions} path={'/'} />
+            <DropDown name={'SERVICES'} options={services} path={'/services'} />
+            <Link href="/testimonials" className={styles.links}>
+              TESTIMONIALS
+            </Link>
+            <Link href="/blogs" className={styles.links}>
+              BLOGS
+            </Link>
+            <Link href="/contact" className={styles.links}>
+              CONTACT US
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

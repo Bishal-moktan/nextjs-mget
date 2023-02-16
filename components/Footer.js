@@ -86,32 +86,32 @@ const Footer = () => {
             <h3>Services</h3>
             <ul>
               <li>
-                <Link className="text_light" href={'/'}>
+                <Link className="text_light" href={'/services/housing'}>
                   Solar for Housing
                 </Link>
               </li>
               <li>
-                <Link className="text_light" href={'/'}>
+                <Link className="text_light" href={'/services/industry'}>
                   Solar for Industries
                 </Link>
               </li>
               <li>
-                <Link className="text_light" href={'/'}>
+                <Link className="text_light" href={'/services/agriculture'}>
                   Solar for Agriculture
                 </Link>
               </li>
               <li>
-                <Link className="text_light" href={'/'}>
+                <Link className="text_light" href={'/services/healthcare'}>
                   Solar for Healthcare
                 </Link>
               </li>
               <li>
-                <Link className="text_light" href={'/'}>
+                <Link className="text_light" href={'/services/company'}>
                   Solar for IT Company
                 </Link>
               </li>
               <li>
-                <Link className="text_light" href={'/'}>
+                <Link className="text_light" href={'/services/institute'}>
                   Solar for Institutes
                 </Link>
               </li>
