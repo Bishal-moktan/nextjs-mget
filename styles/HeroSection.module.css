@@ -5,7 +5,7 @@
   grid-template-columns: 40% 60%;
   gap: 2rem;
   padding: 2rem;
-  place-items: center;
+  place-items: center stretch;
 }
 
 .carousel p {
@@ -15,29 +15,6 @@
 .carousel__image > img {
   border-radius: 1rem;
 }
-/* 
-.wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-  z-index: -1;
-}
-
-.wave svg {
-  position: relative;
-  display: block;
-  width: calc(185% + 1.3px);
-  height: 500px;
-  transform: rotateY(180deg);
-}
-
-.shapefill {
-  fill: var(--color-light-green);
-} */
 
 /* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
 
@@ -47,7 +24,16 @@
     height: 100vh;
   }
 
+  .carousel__content {
+    font-size: 0.6rem;
+  }
+
+  .carousel__image {
+    text-align: center;
+  }
+
   .carousel__image > img {
     border-radius: 1rem;
+    width: 90%;
   }
 }

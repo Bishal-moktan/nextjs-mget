@@ -23,7 +23,7 @@ const Testimonials = ({ testimonials, showAll }) => {
         </header>
 
         {testimonials.map((item, index) => {
-          const { icon, img, description, name, info } = item;
+          const { img, description, name, info } = item;
           return (
             <section key={index} className={styles.testinomials__content}>
               <div className={styles.author}>
@@ -43,7 +43,7 @@ const Testimonials = ({ testimonials, showAll }) => {
               </div>
               <div className={styles.info}>
                 {description}
-                <Link href="/testimonials">
+                <Link href="/testimonials/testimonialsAll">
                   {!showAll && <button>Read more..</button>}
                 </Link>
               </div>

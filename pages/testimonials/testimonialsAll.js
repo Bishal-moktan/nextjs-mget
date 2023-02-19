@@ -1,13 +1,9 @@
-import Carousel from '@/components/Carousel';
-import Partners from '@/components/Partners';
-import Head from 'next/head';
-import img from '@/public/images/about/about12.webp';
-import AboutContent from '@/components/AboutContent';
-import Scroll from '@/components/ScrollToTop';
 import Testinomials from '@/components/Testimonials';
+import Head from 'next/head';
 import { testimonials } from '@/components/data/testimonials';
-const About = () => {
-  const aboutTestimonials = testimonials.slice(0, 3);
+import Scroll from '@/components/ScrollToTop';
+
+const testinomialsAll = () => {
   return (
     <>
       <Head>
@@ -20,13 +16,10 @@ const About = () => {
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        {/* <Landing page="About" /> */}
-        <Carousel />
-        <AboutContent title="INTRO" img={img} />
-        <Partners />
+        <Testinomials testimonials={testimonials} showAll={true} />
         <Scroll />
       </main>
     </>
   );
 };
-export default About;
+export default testinomialsAll;

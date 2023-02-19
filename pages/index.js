@@ -20,11 +20,6 @@ export default function Home() {
       <main>
         <HeroSection />
         <Slider />
-        <AccordianSection />
-        {/* <CTA
-          title="PLAN TO INSTALL SOLAR"
-          info="Know more, Get Free Consultation!"
-        /> */}
         <ScrollToTop />
       </main>
     </>

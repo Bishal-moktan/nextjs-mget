@@ -3,7 +3,8 @@ import Head from 'next/head';
 import { testimonials } from '@/components/data/testimonials';
 import Scroll from '@/components/ScrollToTop';
 
-const blog = () => {
+const Testimonials = () => {
+  const content = testimonials.slice(0, 3);
   return (
     <>
       <Head>
@@ -16,10 +17,10 @@ const blog = () => {
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        <Testinomials testimonials={testimonials} showAll={true} />
+        <Testinomials testimonials={content} showAll={false} />
         <Scroll />
       </main>
     </>
   );
 };
-export default blog;
+export default Testimonials;

@@ -2,7 +2,11 @@ import { FaCheckCircle } from 'react-icons/fa';
 import { Link } from 'next/link';
 import styles from '@/styles/AboutContent.module.css';
 import Image from 'next/image';
-import image1 from '@/public/images/about/about10.webp';
+import experienceImg from '@/public/svg/intro/experience.svg';
+import speedImg from '@/public/svg/intro/speed.svg';
+import workmanshipImg from '@/public/svg/intro/workmanship.svg';
+import customizableImg from '@/public/svg/intro/customizable.svg';
+import managementImg from '@/public/svg/intro/management.svg';
 
 const AboutContent = ({ title }) => {
   return (
@@ -80,29 +84,40 @@ const AboutContent = ({ title }) => {
         </p>
         <ul>
           <li className={styles.margin}>
-            <FaCheckCircle className={styles.check__icon} /> Experience and
-            expertise: Mgetenergy has extensive experience( its 10 year +) and
-            expertise in the solar EPC industry.
+            <span className={styles.icon}>
+              <Image src={experienceImg} height={'auto'} width={'auto'} />{' '}
+            </span>
+            Experience and expertise: Mgetenergy has extensive experience( its
+            10 year +) and expertise in the solar EPC industry.
           </li>
           <li className={styles.margin}>
-            <FaCheckCircle className={styles.check__icon} /> Efficiency and
-            speed: Mgetenergy has proven track record of delivering projects on
-            time and within budget.
+            <span className={styles.icon}>
+              <Image src={speedImg} height={'auto'} width={'auto'} />{' '}
+            </span>{' '}
+            Efficiency and speed: Mgetenergy has proven track record of
+            delivering projects on time and within budget.
           </li>
           <li className={styles.margin}>
-            <FaCheckCircle className={styles.check__icon} />
+            <span className={styles.icon}>
+              <Image src={workmanshipImg} height={'auto'} width={'auto'} />{' '}
+            </span>
             Quality workmanship: Mgetenrgy is known for delivering high-quality
             workmanship and utilizing industry-best practices.
           </li>
           <li className={styles.margin}>
-            <FaCheckCircle className={styles.check__icon} /> Customizable
-            solutions: Mgetenrgy offers custom solutions for customers based on
-            their specific needs and requirements.
+            <span className={styles.icon}>
+              <Image src={customizableImg} height={'auto'} width={'auto'} />{' '}
+            </span>{' '}
+            Customizable solutions: Mgetenrgy offers custom solutions for
+            customers based on their specific needs and requirements.
           </li>
           <li className={styles.margin}>
-            <FaCheckCircle className={styles.check__icon} /> Strong project
-            management: Mgetenergy has a strong project management team that can
-            effectively oversee and manage solar projects from start to finish.
+            <span className={styles.icon}>
+              <Image src={managementImg} height={'auto'} width={'auto'} />{' '}
+            </span>{' '}
+            Strong project management: Mgetenergy has a strong project
+            management team that can effectively oversee and manage solar
+            projects from start to finish.
           </li>
         </ul>
         <p className={styles.margin}>
