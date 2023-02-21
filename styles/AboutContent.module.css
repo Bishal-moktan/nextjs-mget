@@ -37,3 +37,11 @@
     margin: 2rem auto;
   }
 }
+
+/* ========================== MEDIA QUERIES FOR SMALL DEVICES =====================  */
+
+@media screen and (max-width: 600px) {
+  .icon {
+    width: 4rem;
+  }
+}

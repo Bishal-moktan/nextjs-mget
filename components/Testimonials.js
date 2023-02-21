@@ -41,16 +41,14 @@ const Testimonials = ({ testimonials, showAll }) => {
                   <p>{info}</p>
                 </div>
               </div>
-              <div className={styles.info}>
-                {description}
-                <Link href="/testimonials/testimonialsAll">
-                  {!showAll && <button>Read more..</button>}
-                </Link>
-              </div>
+              <div className={styles.info}>{description}</div>
             </section>
           );
         })}
       </div>
+      <Link href="/testimonials/testimonialsAll">
+        {!showAll && <button className={styles.btn}>Read more..</button>}
+      </Link>
     </section>
   );
 };

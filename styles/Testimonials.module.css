@@ -38,16 +38,17 @@
   text-align: justify;
 }
 
-.info button {
+.btn {
   cursor: pointer;
   padding: 0.7rem;
   color: var(--color-white);
   background: var(--color-orangered);
   font-size: 1rem;
   border-radius: var(--radius);
+  transition: var(--transition);
 }
 
-.info button:hover {
+.btn:hover {
   background-color: var(--color-white);
   border: 1px solid var(--color-orangered);
   color: var(--color-orangered);

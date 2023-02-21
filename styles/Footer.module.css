@@ -27,7 +27,27 @@
 }
 
 .icons a {
-  color: var(--color-black);
+  transition: var(--transition);
+}
+
+.icons a:hover {
+  transform: scale(1.2);
+}
+
+.fb_icon {
+  color: var(--color-fb);
+}
+
+.twitter_icon {
+  color: var(--color-twitter);
+}
+
+.linkedin_icon {
+  color: var(--color-linkedin);
+}
+
+.youtube_icon {
+  color: var(--color-youtube);
 }
 
 .footer__services h2 {

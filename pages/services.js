@@ -1,26 +1,25 @@
-import Content from '@/components/Content';
 import Head from 'next/head';
 import { FaCheckCircle } from 'react-icons/fa';
 import styles from '@/styles/Services.module.css';
 import ScrollToTop from '@/components/ScrollToTop';
 import Accordian from '@/components/Accordian';
+import phases from '@/public/svg/services/phases.svg';
+import feasibility from '@/public/svg/services/feasibility.svg';
+import construction from '@/public/svg/services/construction.svg';
+import design from '@/public/svg/services/design.svg';
+import testing from '@/public/svg/services/testing.svg';
+import maintenance from '@/public/svg/services/maintenance.svg';
+import decommissioning from '@/public/svg/services/decommissioning.svg';
+import Image from 'next/image';
 
 const Services = () => {
-  const services = [
-    {
-      title: 'Residential Solar',
-      path: 'services/residentialSolar',
-    },
-    {
-      title: 'Commercial & Industrial Solar',
-      path: 'services/commercialIndustrialSolar',
-    },
-  ];
-
   const description = [
     {
       title: (
         <strong className={styles.strong}>
+          <span className={styles.icon}>
+            <Image src={phases} />
+          </span>
           Different phases of solar power system project
         </strong>
       ),
@@ -85,6 +84,9 @@ const Services = () => {
     {
       title: (
         <strong className={styles.strong}>
+          <span className={styles.icon}>
+            <Image src={feasibility} />
+          </span>
           Site Assessment and Feasibility Study phase
         </strong>
       ),
@@ -157,6 +159,9 @@ const Services = () => {
     {
       title: (
         <strong className={styles.strong}>
+          <span className={styles.icon}>
+            <Image src={design} />
+          </span>
           Design and Engineering phase of solar power system installation
         </strong>
       ),
@@ -222,6 +227,9 @@ const Services = () => {
     {
       title: (
         <strong className={styles.strong}>
+          <span className={styles.icon}>
+            <Image src={construction} />
+          </span>
           Procurement and Construction phase of solar power system installation
         </strong>
       ),
@@ -283,6 +291,9 @@ const Services = () => {
     {
       title: (
         <strong className={styles.strong}>
+          <span className={styles.icon}>
+            <Image src={testing} />
+          </span>
           Commissioning and Testing phase of solar power system installation
         </strong>
       ),
@@ -342,6 +353,9 @@ const Services = () => {
     {
       title: (
         <strong className={styles.strong}>
+          <span className={styles.icon}>
+            <Image src={maintenance} />
+          </span>
           Operations and Maintenance phase of solar power system installation
         </strong>
       ),
@@ -401,6 +415,9 @@ const Services = () => {
     {
       title: (
         <strong className={styles.strong}>
+          <span className={styles.icon}>
+            <Image src={decommissioning} />
+          </span>
           Decommissioning of solar power system
         </strong>
       ),

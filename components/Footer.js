@@ -21,16 +21,16 @@ const Footer = () => {
 
             <div className={styles.icons}>
               <a href="https://www.facebook.com" target="_blank">
-                <FaFacebook />
+                <FaFacebook className={styles.fb_icon} />
               </a>
               <a href="https://www.twitter.com" target="_blank">
-                <FaTwitter />
+                <FaTwitter className={styles.twitter_icon} />
               </a>
               <a href="https://www.linkedin.com" target="_blank">
-                <GrLinkedin />
+                <GrLinkedin className={styles.linkedin_icon} />
               </a>
               <a href="https://www.youtube.com" target="_blank">
-                <FaYoutube />
+                <FaYoutube className={styles.youtube_icon} />
               </a>
             </div>
           </div>
