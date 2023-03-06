@@ -175,7 +175,7 @@ export const testimonials = [
         </p>
       </>
     ),
-    name: 'Mr. Kumar Mahmood',
+    name: 'Mr. Kamar Mahmood',
     info: 'Director, M/s Shimnan Rugs, Taria Khamaria, Bhadohi, Uttar Pradesh',
     img: image8,
   },

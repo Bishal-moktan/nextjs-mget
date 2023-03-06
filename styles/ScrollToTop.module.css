@@ -9,7 +9,15 @@
   z-index: 999;
   border-radius: 50%;
   font-size: 2rem;
-  background: linear-gradient(90deg, #03228f 0, #0e73e4 100%);
+  /* background: linear-gradient(90deg, #03228f 0, #0e73e4 100%); */
+  background-image: linear-gradient(
+    to right top,
+    #009300,
+    #017f02,
+    #026b03,
+    #035804,
+    #034503
+  );
 }
 
 .scrollUp a {

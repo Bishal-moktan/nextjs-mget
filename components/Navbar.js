@@ -55,8 +55,13 @@ const Navbar = () => {
             <EmailIcon />
           </div>
           <div className={styles.navbar_top_content}>
-            <h2>Email Us</h2>
-            <a href="mailto:wecare@mgetenergy.com">wecare@mgetenergy.com</a>
+            <h4>Email Us</h4>
+            <a
+              href="mailto:wecare@mgetenergy.com"
+              className={styles.navbar_top_contact}
+            >
+              wecare@mgetenergy.com
+            </a>
           </div>
         </div>
 
@@ -65,11 +70,13 @@ const Navbar = () => {
             <ClientIcon />
           </div>
           <div className={styles.navbar_top_content}>
-            <h2>Client Services</h2>
-            <a href="tel:+919821876325" className={styles.tel}>
+            <h4>Client Services</h4>
+            <a href="tel:+919821876325" className={styles.navbar_top_contact}>
               +91 98218 76325 ,
             </a>
-            <a href="tel:+919818666325">+91 98186 66325</a>
+            <a href="tel:+919818666325" className={styles.navbar_top_contact}>
+              +91 98186 66325
+            </a>
           </div>
         </div>
 
@@ -78,8 +85,8 @@ const Navbar = () => {
             <TrustIcon />
           </div>
           <div className={styles.navbar_top_content}>
-            <h2>Trusted By</h2>
-            <p>400+ Happy Clients</p>
+            <h4>Trusted By</h4>
+            <p className={styles.navbar_top_contact}>400+ Happy Clients</p>
           </div>
         </div>
 
@@ -118,7 +125,6 @@ const Navbar = () => {
                 alt="mgetenergy logo"
                 height={'auto'}
                 width={'auto'}
-                layout="responsive"
               />
             </Link>
           </div>

@@ -35,7 +35,6 @@ const Carousel = () => {
         modules={[Navigation, Mousewheel, Keyboard, Autoplay]}
         loop={true}
         cssMode={true}
-        navigation
         mousewheel={true}
         keyboard={true}
         autoplay={{

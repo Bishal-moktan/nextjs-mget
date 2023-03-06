@@ -1,19 +1,8 @@
-// import Swiper core and required modules
-import { Pagination } from 'swiper';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-
 import styles from '@/styles/Testimonials.module.css';
-import { FaQuoteRight } from 'react-icons/fa';
 
 import Image from 'next/image';
-import Link from 'next/link';
 
-const Testimonials = ({ testimonials, showAll }) => {
+const Testimonials = ({ testimonials }) => {
   return (
     <section className={styles.testinomials__container}>
       <div className="container">
@@ -28,13 +17,7 @@ const Testimonials = ({ testimonials, showAll }) => {
             <section key={index} className={styles.testinomials__content}>
               <div className={styles.author}>
                 <div className={styles.author__img}>
-                  <Image
-                    src={img}
-                    alt={name}
-                    height={'auto'}
-                    width={'auto'}
-                    layout={'responsive'}
-                  />
+                  <Image src={img} alt={name} height={'auto'} width={'auto'} />
                 </div>
                 <div className={styles.author__info}>
                   <h2>{name}</h2>
@@ -46,9 +29,6 @@ const Testimonials = ({ testimonials, showAll }) => {
           );
         })}
       </div>
-      <Link href="/testimonials/testimonialsAll">
-        {!showAll && <button className={styles.btn}>Read more..</button>}
-      </Link>
     </section>
   );
 };

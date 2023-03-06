@@ -11,10 +11,19 @@
   display: flex;
   gap: 1rem;
   cursor: pointer;
+  align-items: center;
+}
+
+.navbar_top_content h4 {
+  margin-bottom: -0.4rem;
+}
+
+.navbar_top_contact {
+  font-size: 0.9rem;
 }
 
 .navbar_top_icon {
-  width: 2.5rem;
+  width: 3rem;
 }
 
 .navbar_top_socials {
@@ -73,7 +82,8 @@
 }
 
 .img_container > img {
-  height: 4rem;
+  height: 3rem;
+  width: 12rem;
 }
 
 .nav_links {
