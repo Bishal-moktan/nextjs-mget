@@ -25,7 +25,7 @@ const solutions = () => {
         <ul>
           <li>
             <FaCheckCircle />
-            <strong>Grid-Tied Solar Systems:</strong>
+            <strong>Grid-Tied Solar System:</strong>
             These are connected to the electricity grid and provide energy to
             homes and businesses while also sending excess energy back to the
             grid. They rely on the grid for power during night time or cloudy
@@ -33,39 +33,39 @@ const solutions = () => {
           </li>
           <li>
             <FaCheckCircle />
-            <strong>Off-Grid Solar Systems:</strong>
+            <strong>Off-Grid Solar System:</strong>
             These are not connected to the electricity grid and rely entirely on
             solar panels, batteries, and inverters to provide power to homes,
             businesses, and remote locations.
           </li>
           <li>
             <FaCheckCircle />
-            <strong>Hybrid Solar Systems:</strong>
+            <strong>Hybrid Solar System:</strong>
             These combine features of grid-tied and off-grid systems, allowing
             homeowners to use solar power and also draw from the grid when
             necessary.
           </li>
           <li>
             <FaCheckCircle />
-            <strong>Solar Water Heating Systems:</strong>
+            <strong>Solar Water Heating System:</strong>
             These use solar panels to heat water for household or industrial
             use, reducing the reliance on traditional heating methods.
           </li>
           <li>
             <FaCheckCircle />
-            <strong>Solar Pool Heating Systems:</strong>
+            <strong>Solar Pool Heating System:</strong>
             These use solar panels to heat swimming pool water, reducing energy
             costs and promoting energy efficiency.
           </li>
           <li>
             <FaCheckCircle />
-            <strong>Solar-Powered Water Pumping Systems:</strong>
+            <strong>Solar-Powered Water Pumping System:</strong>
             These are used to pump water in rural areas, providing a sustainable
             source of water for irrigation, livestock, and household needs.
           </li>
           <li>
             <FaCheckCircle />
-            <strong>Solar Street Lighting Systems:</strong>
+            <strong>Solar Street Lighting System:</strong>
             These use solar panels and batteries to provide light in parks,
             parking lots, and remote or rural areas where access to the
             electricity grid is limited. Each of these types of solar power

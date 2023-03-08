@@ -11,7 +11,9 @@ import managementImg from '@/public/svg/intro/management.svg';
 const AboutContent = ({ title }) => {
   return (
     <div className="container">
-      <h1>{title}</h1>
+      <div className="title">
+        <h2>{title}</h2>
+      </div>
       <div className={styles.content__description}>
         <p className={styles.margin}>
           Welcome to Maxoptimus Green Energy Technology Pvt Ltd- Mgetenergy,

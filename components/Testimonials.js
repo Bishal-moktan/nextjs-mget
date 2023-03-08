@@ -6,8 +6,7 @@ const Testimonials = ({ testimonials }) => {
   return (
     <section className={styles.testinomials__container}>
       <div className="container">
-        <header>
-          <h5>TESTIMONIAL</h5>
+        <header className="title">
           <h2>Testimonials</h2>
         </header>
 

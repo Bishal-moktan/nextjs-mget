@@ -22,7 +22,7 @@ const About = () => {
       <main>
         {/* <Landing page="About" /> */}
         <Carousel />
-        <AboutContent title="INTRO" img={img} />
+        <AboutContent title="ABOUT US" img={img} />
         <Partners />
         <Scroll />
       </main>

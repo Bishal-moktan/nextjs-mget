@@ -39,14 +39,11 @@ const Footer = () => {
             <ul>
               <li>
                 <Link className="text_light" href={'/about'}>
-                  Intro
+                  About us
                 </Link>
               </li>
               <li>
-                <Link
-                  className="text_light"
-                  href={'/solutions/onGridSolarSystem'}
-                >
+                <Link className="text_light" href={'/solutions'}>
                   Solutions
                 </Link>
               </li>
@@ -68,11 +65,6 @@ const Footer = () => {
               <li>
                 <Link className="text_light" href={'/contact'}>
                   Contact
-                </Link>
-              </li>
-              <li>
-                <Link className="text_light" href={'/sitemap'}>
-                  Sitemap
                 </Link>
               </li>
               <li>
