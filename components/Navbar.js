@@ -136,9 +136,13 @@ const Navbar = () => {
             }
           >
             <Link href="/about" className={styles.links}>
-              INTRO
+              ABOUT US
             </Link>
-            <DropDown name={'SOLUTIONS'} options={solutions} path={'/'} />
+            <DropDown
+              name={'SOLUTIONS'}
+              options={solutions}
+              path={'/solutions'}
+            />
             <DropDown name={'SERVICES'} options={services} path={'/services'} />
             <Link href="/testimonials" className={styles.links}>
               TESTIMONIALS

@@ -7,10 +7,16 @@ const Landing = ({ page, image }) => {
       <div className={styles.landing__content}>
         <h2>{page}</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt et
-          beatae exercitationem minus ratione! Perspiciatis deserunt dolor,
-          recusandae reiciendis eum fugit quasi nam ea officiis quod atque
-          sequi, sit itaque qui suscipit quidem nostrum.
+          A solar power system for a housing unit is a renewable energy system
+          that uses solar panels to generate electricity for residential homes.
+          The system works by capturing the energy from the sun through solar
+          panels and converting it into usable electricity that can power
+          household appliances, lighting, and other electrical devices. There
+          are different types of solar power systems available for housing
+          units, including on-grid and off-grid systems. On-grid systems are
+          connected to the main electrical grid, while off-grid systems operate
+          independently, using batteries to store excess energy for use when
+          there is no sunlight.
         </p>
       </div>
       <div className={styles.landing_img}>
