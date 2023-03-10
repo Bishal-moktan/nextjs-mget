@@ -6,7 +6,6 @@ import { BsEnvelope } from 'react-icons/bs';
 import { FiPhoneCall } from 'react-icons/fi';
 import { SlLocationPin } from 'react-icons/sl';
 import { AiOutlineClockCircle } from 'react-icons/ai';
-import { SiMinutemailer } from 'react-icons/si';
 import Link from 'next/link';
 import logo from '@/public/images/logo-dark.png';
 import styles from '@/styles/Footer.module.css';
@@ -21,16 +20,16 @@ const Footer = () => {
 
             <div className={styles.icons}>
               <a href="https://www.facebook.com" target="_blank">
-                <FaFacebook className={styles.fb_icon} />
+                <FaFacebook className="fb_icon" />
               </a>
               <a href="https://www.twitter.com" target="_blank">
-                <FaTwitter className={styles.twitter_icon} />
+                <FaTwitter className="twitter_icon" />
               </a>
               <a href="https://www.linkedin.com" target="_blank">
-                <GrLinkedin className={styles.linkedin_icon} />
+                <GrLinkedin className="linkedin_icon" />
               </a>
               <a href="https://www.youtube.com" target="_blank">
-                <FaYoutube className={styles.youtube_icon} />
+                <FaYoutube className="youtube_icon" />
               </a>
             </div>
           </div>

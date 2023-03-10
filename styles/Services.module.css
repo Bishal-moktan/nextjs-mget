@@ -32,6 +32,34 @@
   justify-content: center;
 }
 
+.customLink {
+  color: var(--color-black);
+  font-size: 1.2rem;
+  position: relative;
+  width: fit-content;
+  margin: 1rem 0;
+  z-index: 1;
+}
+
+.customLink::after {
+  content: '';
+  position: absolute;
+  width: calc(100% + 1.4rem);
+  height: 100%;
+  background-color: var(--color-green);
+  border-radius: var(--radius);
+  z-index: -1;
+  top: 0;
+  left: -1rem;
+  transform: scaleX(0.01);
+  transform-origin: left;
+  transition: transform 0.25s ease-in;
+}
+
+.customLink:hover::after {
+  transform: scaleX(1);
+}
+
 /* ========================== MEDIA QUERIES FOR SMALL DEVICES =====================  */
 
 @media screen and (max-width: 600px) {

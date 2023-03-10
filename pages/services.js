@@ -11,6 +11,7 @@ import testing from '@/public/svg/services/testing.svg';
 import maintenance from '@/public/svg/services/maintenance.svg';
 import decommissioning from '@/public/svg/services/decommissioning.svg';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Services = () => {
   const description = [
@@ -475,6 +476,17 @@ const Services = () => {
     },
   ];
 
+  const services = [
+    {
+      title: 'Residential Solar',
+      path: 'services/residentialSolar',
+    },
+    {
+      title: 'Commercial & Industrial Solar',
+      path: 'services/commercialIndustrialSolar',
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -493,6 +505,15 @@ const Services = () => {
         {description.map((content, index) => {
           return <Accordian key={index} {...content} />;
         })}
+        <ul>
+          {services.map((item, index) => {
+            return (
+              <Link href={item.path} key={index}>
+                <li className={styles.customLink}>{item.title}</li>
+              </Link>
+            );
+          })}
+        </ul>
         <ScrollToTop />
       </main>
     </>

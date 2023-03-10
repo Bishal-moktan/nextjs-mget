@@ -94,16 +94,16 @@ const Navbar = () => {
 
         <div className={styles.navbar_top_socials}>
           <a href="https://www.facebook.com" target="_blank">
-            <FaFacebook />
+            <FaFacebook className="fb_icon" />
           </a>
           <a href="https://www.twitter.com" target="_blank">
-            <FaTwitter />
+            <FaTwitter className="twitter_icon" />
           </a>
           <a href="https://www.linkedin.com" target="_blank">
-            <GrLinkedin />
+            <GrLinkedin className="linkedin_icon" />
           </a>
           <a href="https://www.linkedin.com" target="_blank">
-            <FaYoutube />
+            <FaYoutube className="youtube_icon" />
           </a>
         </div>
       </div>

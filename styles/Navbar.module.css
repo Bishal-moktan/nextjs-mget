@@ -19,11 +19,11 @@
 }
 
 .navbar_top_contact {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 
 .navbar_top_icon {
-  width: 3rem;
+  width: 2.5rem;
 }
 
 .navbar_top_socials {
@@ -35,12 +35,18 @@
 }
 
 .navbar_top_socials a {
-  color: var(--color-white);
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-white);
   transition: var(--transition);
+  border-radius: 50%;
 }
 
 .navbar_top_socials a:hover {
-  color: orange;
+  transform: scale(1.2);
 }
 .navbar_top_content a {
   color: var(--color-white);
@@ -82,8 +88,8 @@
 }
 
 .img_container > img {
-  height: 3rem;
-  width: 12rem;
+  height: 4rem;
+  width: 13rem;
 }
 
 .nav_links {

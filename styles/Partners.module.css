@@ -7,7 +7,7 @@
 
 .container__client_images {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
@@ -18,8 +18,9 @@
 }
 
 .image > img {
-  height: 7rem;
-  width: 7rem;
+  height: 10rem;
+  width: 10rem;
+  object-fit: contain;
 }
 
 /* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */

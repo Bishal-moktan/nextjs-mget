@@ -109,6 +109,22 @@ strong {
   background: var(--color-green);
 }
 
+.fb_icon {
+  color: var(--color-fb);
+}
+
+.twitter_icon {
+  color: var(--color-twitter);
+}
+
+.linkedin_icon {
+  color: var(--color-linkedin);
+}
+
+.youtube_icon {
+  color: var(--color-youtube);
+}
+
 /* ========================== FOR SWIPER JS ===========================  */
 
 @media screen and (max-width: 768px) {

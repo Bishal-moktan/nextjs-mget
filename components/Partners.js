@@ -9,6 +9,11 @@ import image7 from '@/public/images/client/partner7.webp';
 import image10 from '@/public/images/client/partner10.webp';
 import image11 from '@/public/images/client/partner11.webp';
 import image12 from '@/public/images/client/partner12.webp';
+import image14 from '@/public/images/client/partner14.webp';
+import image15 from '@/public/images/client/partner15.webp';
+import image16 from '@/public/images/client/partner16.webp';
+import image17 from '@/public/images/client/partner17.webp';
+import image18 from '@/public/images/client/partner18.webp';
 import image13 from '@/public/images/client/efab.webp';
 import Image from 'next/image';
 
@@ -53,7 +58,19 @@ const Partners = () => {
             <Image src={image13} alt="Efab powers" />
           </div>
           <div className={styles.image}>
-            <Image src={image4} alt="client" />
+            <Image src={image14} alt="client" />
+          </div>
+          <div className={styles.image}>
+            <Image src={image15} alt="client" />
+          </div>
+          <div className={styles.image}>
+            <Image src={image16} alt="client" />
+          </div>
+          <div className={styles.image}>
+            <Image src={image17} alt="client" />
+          </div>
+          <div className={styles.image}>
+            <Image src={image18} alt="client" />
           </div>
         </div>
       </div>

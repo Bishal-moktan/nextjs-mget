@@ -1,8 +1,27 @@
 import Head from 'next/head';
 import { FaCheckCircle } from 'react-icons/fa';
 import styles from '@/styles/Services.module.css';
+import Link from 'next/link';
 
 const solutions = () => {
+  const solutions = [
+    {
+      title: 'On-grid Solar System',
+      path: 'solutions/onGridSolarSystem',
+    },
+    {
+      title: 'Off-grid Solar System',
+      path: 'solutions/offGridSolarSystem',
+    },
+    {
+      title: 'Hybrid Solar System',
+      path: 'solutions/hybridSolarPump',
+    },
+    {
+      title: 'Solar Water Pump',
+      path: 'solutions/solarWaterPump',
+    },
+  ];
   return (
     <>
       <Head>
@@ -79,6 +98,15 @@ const solutions = () => {
           disadvantages, and the most suitable type depends on the energy needs,
           location, and budget of the user.
         </p>
+        <ul>
+          {solutions.map((item, index) => {
+            return (
+              <Link href={item.path} key={index}>
+                <li className={styles.customLink}>{item.title}</li>
+              </Link>
+            );
+          })}
+        </ul>
       </main>
     </>
   );

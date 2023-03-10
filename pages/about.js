@@ -7,7 +7,6 @@ import Scroll from '@/components/ScrollToTop';
 import Testinomials from '@/components/Testimonials';
 import { testimonials } from '@/components/data/testimonials';
 const About = () => {
-  const aboutTestimonials = testimonials.slice(0, 3);
   return (
     <>
       <Head>
