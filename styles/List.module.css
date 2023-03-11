@@ -26,7 +26,7 @@
 
 /* ========================== MEDIA QUERIES FOR SMALL DEVICES =====================  */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .cards {
     grid-template-columns: 1fr;
   }
