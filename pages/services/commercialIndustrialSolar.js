@@ -1,9 +1,11 @@
 import Content from '@/components/Content';
 import Scroll from '@/components/ScrollToTop';
+import useGlobalContext from '@/hooks/useGlobalContext';
 import Head from 'next/head';
 import { FaCheckCircle } from 'react-icons/fa';
 
 const commercialIndustrialSolar = () => {
+  const { metaContent } = useGlobalContext();
   const services = [
     {
       title: 'Residential Solar',
@@ -133,10 +135,7 @@ const commercialIndustrialSolar = () => {
     <>
       <Head>
         <title>BEST COMMERCIAL AND INDUSTRIAL SOLAR SYSTEM INSTALLATION</title>
-        <meta
-          name="description"
-          content="Mosst Solar | Solar Panel Installation, best commerical and industrial solar"
-        />
+        <meta name="description" content={metaContent} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>

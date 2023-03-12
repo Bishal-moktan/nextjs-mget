@@ -12,8 +12,10 @@ import maintenance from '@/public/svg/services/maintenance.svg';
 import decommissioning from '@/public/svg/services/decommissioning.svg';
 import Image from 'next/image';
 import Link from 'next/link';
+import useGlobalContext from '@/hooks/useGlobalContext';
 
 const Services = () => {
+  const { metaContent } = useGlobalContext();
   const description = [
     {
       title: (
@@ -491,10 +493,7 @@ const Services = () => {
     <>
       <Head>
         <title>BEST SOLAR POWER SYSTEM INSTALLATION COMPANY</title>
-        <meta
-          name="description"
-          content="Mosst Solar | Solar Panel Installation, services offered"
-        />
+        <meta name="description" content={metaContent} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>

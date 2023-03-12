@@ -2,8 +2,10 @@ import Head from 'next/head';
 import { FaCheckCircle } from 'react-icons/fa';
 import styles from '@/styles/Services.module.css';
 import Link from 'next/link';
+import useGlobalContext from '@/hooks/useGlobalContext';
 
 const solutions = () => {
+  const { metaContent } = useGlobalContext();
   const solutions = [
     {
       title: 'On-grid Solar System',
@@ -26,10 +28,7 @@ const solutions = () => {
     <>
       <Head>
         <title>BEST SOLAR POWER SYSTEM INSTALLATION COMPANY</title>
-        <meta
-          name="description"
-          content="Best Solar power system, services offered"
-        />
+        <meta name="description" content={metaContent} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>

@@ -5,8 +5,11 @@ import Scroll from '@/components/ScrollToTop';
 import { useEffect, useState } from 'react';
 import styles from '@/styles/Testimonials.module.css';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
+import useGlobalContext from '@/hooks/useGlobalContext';
 
 const Testimonials = () => {
+  const { metaContent } = useGlobalContext();
+
   const [content, setContent] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(3);
@@ -46,10 +49,7 @@ const Testimonials = () => {
     <>
       <Head>
         <title>BEST SOLAR POWER SYSTEM INSTALLATION COMPANY</title>
-        <meta
-          name="description"
-          content="Mosst Solar | Solar Panel Installation"
-        />
+        <meta name="description" content={metaContent} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>

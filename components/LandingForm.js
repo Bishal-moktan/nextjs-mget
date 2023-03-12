@@ -14,15 +14,57 @@ const LandingForm = () => {
           <h2>Submit Enquiry For Solar Project</h2>
           <form className={styles.form}>
             <div className={styles.form_inputs}>
-              <input type="text" placeholder="Name" required />
-              <input type="email" placeholder="Email" required />
+              <div class={styles.input_box}>
+                <input
+                  type="text"
+                  required
+                  placeholder=" "
+                  id="firstN"
+                  className={styles.input}
+                />
+                <label htmlFor="firstN">First name</label>
+              </div>
+              <div class={styles.input_box}>
+                <input
+                  type="text"
+                  required
+                  placeholder=" "
+                  id="lastN"
+                  className={styles.input}
+                />
+                <label htmlFor="lastN">Last name</label>
+              </div>
             </div>
-            <input type="tel" placeholder="Phone Number" required />
-            <textarea
-              rows="5"
-              placeholder="Your message here"
-              required
-            ></textarea>
+            <div class={styles.input_box}>
+              <input
+                type="email"
+                required
+                placeholder=" "
+                id="email"
+                className={styles.input}
+              />
+              <label htmlFor="email">Email</label>
+            </div>
+            <div class={styles.input_box}>
+              <input
+                type="tel"
+                required
+                placeholder=" "
+                id="number"
+                className={styles.input}
+              />
+              <label htmlFor="number">Phone Number</label>
+            </div>
+            <div class={styles.input_box}>
+              <textarea
+                rows="5"
+                required
+                placeholder=" "
+                id="message"
+                className={styles.input}
+              ></textarea>
+              <label htmlFor="message">Your message here</label>
+            </div>
             <button>Submit Now</button>
           </form>
         </div>

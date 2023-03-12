@@ -44,10 +44,30 @@
   border-radius: 1rem;
 }
 
+.input_box {
+  position: relative;
+}
+
+.input_box label {
+  position: absolute;
+  top: 1rem;
+  left: 0.6rem;
+  transition: all 250ms ease;
+  color: #757575;
+  padding: 0 1rem;
+}
+
+.input:focus ~ label,
+.input:not(:placeholder-shown).input:not(:focus) ~ label {
+  top: -1rem;
+  left: 0.8rem;
+  background: var(--clr-grey-special);
+}
+
 .landingForm__container_form textarea {
   padding: 2rem 1rem;
-  background: #f6f7f9;
   font-size: 1rem;
+  width: 100%;
   border-radius: 1rem;
 }
 

@@ -66,11 +66,6 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
-              <li>
-                <Link className="text_light" href={'/'}>
-                  Careers
-                </Link>
-              </li>
             </ul>
           </div>
           <div className={styles.footer__services}>

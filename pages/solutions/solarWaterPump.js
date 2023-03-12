@@ -2,9 +2,11 @@ import Content from '@/components/Content';
 import Lists from '@/components/Lists';
 import Paragraph from '@/components/Paragraph';
 import Scroll from '@/components/ScrollToTop';
+import useGlobalContext from '@/hooks/useGlobalContext';
 import Head from 'next/head';
 
 const SolarWaterPump = () => {
+  const { metaContent } = useGlobalContext();
   const solutions = [
     {
       title: 'On-grid Solar System',
@@ -104,10 +106,7 @@ const SolarWaterPump = () => {
     <>
       <Head>
         <title>BEST SOLAR WATER PUMP INSTALLATION</title>
-        <meta
-          name="description"
-          content="Mosst Solar | Solar Panel Installation, best solar water pump"
-        />
+        <meta name="description" content={metaContent} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>

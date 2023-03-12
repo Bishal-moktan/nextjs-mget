@@ -1,8 +1,10 @@
 import Content from '@/components/Content';
 import Head from 'next/head';
 import ScrollToTop from '@/components/ScrollToTop';
+import useGlobalContext from '@/hooks/useGlobalContext';
 
 const HybridSolarPump = () => {
+  const { metaContent } = useGlobalContext();
   const solutions = [
     {
       title: 'On-grid Solar System',
@@ -96,10 +98,7 @@ const HybridSolarPump = () => {
     <>
       <Head>
         <title>BEST HYBRID SOLAR PUMP INSTALLATION</title>
-        <meta
-          name="description"
-          content="Mosst Solar | Solar Panel Installation, best hybrid solar pump"
-        />
+        <meta name="description" content={metaContent} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>
