@@ -25,10 +25,10 @@ const Partners = () => {
 
         <div className={styles.container__client_images}>
           <div className={styles.image}>
-            <Image src={image1} alt="client" />
+            <Image src={image2} alt="client" />
           </div>
           <div className={styles.image}>
-            <Image src={image2} alt="client" />
+            <Image src={image1} alt="client" />
           </div>
           <div className={styles.image}>
             <Image src={image3} alt="client" />

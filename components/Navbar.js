@@ -86,7 +86,7 @@ const Navbar = () => {
           </div>
           <div className={styles.navbar_top_content}>
             <h4>Trusted By</h4>
-            <p className={styles.navbar_top_contact}>400+ Happy Clients</p>
+            <a className={styles.navbar_top_contact}>400+ Happy Clients</a>
           </div>
         </div>
 
@@ -119,7 +119,7 @@ const Navbar = () => {
           </div>
 
           <div className={styles.logo}>
-            <Link href={'/about'} className={styles.img_container}>
+            <Link href={'/'} className={styles.img_container}>
               <Image
                 src={logo}
                 alt="mgetenergy logo"
@@ -135,7 +135,7 @@ const Navbar = () => {
                 : styles.nav_links
             }
           >
-            <Link href="/about" className={styles.links}>
+            <Link href="/" className={styles.links}>
               ABOUT US
             </Link>
             <DropDown

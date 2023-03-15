@@ -81,7 +81,7 @@
 }
 
 .logo {
-  width: 12rem;
+  width: 15rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,7 +89,8 @@
 
 .img_container > img {
   height: 4rem;
-  width: 13rem;
+  width: 14rem;
+  object-fit: fill;
 }
 
 .nav_links {

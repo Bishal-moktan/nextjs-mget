@@ -16,7 +16,9 @@ const Footer = () => {
       <div className="container">
         <div className={styles.footer__top}>
           <div className={styles.footer__socials}>
-            <Image src={logo} alt="logo" className={styles.logo} />
+            <div className={styles.img__container}>
+              <Image src={logo} alt="logo" className={styles.logo} />
+            </div>
 
             <div className={styles.icons}>
               <a href="https://www.facebook.com" target="_blank">
@@ -37,7 +39,7 @@ const Footer = () => {
             <h3>Quick links</h3>
             <ul>
               <li>
-                <Link className="text_light" href={'/about'}>
+                <Link className="text_light" href={'/'}>
                   About us
                 </Link>
               </li>
