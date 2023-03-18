@@ -1,4 +1,3 @@
-import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
 import styles from '@/styles/Write.module.css';
