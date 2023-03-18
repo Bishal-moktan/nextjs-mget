@@ -3,7 +3,7 @@ import styles from '@/styles/Blog.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import DOMPurify from 'dompurify';
+import DOMPurify from 'isomorphic-dompurify';
 import { fetchAllPost } from '@/features/postSlice/postSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import Loading from '@/components/Loading';

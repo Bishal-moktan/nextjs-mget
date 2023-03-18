@@ -4,7 +4,7 @@ import styles from '@/styles/Write.module.css';
 
 import { BsUpload } from 'react-icons/bs';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import moment from 'moment';
 import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';

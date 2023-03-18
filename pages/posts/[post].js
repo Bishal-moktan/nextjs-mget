@@ -2,8 +2,8 @@ import Loading from '@/components/Loading';
 import Menu from '@/components/Menu';
 import { deletePost, fetchSinglePost } from '@/features/postSlice/postSlice';
 import styles from '@/styles/SinglePost.module.css';
-import DOMPurify from 'dompurify';
-import moment from 'moment/moment';
+import DOMPurify from 'isomorphic-dompurify';
+import moment from 'moment';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -25,7 +25,6 @@ const SinglePost = () => {
     fetchSinglePostLoading,
     deleteComplete,
   } = useSelector((store) => store.post);
-  console.log(post);
   const { user } = useSelector((store) => store.auth);
 
   const handleDelete = async () => {
