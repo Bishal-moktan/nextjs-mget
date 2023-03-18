@@ -3,6 +3,7 @@ import image from '@/public/svg/agriculture.svg';
 import Landing from '@/components/Landing';
 import Paragraph from '@/components/Paragraph';
 import useGlobalContext from '@/hooks/useGlobalContext';
+import Scroll from '@/components/ScrollToTop';
 
 const Agriculture = () => {
   const { metaContent } = useGlobalContext();
@@ -43,6 +44,7 @@ const Agriculture = () => {
           landingContent={landingContent}
         />
         <Paragraph para={para} />
+        <Scroll />
       </main>
     </>
   );

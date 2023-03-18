@@ -135,7 +135,7 @@ const Navbar = () => {
                 : styles.nav_links
             }
           >
-            <Link href="/" className={styles.links}>
+            <Link href="/about" className={styles.links}>
               ABOUT US
             </Link>
             <DropDown

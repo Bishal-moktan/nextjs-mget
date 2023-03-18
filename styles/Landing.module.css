@@ -1,11 +1,11 @@
 .landing__section {
-  width: 98vw;
+  width: var(--container-width-lg);
   height: 75vh;
   display: grid;
   grid-template-columns: 40% 60%;
   gap: 4rem;
-  padding: 2rem;
   place-items: center;
+  margin: 0 auto;
 }
 
 .landing_img {

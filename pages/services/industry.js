@@ -10,6 +10,7 @@ import monitoring from '@/public/svg/services/housing/monitoring.svg';
 import mounting from '@/public/svg/services/industry/mounting.svg';
 import wiring from '@/public/svg/services/industry/wiring.svg';
 import useGlobalContext from '@/hooks/useGlobalContext';
+import Scroll from '@/components/ScrollToTop';
 
 const Industry = () => {
   const { metaContent } = useGlobalContext();
@@ -71,6 +72,7 @@ const Industry = () => {
         />
         <CardList content={lists} title={listTitle} />
         <Paragraph para={para} />
+        <Scroll />
       </main>
     </>
   );

@@ -4,7 +4,6 @@ import HeroSection from '@/components/HeroSection';
 import Slider from '@/components/Slider';
 import Head from 'next/head';
 import useGlobalContext from '@/hooks/useGlobalContext';
-import About from './about';
 
 export default function Home() {
   const { metaContent } = useGlobalContext();
@@ -17,10 +16,9 @@ export default function Home() {
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        {/* <HeroSection />
+        <HeroSection />
         <Slider />
-        <ScrollToTop /> */}
-        <About />
+        <ScrollToTop />
       </main>
     </>
   );

@@ -9,6 +9,7 @@ import monitoring from '@/public/svg/services/housing/monitoring.svg';
 import CardList from '@/components/CardList';
 import Paragraph from '@/components/Paragraph';
 import useGlobalContext from '@/hooks/useGlobalContext';
+import Scroll from '@/components/ScrollToTop';
 
 const Housing = () => {
   const { metaContent } = useGlobalContext();
@@ -62,6 +63,7 @@ const Housing = () => {
         <Landing page={title} image={image} landingContent={landingContent} />
         <CardList content={lists} title={listTitle} />
         <Paragraph para={para} />
+        <Scroll />
       </main>
     </>
   );

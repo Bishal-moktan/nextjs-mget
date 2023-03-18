@@ -39,7 +39,7 @@ const Footer = () => {
             <h3>Quick links</h3>
             <ul>
               <li>
-                <Link className="text_light" href={'/'}>
+                <Link className="text_light" href={'/about'}>
                   About us
                 </Link>
               </li>
@@ -95,7 +95,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link className="text_light" href={'/services/company'}>
-                  Solar for IT Company
+                  Solar for IT industry
                 </Link>
               </li>
               <li>

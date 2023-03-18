@@ -10,6 +10,7 @@ import Paragraph from '@/components/Paragraph';
 import CardList from '@/components/CardList';
 import Lists from '@/components/Lists';
 import useGlobalContext from '@/hooks/useGlobalContext';
+import Scroll from '@/components/ScrollToTop';
 
 const Institute = () => {
   const { metaContent } = useGlobalContext();
@@ -98,6 +99,7 @@ const Institute = () => {
         <CardList content={cardList} title={CartListTitle} />
         <Paragraph para={para} />
         <Lists content={benefits} title={listTitle} />
+        <Scroll />
       </main>
     </>
   );
