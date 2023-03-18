@@ -1,10 +1,11 @@
 import Content from '@/components/Content';
 import Head from 'next/head';
 import ScrollToTop from '@/components/ScrollToTop';
-import useGlobalContext from '@/hooks/useGlobalContext';
+import { useSelector } from 'react-redux';
 
 const HybridSolarPump = () => {
-  const { metaContent } = useGlobalContext();
+  const { metaContent } = useSelector((store) => store.post);
+
   const solutions = [
     {
       title: 'On-grid Solar System',

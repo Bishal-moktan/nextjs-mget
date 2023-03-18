@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import image from '@/public/svg/company.svg';
 import Landing from '@/components/Landing';
-import useGlobalContext from '@/hooks/useGlobalContext';
 import Paragraph from '@/components/Paragraph';
 import Lists from '@/components/Lists';
 import CardList from '@/components/CardList';
@@ -12,9 +11,11 @@ import energy from '@/public/svg/services/company/energy.svg';
 import environment from '@/public/svg/services/company/environment.svg';
 import government from '@/public/svg/services/company/government.svg';
 import Scroll from '@/components/ScrollToTop';
+import { useSelector } from 'react-redux';
 
 const Company = () => {
-  const { metaContent } = useGlobalContext();
+  const { metaContent } = useSelector((store) => store.post);
+
   const landingContent =
     'In an IT industry, the use of computer equipment and other electronics can lead to a significant demand for electricity. By installing a solar power system, IT companies can reduce their dependence on traditional sources of energy, save money on electricity bills, and contribute to a cleaner and greener environment. The system can be designed to meet the specific energy needs of the industry, taking into account factors such as building size, energy usage patterns, and budget.';
   const para1 = [

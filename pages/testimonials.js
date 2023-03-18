@@ -5,10 +5,10 @@ import Scroll from '@/components/ScrollToTop';
 import { useEffect, useState } from 'react';
 import styles from '@/styles/Testimonials.module.css';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
-import useGlobalContext from '@/hooks/useGlobalContext';
+import { useSelector } from 'react-redux';
 
 const Testimonials = () => {
-  const { metaContent } = useGlobalContext();
+  const { metaContent } = useSelector((store) => store.post);
 
   const [content, setContent] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);

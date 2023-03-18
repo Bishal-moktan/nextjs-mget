@@ -9,11 +9,12 @@ import energy from '@/public/svg/services/institute/energy.svg';
 import Paragraph from '@/components/Paragraph';
 import CardList from '@/components/CardList';
 import Lists from '@/components/Lists';
-import useGlobalContext from '@/hooks/useGlobalContext';
 import Scroll from '@/components/ScrollToTop';
+import { useSelector } from 'react-redux';
 
 const Institute = () => {
-  const { metaContent } = useGlobalContext();
+  const { metaContent } = useSelector((store) => store.post);
+
   const landingContent =
     "Solar power systems for schools have become increasingly popular in recent years as a way to reduce energy costs and promote environmental sustainability. A solar power system for a school consists of solar panels that collect energy from the sun and convert it into electrical energy, which can then be used to power the school's lights, computers, and other equipment.A solar power system for a school can provide numerous benefits for both the school and the surrounding community. These systems can help to reduce the school's energy costs, promote environmental sustainability, and provide educational opportunities for students.";
 

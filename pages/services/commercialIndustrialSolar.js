@@ -1,11 +1,12 @@
 import Content from '@/components/Content';
 import Scroll from '@/components/ScrollToTop';
-import useGlobalContext from '@/hooks/useGlobalContext';
 import Head from 'next/head';
 import { FaCheckCircle } from 'react-icons/fa';
+import { useSelector } from 'react-redux';
 
 const commercialIndustrialSolar = () => {
-  const { metaContent } = useGlobalContext();
+  const { metaContent } = useSelector((store) => store.post);
+
   const services = [
     {
       title: 'Residential Solar',

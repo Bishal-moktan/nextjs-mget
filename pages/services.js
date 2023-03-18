@@ -12,10 +12,11 @@ import maintenance from '@/public/svg/services/maintenance.svg';
 import decommissioning from '@/public/svg/services/decommissioning.svg';
 import Image from 'next/image';
 import Link from 'next/link';
-import useGlobalContext from '@/hooks/useGlobalContext';
+import { useSelector } from 'react-redux';
 
 const Services = () => {
-  const { metaContent } = useGlobalContext();
+  const { metaContent } = useSelector((store) => store.post);
+
   const description = [
     {
       title: (

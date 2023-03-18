@@ -4,10 +4,11 @@ import Head from 'next/head';
 import img from '@/public/images/about/about12.webp';
 import AboutContent from '@/components/AboutContent';
 import Scroll from '@/components/ScrollToTop';
-import useGlobalContext from '@/hooks/useGlobalContext';
+import { useSelector } from 'react-redux';
 
 const About = () => {
-  const { metaContent } = useGlobalContext();
+  const { metaContent } = useSelector((store) => store.post);
+
   return (
     <>
       <Head>

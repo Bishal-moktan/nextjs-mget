@@ -1,12 +1,11 @@
-import AccordianSection from '@/components/AccordianSection';
 import ScrollToTop from '@/components/ScrollToTop';
 import HeroSection from '@/components/HeroSection';
 import Slider from '@/components/Slider';
 import Head from 'next/head';
-import useGlobalContext from '@/hooks/useGlobalContext';
+import { useSelector } from 'react-redux';
 
 export default function Home() {
-  const { metaContent } = useGlobalContext();
+  const { metaContent } = useSelector((store) => store.post);
   return (
     <>
       <Head>

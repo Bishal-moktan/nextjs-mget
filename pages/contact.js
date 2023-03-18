@@ -1,9 +1,10 @@
 import LandingForm from '@/components/LandingForm';
-import useGlobalContext from '@/hooks/useGlobalContext';
 import Head from 'next/head';
+import { useSelector } from 'react-redux';
 
 const Contact = () => {
-  const { metaContent } = useGlobalContext();
+  const { metaContent } = useSelector((store) => store.post);
+
   return (
     <>
       <Head>

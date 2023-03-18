@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import image from '@/public/svg/health.svg';
 import Landing from '@/components/Landing';
-import useGlobalContext from '@/hooks/useGlobalContext';
 import Scroll from '@/components/ScrollToTop';
 import Lists from '@/components/Lists';
 import CardList from '@/components/CardList';
@@ -13,9 +12,11 @@ import monitoring from '@/public/svg/services/housing/monitoring.svg';
 import energy from '@/public/svg/services/institute/energy.svg';
 import Accordian from '@/components/Accordian';
 import Paragraph from '@/components/Paragraph';
+import { useSelector } from 'react-redux';
 
 const Agriculture = () => {
-  const { metaContent } = useGlobalContext();
+  const { metaContent } = useSelector((store) => store.post);
+
   const landingContent =
     'A solar power system for commercial and industrial (C&I) applications is a renewable energy system that uses solar panels to generate electricity for commercial and industrial buildings.';
 

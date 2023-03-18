@@ -2,10 +2,11 @@ import Head from 'next/head';
 import { FaCheckCircle } from 'react-icons/fa';
 import styles from '@/styles/Services.module.css';
 import Link from 'next/link';
-import useGlobalContext from '@/hooks/useGlobalContext';
+import { useSelector } from 'react-redux';
 
 const solutions = () => {
-  const { metaContent } = useGlobalContext();
+  const { metaContent } = useSelector((store) => store.post);
+
   const solutions = [
     {
       title: 'On-grid Solar System',

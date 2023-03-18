@@ -2,11 +2,11 @@ import Content from '@/components/Content';
 import Lists from '@/components/Lists';
 import Paragraph from '@/components/Paragraph';
 import Scroll from '@/components/ScrollToTop';
-import useGlobalContext from '@/hooks/useGlobalContext';
 import Head from 'next/head';
 
 const SolarWaterPump = () => {
-  const { metaContent } = useGlobalContext();
+  const { metaContent } = useSelector((store) => store.post);
+
   const solutions = [
     {
       title: 'On-grid Solar System',

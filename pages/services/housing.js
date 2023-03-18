@@ -8,11 +8,12 @@ import controller from '@/public/svg/services/housing/controller.svg';
 import monitoring from '@/public/svg/services/housing/monitoring.svg';
 import CardList from '@/components/CardList';
 import Paragraph from '@/components/Paragraph';
-import useGlobalContext from '@/hooks/useGlobalContext';
 import Scroll from '@/components/ScrollToTop';
+import { useSelector } from 'react-redux';
 
 const Housing = () => {
-  const { metaContent } = useGlobalContext();
+  const { metaContent } = useSelector((store) => store.post);
+
   const title = 'Solar For Housing';
   const landingContent =
     'A solar power system for a housing unit is a renewable energy system that uses solar panels to generate electricity for residential homes. The system works by capturing the energy from the sun through solar panels and converting it into usable electricity that can power household appliances, lighting, and other electrical devices. There are different types of solar power systems available for housing units, including on-grid and off-grid systems. On-grid systems are connected to the main electrical grid, while off-grid systems operate independently, using batteries to store excess energy for use when there is no sunlight.';
