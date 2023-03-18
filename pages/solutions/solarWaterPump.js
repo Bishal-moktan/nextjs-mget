@@ -3,6 +3,7 @@ import Lists from '@/components/Lists';
 import Paragraph from '@/components/Paragraph';
 import Scroll from '@/components/ScrollToTop';
 import Head from 'next/head';
+import { useSelector } from 'react-redux';
 
 const SolarWaterPump = () => {
   const { metaContent } = useSelector((store) => store.post);
