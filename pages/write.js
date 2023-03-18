@@ -1,4 +1,3 @@
-import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
 import styles from '@/styles/Write.module.css';
@@ -13,7 +12,9 @@ import { toast } from 'react-toastify';
 import { postBlog } from '@/features/postSlice/postSlice';
 import Unauthorized from '@/components/Unauthorized';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 const Write = () => {
   const [title, setTitle] = useState('');
   const [value, setValue] = useState('');
@@ -108,7 +109,7 @@ const Write = () => {
           <div className={styles.menu}>
             <div className={styles.publish}>
               <h2>Publish</h2>
-          
+
               <div className={styles.file}>
                 <input
                   // style={{ display: 'none' }}

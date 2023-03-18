@@ -12,6 +12,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { fetchSinglePost, updateBlog } from '@/features/postSlice/postSlice';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
+
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
 const Update = () => {
   const [title, setTitle] = useState('');
