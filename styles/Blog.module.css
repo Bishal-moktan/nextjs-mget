@@ -75,3 +75,19 @@
 .link {
   margin: 0 1rem;
 }
+
+/* =========================== FOR SMALL DEVICES =======================  */
+
+@media (max-width: 700px) {
+  .post {
+    flex-direction: column;
+  }
+
+  .post:nth-child(2n + 1) {
+    flex-direction: column;
+  }
+
+  .blogNav h1 {
+    font-size: 1.9rem;
+  }
+}

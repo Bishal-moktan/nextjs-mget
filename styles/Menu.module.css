@@ -35,7 +35,4 @@
 /* =========================== FOR SMALL DEVICES =======================  */
 
 @media (max-width: 700px) {
-  .menu {
-    flex-direction: row;
-  }
 }

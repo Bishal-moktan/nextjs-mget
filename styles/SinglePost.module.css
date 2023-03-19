@@ -1,7 +1,7 @@
 .single__post {
   display: flex;
   gap: 2rem;
-  margin-bottom: 4rem;
+  margin: 4rem 0;
 }
 
 .content {
