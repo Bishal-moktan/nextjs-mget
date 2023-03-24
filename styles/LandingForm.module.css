@@ -72,9 +72,17 @@
 }
 
 .landingForm__container_form button {
+  font-size: 1.2rem;
   width: fit-content;
   padding: 1rem 2rem;
-  background: linear-gradient(250deg, #4e95ed 19%, #03228f 100%);
+  background-image: linear-gradient(
+    to right top,
+    #009300,
+    #017f02,
+    #026b03,
+    #035804,
+    #034503
+  );
   border-radius: 2rem;
   color: var(--color-white);
   transition: var(--transition);
@@ -82,7 +90,14 @@
 }
 
 .landingForm__container_form button:hover {
-  background: linear-gradient(180deg, #03228f 19%, #4e95ed 100%);
+  background-image: linear-gradient(
+    to right top,
+    #035804,
+    #034503,
+    #017f02,
+    #009300,
+    #026b03
+  );
 }
 
 /* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */

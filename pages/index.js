@@ -1,8 +1,12 @@
 import ScrollToTop from '@/components/ScrollToTop';
-import HeroSection from '@/components/HeroSection';
-import Slider from '@/components/Slider';
+import HeroSection from '@/components/home/HeroSection/HeroSection';
 import Head from 'next/head';
 import { useSelector } from 'react-redux';
+import Intro from '@/components/home/Intro/Intro';
+import WeOffer from '@/components/home/weOffer/WeOffer';
+import Partners from '@/components/Partners';
+import Blog from '@/components/home/Blog/Blog';
+import Testimonials from '@/components/home/testimonials/testimonials';
 
 export default function Home() {
   const { metaContent } = useSelector((store) => store.post);
@@ -16,7 +20,11 @@ export default function Home() {
       </Head>
       <main>
         <HeroSection />
-        <Slider />
+        <Intro />
+        <WeOffer />
+        <Partners />
+        <Blog />
+        <Testimonials />
         <ScrollToTop />
       </main>
     </>

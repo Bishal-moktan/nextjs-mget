@@ -1,0 +1,110 @@
+.heroSection {
+  background: url('../../../public/images/about/about12.webp');
+  background-color: rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position-y: 25%;
+  height: 90vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.content__container {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--color-white);
+  line-height: normal;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  width: 60%;
+}
+
+.header h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.header {
+  position: relative;
+}
+
+.underline {
+  background: var(--color-orangered);
+  width: 4rem;
+  height: 0.3rem;
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+}
+
+.content p {
+  text-align: justify;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin: 2rem 0;
+}
+
+.container__fluid {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+.btn__container {
+  display: flex;
+  gap: 2rem;
+}
+
+.btn {
+  padding: 0.9rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.btn:nth-child(1) {
+  background: var(--color-orangered);
+  color: var(--color-white);
+  transition: var(--transition);
+}
+
+.btn:nth-child(1):hover {
+  background: var(--color-white);
+  color: var(--color-orangered);
+}
+
+.btn:nth-child(2) {
+  border: 1px solid var(--color-white);
+  background: transparent;
+  color: var(--color-white);
+  transition: var(--transition);
+}
+
+.btn:nth-child(2):hover {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+/* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
+
+@media screen and (max-width: 990px) {
+  .content h1 {
+    font-size: 3rem;
+  }
+}
+
+/* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
+
+@media screen and (max-width: 600px) {
+  .content p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,28 @@
+.testimonials__container {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.testimonials__container h1 {
+  margin-bottom: 2rem;
+}
+
+/* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
+
+@media screen and (max-width: 990px) {
+  .testimonials__container h1 {
+    font-size: 1.9rem;
+  }
+
+  .testimonials__container p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 95vw;
+  }
+}

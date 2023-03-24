@@ -15,13 +15,18 @@ import image16 from '@/public/images/client/partner16.webp';
 import image17 from '@/public/images/client/partner17.webp';
 import image18 from '@/public/images/client/partner18.webp';
 import image13 from '@/public/images/client/efab.webp';
+import tecumseh from '@/public/images/client/tecumseh.webp';
+import k_raheja from '@/public/images/client/k_raheja.webp';
+import kissui from '@/public/images/client/kissui.webp';
+import lodha from '@/public/images/client/lodha.webp';
+
 import Image from 'next/image';
 
 const Partners = () => {
   return (
     <section className={styles.container__client}>
       <div className="container">
-        <h1>RECENT WORK</h1>
+        <h1>RECENT CLIENTS</h1>
 
         <div className={styles.container__client_images}>
           <div className={styles.image}>
@@ -71,6 +76,18 @@ const Partners = () => {
           </div>
           <div className={styles.image}>
             <Image src={image18} alt="client" />
+          </div>
+          <div className={styles.image}>
+            <Image src={tecumseh} alt="client" />
+          </div>
+          <div className={styles.image}>
+            <Image src={lodha} alt="client" />
+          </div>
+          <div className={styles.image}>
+            <Image src={k_raheja} alt="client" />
+          </div>
+          <div className={styles.image}>
+            <Image src={kissui} alt="client" />
           </div>
         </div>
       </div>
