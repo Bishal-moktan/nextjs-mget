@@ -6,7 +6,7 @@ import Intro from '@/components/home/Intro/Intro';
 import WeOffer from '@/components/home/weOffer/WeOffer';
 import Partners from '@/components/Partners';
 import Blog from '@/components/home/Blog/Blog';
-import Testimonials from '@/components/home/testimonials/testimonials';
+import Testimonials from '@/components/home/testimonials/Testimonials';
 
 export default function Home() {
   const { metaContent } = useSelector((store) => store.post);
