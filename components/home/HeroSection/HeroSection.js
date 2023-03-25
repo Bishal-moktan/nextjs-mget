@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './HeroSection.module.css';
 
 export default function App() {
@@ -14,7 +15,9 @@ export default function App() {
               <p>The Sustainable Energy Solution for your Home or Business</p>
               <div className={styles.btn__container}>
                 <button className={styles.btn}>Our Portfolio</button>
-                <button className={styles.btn}>Contact Us</button>
+                <Link href={'/contact'} className={styles.btn}>
+                  Contact Us
+                </Link>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import { FaCheckCircle } from 'react-icons/fa';
 import { Link } from 'next/link';
-import styles from '@/styles/AboutContent.module.css';
+import styles from './AboutContent.module.css';
 import Image from 'next/image';
 import experienceImg from '@/public/svg/intro/experience.svg';
 import speedImg from '@/public/svg/intro/speed.svg';

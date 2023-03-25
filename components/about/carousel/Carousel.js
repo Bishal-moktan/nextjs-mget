@@ -15,7 +15,7 @@ import image6 from '@/public/images/about/about9.webp';
 import image7 from '@/public/images/about/about11.webp';
 import image8 from '@/public/images/about/about10.webp';
 
-import styles from '@/styles/Carousel.module.css';
+import styles from './Carousel.module.css';
 import Image from 'next/image';
 
 const Carousel = () => {
