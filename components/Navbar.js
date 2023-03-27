@@ -5,14 +5,13 @@ import EmailIcon from '@/public/icons/EmailIcon';
 import TrustIcon from '@/public/icons/TrustIcon';
 import { FaFacebook, FaYoutube } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
-import { MdKeyboardArrowDown } from 'react-icons/md';
 
 import { FaBars } from 'react-icons/fa';
 import { GrLinkedin } from 'react-icons/gr';
 import styles from '@/styles/Navbar.module.css';
 import logo from '@/public/images/logo-dark.png';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import DropDown from './DropDown';
 
 const Navbar = () => {
@@ -135,6 +134,9 @@ const Navbar = () => {
                 : styles.nav_links
             }
           >
+            <Link href="/" className={styles.links}>
+              HOME
+            </Link>
             <Link href="/about" className={styles.links}>
               ABOUT US
             </Link>

@@ -1,11 +1,39 @@
-.carousel__container {
-  width: 100vw;
-  height: 75vh;
-  overflow: hidden;
+.slide {
+  height: 25rem;
+  width: 40rem;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  padding: 2rem;
 }
 
-.carousel__container > img {
-  width: 100%;
-  height: inherit;
-  object-fit: contain;
+.header {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.underline {
+  background: var(--color-orange);
+  width: 4rem;
+  height: 0.3rem;
+  position: absolute;
+  bottom: 0rem;
+  left: 0;
+}
+
+/* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
+
+@media screen and (max-width: 990px) {
+  .slide {
+    width: 28rem;
+    height: 33rem;
+  }
+}
+
+/* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
+
+@media screen and (max-width: 700px) {
+  .slide {
+    width: 20rem;
+    height: 40rem;
+  }
 }

@@ -6,7 +6,7 @@
 }
 
 .left span {
-  color: var(--color-orangered);
+  color: var(--color-orange);
   font-size: 2rem;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .underline {
-  background: var(--color-orangered);
+  background: var(--color-orange);
   width: 4rem;
   height: 0.3rem;
   position: absolute;

@@ -7,7 +7,7 @@ const Intro = () => {
         <div className={styles.left}>
           <div className={styles.header}>
             <span>Welcome to</span>
-            <h1>MAXOPTIMUS GREEN ENERGY TECHNOLOGY PVT LTD- MGETENERGY</h1>
+            <h1>Maxoptimus Green Energy Technology Pvt Ltd- MGETENERGY</h1>
             <div className={styles.underline}></div>
           </div>
           <p>

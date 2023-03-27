@@ -43,7 +43,7 @@
 }
 
 .underline {
-  background: var(--color-orangered);
+  background: var(--color-orange);
   width: 4rem;
   height: 0.3rem;
   position: absolute;

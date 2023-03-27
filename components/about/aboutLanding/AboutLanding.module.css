@@ -1,0 +1,97 @@
+.landing__container {
+  height: 95vh;
+  width: 100%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.backImg {
+  position: absolute;
+  top: 0rem;
+  right: 2rem;
+  z-index: -2;
+  height: 30rem;
+  width: 40rem;
+}
+
+.backImg > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.middleImg {
+  position: absolute;
+  height: 28rem;
+  width: 30rem;
+  bottom: 0rem;
+  left: 2rem;
+  z-index: -1;
+}
+
+.middleImg > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  top: 5rem;
+  right: 15rem;
+  background-color: transparent;
+  color: var(--color-black);
+  z-index: 2;
+  text-align: justify;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../../../public/images/about/about3.webp');
+  background-color: rgba(0, 0, 0, 0.1);
+  background-position: 25%;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  z-index: -3;
+  overflow: hidden;
+}
+
+/* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
+
+@media screen and (max-width: 990px) {
+  .content {
+    top: 4rem;
+    right: 9rem;
+  }
+
+  .backImg {
+    width: 30rem;
+  }
+}
+
+/* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
+
+@media screen and (max-width: 700px) {
+  .landing__container {
+    height: 98vh;
+  }
+  .content {
+    right: 0rem;
+    top: 1rem;
+  }
+
+  .backImg {
+    display: none;
+  }
+
+  .middleImg {
+    display: none;
+  }
+}

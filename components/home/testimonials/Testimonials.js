@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 // import required modules
-import { Navigation } from 'swiper';
+import { Autoplay, Navigation } from 'swiper';
 
 import { testimonials } from '@/components/data/testimonials';
 import Card from '../Card/Card';
@@ -16,8 +16,7 @@ const Testimonials = () => {
   return (
     <article className={`container`}>
       <div className={styles.testimonials__container}>
-        <p>TESTIMONIALS</p>
-        <h1>WHAT THEY SAY ABOUT US</h1>
+        <h1>What Clients say about us?</h1>
         <Swiper
           spaceBetween={10}
           navigation={true}
@@ -35,7 +34,11 @@ const Testimonials = () => {
               spaceBetween: 50,
             },
           }}
-          modules={[Navigation]}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          modules={[Navigation, Autoplay]}
         >
           {testimonials.map((item, index) => {
             return (

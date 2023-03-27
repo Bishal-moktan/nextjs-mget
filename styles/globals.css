@@ -16,7 +16,7 @@
   --color-white: #fff;
   --color-black: #101010;
   --color-light: #444;
-  --color-orange: orange;
+  --color-orange: #f18f1d;
   --color-green: #009300;
   --color-dark-green: #034503;
   --color-light-green: #03c988;
@@ -153,13 +153,6 @@ strong {
 }
 
 /* ========================== FOR SWIPER JS ===========================  */
-
-@media screen and (max-width: 768px) {
-  .swiper-button-prev,
-  .swiper-button-next {
-    margin: 0rem;
-  }
-}
 
 /* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
 

@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 27rem;
   gap: 1rem;
-  border: 1px solid var(--color-orangered);
+  border: 1px solid var(--color-orange);
   box-shadow: var(--dark-shadow);
-  padding: 1rem;
+  padding: 0 1rem;
   text-align: center;
 }
 
@@ -31,7 +32,7 @@
 }
 
 .desc p {
-  color: var(--color-orangered);
+  color: var(--color-orange);
 }
 
 .desc span {

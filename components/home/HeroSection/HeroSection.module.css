@@ -1,6 +1,5 @@
 .heroSection {
   background: url('../../../public/images/about/about12.webp');
-  background-color: rgba(0, 0, 0, 0.1);
   background-size: cover;
   background-position-y: 25%;
   height: 90vh;
@@ -32,7 +31,7 @@
 }
 
 .underline {
-  background: var(--color-orangered);
+  background: var(--color-orange);
   width: 4rem;
   height: 0.3rem;
   position: absolute;
@@ -67,14 +66,14 @@
 }
 
 .btn:nth-child(1) {
-  background: var(--color-orangered);
+  background: var(--color-orange);
   color: var(--color-white);
   transition: var(--transition);
 }
 
 .btn:nth-child(1):hover {
   background: var(--color-white);
-  color: var(--color-orangered);
+  color: var(--color-orange);
 }
 
 button ~ .btn {
