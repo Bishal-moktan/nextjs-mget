@@ -29,8 +29,8 @@ const Carousel = ({ content }) => {
         }}
         keyboard={true}
         autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
+          delay: 4000,
+          disableOnInteraction: true,
         }}
       >
         {content.map((desc, index) => {

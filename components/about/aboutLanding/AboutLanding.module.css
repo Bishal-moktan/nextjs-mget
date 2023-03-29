@@ -66,6 +66,9 @@
 /* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
 
 @media screen and (max-width: 990px) {
+  .landing__container {
+    height: 65vh;
+  }
   .content {
     top: 4rem;
     right: 9rem;
@@ -80,7 +83,7 @@
 
 @media screen and (max-width: 700px) {
   .landing__container {
-    height: 98vh;
+    height: 95vh;
   }
   .content {
     right: 0rem;

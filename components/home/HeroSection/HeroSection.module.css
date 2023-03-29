@@ -92,19 +92,25 @@ button ~ .btn:hover {
 /* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
 
 @media screen and (max-width: 990px) {
+  .content {
+    width: 90%;
+  }
   .content h1 {
     font-size: 3rem;
   }
 }
 
-/* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
+/* ========================== MEDIA QUERIES FOR small DEVICES =====================  */
 
 @media screen and (max-width: 600px) {
+  .content h1 {
+    font-size: 2rem;
+  }
   .content p {
     font-size: 1rem;
   }
 
   .btn {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }

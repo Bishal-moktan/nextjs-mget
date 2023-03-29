@@ -35,8 +35,8 @@ const Testimonials = () => {
             },
           }}
           autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
+            delay: 4000,
+            disableOnInteraction: true,
           }}
           modules={[Navigation, Autoplay]}
         >

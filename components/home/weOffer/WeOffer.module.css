@@ -40,6 +40,7 @@
 .header {
   position: relative;
   margin-bottom: 1rem;
+  width: fit-content;
 }
 
 .underline {
@@ -49,6 +50,11 @@
   position: absolute;
   bottom: -0.3rem;
   left: 0;
+  transition: var(--transition);
+}
+
+.common__container:hover .underline {
+  width: 100%;
 }
 
 /* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
