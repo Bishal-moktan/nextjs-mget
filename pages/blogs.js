@@ -11,7 +11,7 @@ import { logoutUser } from '@/features/authSlice/authSlice';
 import { useRouter } from 'next/router';
 
 export default function Home() {
-  const { metaContent } = useSelector((store) => store.post);
+  const { metaContent, title } = useSelector((store) => store.content);
   const [mounted, setMounted] = useState(false);
   const disptach = useDispatch();
   useEffect(() => {
@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>BEST SOLAR POWER SYSTEM INSTALLATION COMPANY - BLOG</title>
+        <title>{title} - BLOG</title>
         <meta name="description" content={metaContent} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />

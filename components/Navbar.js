@@ -13,38 +13,12 @@ import logo from '@/public/images/logo-dark.png';
 import Link from 'next/link';
 import { useState } from 'react';
 import DropDown from './DropDown';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
-  const solutions = [
-    {
-      title: 'On-grid Solar System',
-      path: 'solutions/onGridSolarSystem',
-    },
-    {
-      title: 'Off-grid Solar System',
-      path: 'solutions/offGridSolarSystem',
-    },
-    {
-      title: 'Hybrid Solar System',
-      path: 'solutions/hybridSolarPump',
-    },
-    {
-      title: 'Solar Water Pump',
-      path: 'solutions/solarWaterPump',
-    },
-  ];
 
-  const services = [
-    {
-      title: 'Residential Solar',
-      path: 'services/residentialSolar',
-    },
-    {
-      title: 'Commercial & Industrial Solar',
-      path: 'services/commercialIndustrialSolar',
-    },
-  ];
+  const { solutions, services } = useSelector((store) => store.content);
   return (
     <nav className={styles.navbar} id="nav">
       {/* navbar top  */}

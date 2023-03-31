@@ -15,7 +15,7 @@ import Paragraph from '@/components/Paragraph';
 import { useSelector } from 'react-redux';
 
 const Agriculture = () => {
-  const { metaContent } = useSelector((store) => store.post);
+  const { metaContent } = useSelector((store) => store.content);
 
   const landingContent =
     'A solar power system for commercial and industrial (C&I) applications is a renewable energy system that uses solar panels to generate electricity for commercial and industrial buildings.';
@@ -81,8 +81,6 @@ const Agriculture = () => {
     },
   ];
 
-  const secondListTitle =
-    'Types of solar power system available for healthcare & hospital  There are several types of solar power systems available for healthcare and hospitals, including:';
   const secondList = [
     {
       title: 'Grid-Tied Solar Power System',
@@ -154,7 +152,7 @@ const Agriculture = () => {
   return (
     <>
       <Head>
-        <title>BEST SOLAR FOR HEALTHCARE</title>
+        <title>SOLAR FOR HEALTHCARE</title>
         <meta name="description" content={metaContent} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />

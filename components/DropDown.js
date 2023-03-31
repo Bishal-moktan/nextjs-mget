@@ -2,9 +2,15 @@ import Link from 'next/link';
 import styles from '@/styles/DropDown.module.css';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { useState } from 'react';
+import { changeActive } from '@/features/contentSlice/contentSlice';
+import { useDispatch } from 'react-redux';
 
 const DropDown = ({ name, options, path }) => {
   const [show, setShow] = useState(false);
+  const dispatch = useDispatch();
+  const handleClick = (index) => {
+    dispatch(changeActive(index));
+  };
   return (
     <div
       onClick={() => setShow(!show)}
@@ -25,7 +31,11 @@ const DropDown = ({ name, options, path }) => {
           const { title, path } = option;
           return (
             <li key={index} className={styles.dropDown__item}>
-              <Link href={`/${path}`} className={styles.links}>
+              <Link
+                href={`${path}`}
+                className={styles.links}
+                onClick={() => handleClick(index)}
+              >
                 {title}
               </Link>
             </li>

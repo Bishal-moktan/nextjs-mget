@@ -8,7 +8,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { AiOutlineEdit, AiOutlineDelete } from 'react-icons/ai';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -26,6 +26,7 @@ const SinglePost = () => {
     deleteComplete,
   } = useSelector((store) => store.post);
   const { user } = useSelector((store) => store.auth);
+  const { metaContent, title } = useSelector((store) => store.content);
 
   const handleDelete = async () => {
     dispatch(deletePost(postId));
@@ -38,9 +39,11 @@ const SinglePost = () => {
   return (
     <>
       <Head>
-        <title>BEST SOLAR POWER SYSTEM INSTALLATION COMPANY - Write</title>
+        <title>{title} - Write</title>
         <meta name="description" content={post.title} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={metaContent} />
+
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main className="container">

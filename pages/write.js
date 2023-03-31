@@ -16,7 +16,7 @@ import dynamic from 'next/dynamic';
 
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 const Write = () => {
-  const [title, setTitle] = useState('');
+  const [inputTitle, setInputTitle] = useState('');
   const [value, setValue] = useState('');
   const [file, setFile] = useState(null);
   const handleFileOnChange = (e) => {
@@ -41,9 +41,10 @@ const Write = () => {
 
   const { user } = useSelector((store) => store.auth);
   const { loading, postComplete } = useSelector((store) => store.post);
+  const { metaContent, title } = useSelector((store) => store.content);
   const dispatch = useDispatch();
   const handlePost = (e) => {
-    if (title === '') {
+    if (inputTitle === '') {
       toast.warning('Title cannot be empty', {
         position: 'bottom-left',
       });
@@ -64,7 +65,7 @@ const Write = () => {
 
     dispatch(
       postBlog({
-        title,
+        inputTitle,
         desc: value,
         img: file,
         date: moment(Date.now()).format('YYYY-MM-DD HH:mm:ss'),
@@ -84,8 +85,9 @@ const Write = () => {
   return (
     <>
       <Head>
-        <title>BEST SOLAR POWER SYSTEM INSTALLATION COMPANY - Write</title>
+        <title>{title} - Write</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={metaContent} />
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main className="container">
@@ -94,8 +96,8 @@ const Write = () => {
             <input
               type="text"
               placeholder="Title..."
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
+              value={inputTitle}
+              onChange={(e) => setInputTitle(e.target.value)}
             />
             <div className={styles.editorContainer}>
               <ReactQuill

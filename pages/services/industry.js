@@ -13,7 +13,7 @@ import Scroll from '@/components/ScrollToTop';
 import { useSelector } from 'react-redux';
 
 const Industry = () => {
-  const { metaContent } = useSelector((store) => store.post);
+  const { metaContent } = useSelector((store) => store.content);
 
   const landingContent =
     'A solar power system for commercial and industrial (C&I) applications is a renewable energy system that uses solar panels to generate electricity for commercial and industrial buildings. The system works by capturing the energy from the sun through solar panels and converting it into usable electricity that can power commercial and industrial appliances, lighting, and other electrical devices.There are different types of solar power systems available for commercial and industrial applications, including rooftop systems, ground-mounted systems, and carport systems. Rooftop systems are mounted on the roof of a building, ground-mounted systems are installed on the ground near the building, and carport systems are installed in parking lots to provide shade for cars while generating electricity.';
@@ -60,7 +60,7 @@ const Industry = () => {
   return (
     <>
       <Head>
-        <title>BEST SOLAR FOR INDUSTRY</title>
+        <title>SOLAR FOR INDUSTRY</title>
         <meta name="description" content={metaContent} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />

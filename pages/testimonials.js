@@ -8,7 +8,7 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import { useSelector } from 'react-redux';
 
 const Testimonials = () => {
-  const { metaContent } = useSelector((store) => store.post);
+  const { metaContent, title } = useSelector((store) => store.content);
 
   const [content, setContent] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -48,7 +48,7 @@ const Testimonials = () => {
   return (
     <>
       <Head>
-        <title>BEST SOLAR POWER SYSTEM INSTALLATION COMPANY</title>
+        <title>{title} - Testimonials</title>
         <meta name="description" content={metaContent} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />

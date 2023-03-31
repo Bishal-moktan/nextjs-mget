@@ -5,18 +5,8 @@ import { FaCheckCircle } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 
 const ResidentialSolar = () => {
-  const { metaContent } = useSelector((store) => store.post);
+  const { metaContent, services } = useSelector((store) => store.content);
 
-  const services = [
-    {
-      title: 'Residential Solar',
-      path: '/services/residentialSolar',
-    },
-    {
-      title: 'Commercial & Industrial Solar',
-      path: '/services/commercialIndustrialSolar',
-    },
-  ];
   const content = (
     <div>
       <p>
@@ -98,7 +88,7 @@ const ResidentialSolar = () => {
   return (
     <>
       <Head>
-        <title>BEST RESIDENTIAL SOLAR SYSTEM INSTALLATION</title>
+        <title>RESIDENTIAL SOLAR SYSTEM INSTALLATION</title>
         <meta name="description" content={metaContent} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />

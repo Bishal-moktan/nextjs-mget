@@ -14,7 +14,7 @@ import Scroll from '@/components/ScrollToTop';
 import { useSelector } from 'react-redux';
 
 const Company = () => {
-  const { metaContent } = useSelector((store) => store.post);
+  const { metaContent } = useSelector((store) => store.content);
 
   const landingContent =
     'In an IT industry, the use of computer equipment and other electronics can lead to a significant demand for electricity. By installing a solar power system, IT companies can reduce their dependence on traditional sources of energy, save money on electricity bills, and contribute to a cleaner and greener environment. The system can be designed to meet the specific energy needs of the industry, taking into account factors such as building size, energy usage patterns, and budget.';
@@ -104,7 +104,7 @@ const Company = () => {
   return (
     <>
       <Head>
-        <title>BEST SOLAR FOR COMPANY</title>
+        <title>SOLAR FOR COMPANY</title>
         <meta name="description" content={metaContent} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />

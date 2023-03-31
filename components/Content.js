@@ -1,9 +1,14 @@
+import { changeActive } from '@/features/contentSlice/contentSlice';
 import styles from '@/styles/Content.module.css';
 import Link from 'next/link';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { useState } from 'react';
 const Content = ({ title, description, items }) => {
-  const [value, setValue] = useState(null);
+  const dispatch = useDispatch();
+  const handleClick = (index) => {
+    dispatch(changeActive(index));
+  };
+  const { activeContent } = useSelector((store) => store.content);
   return (
     <div className="container">
       <div className={styles.title}>
@@ -16,9 +21,9 @@ const Content = ({ title, description, items }) => {
               <Link
                 href={item.path}
                 key={index}
-                onClick={() => setValue(index)}
+                onClick={() => handleClick(index)}
                 className={`${styles.btn} ${
-                  index === value && `${styles.active_btn}`
+                  index === activeContent && `${styles.active_btn}`
                 }`}
               >
                 {item.title}

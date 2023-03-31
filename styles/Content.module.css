@@ -12,7 +12,7 @@
   display: block;
   width: 100%;
   height: 0.25rem;
-  background: var(--color-green);
+  background: var(--color-orange);
 }
 
 .content__title {
@@ -28,21 +28,25 @@
   border-color: transparent;
   text-transform: capitalize;
   font-size: 1.25rem;
-  margin: 0 0.5rem;
+  margin: 1rem 0.5rem;
   transition: var(--transition);
   cursor: pointer;
   padding: 0.25rem 0;
   line-height: 1;
   color: var(--color-black);
   outline-color: var(--color-light-green);
+  padding: 1rem;
+  border-radius: var(--radius);
 }
-.btn:hover {
-  color: var(--color-orange);
-  box-shadow: 0 2px var(--color-orange);
-}
+.btn:hover,
 .active_btn {
-  color: var(--color-orange);
+  color: var(--color-white);
+  background-color: var(--color-orange);
   box-shadow: 0 2px var(--color-orange);
+}
+
+.content__description {
+  text-align: justify;
 }
 
 /* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
@@ -51,7 +55,7 @@
   .content__container {
     width: 90vw;
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 260px 1fr;
     column-gap: 4rem;
   }
   .content__title {

@@ -5,26 +5,9 @@ import ScrollToTop from '@/components/ScrollToTop';
 import { useSelector } from 'react-redux';
 
 const OffGridSolarSystem = () => {
-  const { metaContent } = useSelector((store) => store.post);
+  const { metaContent, solutions } = useSelector((store) => store.content);
 
-  const solutions = [
-    {
-      title: 'On-grid Solar System',
-      path: '/solutions/onGridSolarSystem',
-    },
-    {
-      title: 'Off-grid Solar System',
-      path: '/solutions/offGridSolarSystem',
-    },
-    {
-      title: 'Hybrid Solar System',
-      path: '/solutions/hybridSolarPump',
-    },
-    {
-      title: 'Solar Water Pump',
-      path: '/solutions/solarWaterPump',
-    },
-  ];
+
 
   const content = (
     <div>
@@ -178,7 +161,7 @@ const OffGridSolarSystem = () => {
   return (
     <>
       <Head>
-        <title>BEST OFF GRID SOLAR POWER SYSTEM INSTALLATION</title>
+        <title>OFF GRID SOLAR POWER SYSTEM INSTALLATION</title>
         <meta name="description" content={metaContent} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />

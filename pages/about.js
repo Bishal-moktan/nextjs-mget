@@ -8,12 +8,12 @@ import { useSelector } from 'react-redux';
 import AboutLanding from '@/components/about/aboutLanding/AboutLanding';
 
 const About = () => {
-  const { metaContent } = useSelector((store) => store.post);
+  const { metaContent, title } = useSelector((store) => store.content);
 
   return (
     <>
       <Head>
-        <title>BEST SOLAR POWER SYSTEM INSTALLATION COMPANY</title>
+        <title>{title} - About</title>
         <meta name="description" content={metaContent} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />

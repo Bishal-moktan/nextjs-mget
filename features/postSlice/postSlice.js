@@ -1,7 +1,5 @@
-import metaContent from '@/data/metaContent';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { useRouter } from 'next/router';
 import { toast } from 'react-toastify';
 
 const initialState = {
@@ -13,7 +11,6 @@ const initialState = {
   deleteComplete: false,
   fetchSinglePostError: null,
   singlePost: {},
-  metaContent: metaContent,
 };
 
 const url = 'https://mgetenegy-blog.onrender.com/api/';

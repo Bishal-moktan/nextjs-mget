@@ -17,7 +17,7 @@ import Unauthorized from '@/components/Unauthorized';
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
 const Update = () => {
-  const [title, setTitle] = useState('');
+  const [inputTitle, setInputTitle] = useState('');
   const [value, setValue] = useState('');
   const [file, setFile] = useState(null);
   const handleFileOnChange = (e) => {
@@ -42,12 +42,13 @@ const Update = () => {
   };
 
   const { user } = useSelector((store) => store.auth);
+  const { title, metaContent } = useSelector((store) => store.content);
   const { loading, singlePost, postComplete } = useSelector(
     (store) => store.post
   );
   const dispatch = useDispatch();
   const updatePost = () => {
-    if (title === '') {
+    if (inputTitle === '') {
       toast.warning('Title cannot be empty', {
         position: 'bottom-left',
       });
@@ -62,7 +63,7 @@ const Update = () => {
 
     dispatch(
       updateBlog({
-        title: title,
+        inputTitle: inputTitle,
         desc: value,
         date: moment(Date.now()).format('YYYY-MM-DD HH:mm:ss'),
         uid: user.id,
@@ -73,7 +74,7 @@ const Update = () => {
 
   useEffect(() => {
     dispatch(fetchSinglePost(postId));
-    setTitle(singlePost.title);
+    setInputTitle(singlePost.inputTitle);
     setValue(singlePost.desc);
   }, []);
 
@@ -88,8 +89,9 @@ const Update = () => {
   return (
     <>
       <Head>
-        <title>BEST SOLAR POWER SYSTEM INSTALLATION COMPANY - Write</title>
+        <inputTitle>{title} - Write</inputTitle>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={metaContent} />
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main className="container">
@@ -98,8 +100,8 @@ const Update = () => {
             <input
               type="text"
               placeholder="Title..."
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
+              value={inputTitle}
+              onChange={(e) => setInputTitle(e.target.value)}
             />
             <div className={styles.editorContainer}>
               <ReactQuill

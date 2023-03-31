@@ -12,7 +12,7 @@ import Scroll from '@/components/ScrollToTop';
 import { useSelector } from 'react-redux';
 
 const Housing = () => {
-  const { metaContent } = useSelector((store) => store.post);
+  const { metaContent } = useSelector((store) => store.content);
 
   const title = 'Solar For Housing';
   const landingContent =
@@ -55,7 +55,7 @@ const Housing = () => {
   return (
     <>
       <Head>
-        <title>BEST SOLAR FOR HOUSING</title>
+        <title>SOLAR FOR HOUSING</title>
         <meta name="description" content={metaContent} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />

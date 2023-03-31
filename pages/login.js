@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import styles from '../styles/Login.module.css';
 
 const Login = () => {
-  const { metaContent } = useSelector((store) => store.post);
+  const { metaContent, title } = useSelector((store) => store.content);
 
   const [inputs, setInputs] = useState({
     username: '',
@@ -35,7 +35,7 @@ const Login = () => {
   return (
     <>
       <Head>
-        <title>BEST SOLAR POWER SYSTEM INSTALLATION COMPANY - BLOG</title>
+        <title>{title}</title>
         <meta name="description" content={metaContent} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
