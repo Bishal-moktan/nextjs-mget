@@ -1,5 +1,6 @@
 import Content from '@/components/Content';
 import Scroll from '@/components/ScrollToTop';
+import SideBar from '@/components/sidebar/sidebar';
 import Head from 'next/head';
 import { FaCheckCircle } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
@@ -94,11 +95,9 @@ const ResidentialSolar = () => {
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        <Content
-          title={'Residential Solar System'}
-          description={content}
-          items={services}
-        />
+        <Content title={'Residential Solar System'} description={content} />
+        <SideBar items={services} name="Services" />
+
         <Scroll />
       </main>
     </>

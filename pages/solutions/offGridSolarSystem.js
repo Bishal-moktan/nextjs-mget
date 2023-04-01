@@ -3,11 +3,10 @@ import Head from 'next/head';
 import { FaCheckCircle } from 'react-icons/fa';
 import ScrollToTop from '@/components/ScrollToTop';
 import { useSelector } from 'react-redux';
+import SideBar from '@/components/sidebar/sidebar';
 
 const OffGridSolarSystem = () => {
   const { metaContent, solutions } = useSelector((store) => store.content);
-
-
 
   const content = (
     <div>
@@ -167,11 +166,9 @@ const OffGridSolarSystem = () => {
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        <Content
-          title="Off Grid Solar System"
-          description={content}
-          items={solutions}
-        />
+        <Content title="Off Grid Solar System" description={content} />
+        <SideBar items={solutions} name="Solutions" />
+
         <ScrollToTop />
       </main>
     </>

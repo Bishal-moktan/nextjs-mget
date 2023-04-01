@@ -2,6 +2,7 @@ import Content from '@/components/Content';
 import Head from 'next/head';
 import ScrollToTop from '@/components/ScrollToTop';
 import { useSelector } from 'react-redux';
+import SideBar from '@/components/sidebar/sidebar';
 
 const HybridSolarPump = () => {
   const { metaContent, solutions } = useSelector((store) => store.content);
@@ -85,11 +86,9 @@ const HybridSolarPump = () => {
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        <Content
-          title={'Hybrid Solar Pump'}
-          description={content}
-          items={solutions}
-        />
+        <Content title={'Hybrid Solar Pump'} description={content} />
+        <SideBar items={solutions} name="Solutions" />
+
         <ScrollToTop />
       </main>
     </>

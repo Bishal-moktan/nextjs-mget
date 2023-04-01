@@ -1,5 +1,6 @@
 import Content from '@/components/Content';
 import Scroll from '@/components/ScrollToTop';
+import SideBar from '@/components/sidebar/sidebar';
 import Head from 'next/head';
 import { FaCheckCircle } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
@@ -134,8 +135,9 @@ const commercialIndustrialSolar = () => {
         <Content
           title={'Commercial & Industrial Solar'}
           description={content}
-          items={services}
         />
+        <SideBar items={services} name="Services" />
+
         <Scroll />
       </main>
     </>
