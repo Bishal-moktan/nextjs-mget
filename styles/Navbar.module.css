@@ -76,7 +76,7 @@
   transition: var(--transition);
 }
 
-.barsIcon:hover {
+.rotate {
   transform: rotate(90deg);
 }
 

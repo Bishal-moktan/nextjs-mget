@@ -17,6 +17,7 @@ import { useSelector } from 'react-redux';
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
+  const [rotate, setRotate] = useState(false);
 
   const { solutions, services } = useSelector((store) => store.content);
   return (
@@ -86,9 +87,14 @@ const Navbar = () => {
         <div className={styles.navbar_bottom}>
           <div
             className={styles.toggle_btn}
-            onClick={() => setShowLinks(!showLinks)}
+            onClick={() => {
+              setShowLinks((prev) => !prev);
+              setRotate((prev) => !prev);
+            }}
           >
-            <FaBars className={styles.barsIcon} />
+            <FaBars
+              className={`${styles.barsIcon} ${rotate && styles.rotate}`}
+            />
           </div>
 
           <div className={styles.logo}>

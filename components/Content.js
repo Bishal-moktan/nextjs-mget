@@ -18,7 +18,7 @@ const Content = ({ title, description }) => {
         <h2>{title}</h2>
       </div>
       <div className={styles.icon}>
-        <MdKeyboardArrowRight onClick={handleOpen} />J
+        <MdKeyboardArrowRight onClick={handleOpen} />
       </div>
       <div className={styles.content__container}>
         <div className={styles.content__description}>{description}</div>

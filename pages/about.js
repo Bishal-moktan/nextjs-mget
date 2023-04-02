@@ -6,6 +6,8 @@ import AboutContent from '@/components/about/aboutContent/AboutContent';
 import Scroll from '@/components/ScrollToTop';
 import { useSelector } from 'react-redux';
 import AboutLanding from '@/components/about/aboutLanding/AboutLanding';
+import ImageSection from '@/components/about/ImageSection/ImageSection';
+import Description from '@/components/about/Description/Description';
 
 const About = () => {
   const { metaContent, title } = useSelector((store) => store.content);
@@ -20,6 +22,8 @@ const About = () => {
       </Head>
       <main>
         <AboutLanding />
+        <ImageSection />
+        <Description />
         <AboutContent title="ABOUT US" img={img} />
         <Scroll />
       </main>

@@ -1,0 +1,86 @@
+.images {
+  display: flex;
+  height: 80vh;
+  gap: 10px;
+  background-color: var(--color-light-blue);
+  padding: 1rem;
+}
+/* fed13e */
+/* a3b3cb */
+
+.col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+}
+
+.row > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: max-content;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--color-white);
+  padding: 1rem 0;
+  transform: translateY(100%);
+  transition: var(--transition);
+}
+
+.row:hover .content {
+  transform: translateY(0%);
+}
+
+.specialRow:hover .content {
+  transform: translateY(100%);
+}
+
+.sub__row:hover .content {
+  transform: translateY(0%);
+}
+
+/* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
+
+@media screen and (max-width: 990px) {
+  .content > h4 {
+    font-size: 0.8rem;
+  }
+}
+
+/* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
+
+@media screen and (max-width: 700px) {
+  .images {
+    flex-direction: column;
+    height: max-content;
+  }
+
+  .content > h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .specialRow {
+    flex-direction: column;
+  }
+}
