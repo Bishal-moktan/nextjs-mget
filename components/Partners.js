@@ -24,9 +24,12 @@ import Image from 'next/image';
 
 const Partners = () => {
   return (
-    <section className={styles.container__client}>
+    <section className={styles.container__client} id="clients">
       <div className="container">
-        <h1>Work Done</h1>
+        <div className={styles.header}>
+          <h2>Work Done</h2>
+          <div className={styles.underline}></div>
+        </div>
 
         <div className={styles.container__client_images}>
           <div className={styles.image}>

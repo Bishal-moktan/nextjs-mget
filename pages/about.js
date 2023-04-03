@@ -1,7 +1,6 @@
 import Carousel from '@/components/about/carousel/Carousel';
 import Partners from '@/components/Partners';
 import Head from 'next/head';
-import img from '@/public/images/about/about12.webp';
 import AboutContent from '@/components/about/aboutContent/AboutContent';
 import Scroll from '@/components/ScrollToTop';
 import { useSelector } from 'react-redux';
@@ -24,7 +23,7 @@ const About = () => {
         <AboutLanding />
         <ImageSection />
         <Description />
-        <AboutContent title="ABOUT US" img={img} />
+        <AboutContent />
         <Scroll />
       </main>
     </>

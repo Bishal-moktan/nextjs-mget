@@ -46,10 +46,11 @@ const Navbar = () => {
           <div className={styles.navbar_top_content}>
             <h4>Client Services</h4>
             <a href="tel:+919821876325" className={styles.navbar_top_contact}>
-              +91 98218 76325 ,
+              +91 98218 76325,
             </a>
             <a href="tel:+919818666325" className={styles.navbar_top_contact}>
-              +91 98186 66325
+              {' '}
+              98186 66325
             </a>
           </div>
         </div>

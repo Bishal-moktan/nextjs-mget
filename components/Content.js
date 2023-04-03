@@ -1,7 +1,4 @@
-import {
-  closeSidebar,
-  openSidebar,
-} from '@/features/contentSlice/contentSlice';
+import { openSidebar } from '@/features/contentSlice/contentSlice';
 import styles from '@/styles/Content.module.css';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 import { useDispatch, useSelector } from 'react-redux';

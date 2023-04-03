@@ -3,8 +3,21 @@
   text-align: center;
 }
 
-.testimonials__container h1 {
-  margin-bottom: 2rem;
+.header {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+.header h2 {
+  width: fit-content;
+}
+
+.header h2::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 0.25rem;
+  background: var(--color-orange);
 }
 
 /* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */

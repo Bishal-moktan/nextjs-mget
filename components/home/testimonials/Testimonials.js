@@ -16,7 +16,9 @@ const Testimonials = () => {
   return (
     <article className={`container`}>
       <div className={styles.testimonials__container}>
-        <h1>What Clients say about us?</h1>
+        <div className={styles.header}>
+          <h2>What Clients say about us?</h2>
+        </div>
         <Swiper
           spaceBetween={10}
           navigation={true}

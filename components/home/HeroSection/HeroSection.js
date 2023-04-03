@@ -14,7 +14,9 @@ export default function App() {
               </div>
               <p>The Sustainable Energy Solution for your Home or Business</p>
               <div className={styles.btn__container}>
-                <button className={styles.btn}>Our Portfolio</button>
+                <a href={'#clients'} className={styles.btn}>
+                  Our Portfolio
+                </a>
                 <Link href={'/contact'} className={styles.btn}>
                   Contact Us
                 </Link>
