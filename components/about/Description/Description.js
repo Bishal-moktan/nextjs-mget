@@ -10,10 +10,10 @@ import Image from 'next/image';
 
 const Description = () => {
   const content = [
-    {
-      desc: 'Despite the growing demand for clean and renewable energy, many individuals and businesses face barriers in adopting solar power systems, including lack of access to financing, lack of understanding of the technology and benefits, and difficulty in navigating the complex process of design, installation, and maintenance. As a solar power company, Mgetenergy aim to address these challenges and make it easy for our customers to access and utilize solar power, in order to promote a sustainable future and reduce dependence on fossil fuels.',
-      img: firstImage,
-    },
+    // {
+    //   desc: 'Despite the growing demand for clean and renewable energy, many individuals and businesses face barriers in adopting solar power systems, including lack of access to financing, lack of understanding of the technology and benefits, and difficulty in navigating the complex process of design, installation, and maintenance. As a solar power company, Mgetenergy aim to address these challenges and make it easy for our customers to access and utilize solar power, in order to promote a sustainable future and reduce dependence on fossil fuels.',
+    //   img: firstImage,
+    // },
     {
       desc: 'Mgetenergy designs, installs, and maintains systems that convert sunlight into electricity. These systems are made up of solar panels, an inverter, and other electrical components. The solar panels are typically installed on rooftops or in open areas and convert sunlight into direct current (DC) electricity. The inverter then converts the DC electricity into alternating current (AC) electricity, which is the type of electricity that is used in homes and businesses.',
       img: secondImage,

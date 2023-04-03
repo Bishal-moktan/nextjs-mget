@@ -7,6 +7,9 @@ import { useSelector } from 'react-redux';
 import AboutLanding from '@/components/about/aboutLanding/AboutLanding';
 import ImageSection from '@/components/about/ImageSection/ImageSection';
 import Description from '@/components/about/Description/Description';
+import Landing from '@/components/about/landing/Landing';
+import AboutSection from '@/components/about/aboutSection/AboutSection';
+import CTA from '@/components/about/cta/CTA';
 
 const About = () => {
   const { metaContent, title } = useSelector((store) => store.content);
@@ -20,10 +23,12 @@ const About = () => {
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        <AboutLanding />
+        <Landing />
+        <AboutSection />
         <ImageSection />
         <Description />
         <AboutContent />
+        <CTA />
         <Scroll />
       </main>
     </>

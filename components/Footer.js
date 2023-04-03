@@ -59,9 +59,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link className="text_light" href={'/blogs'}>
+                {/* <Link className="text_light" href={'/blogs'}>
                   Blog
-                </Link>
+                </Link> */}
               </li>
               <li>
                 <Link className="text_light" href={'/contact'}>

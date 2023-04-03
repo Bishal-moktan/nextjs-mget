@@ -130,9 +130,9 @@ const Navbar = () => {
             <Link href="/testimonials" className={styles.links}>
               TESTIMONIALS
             </Link>
-            <Link href="/blogs" className={styles.links}>
+            {/* <Link href="/blogs" className={styles.links}>
               BLOGS
-            </Link>
+            </Link> */}
             <Link href="/contact" className={styles.links}>
               CONTACT US
             </Link>
