@@ -14,6 +14,7 @@ import speedImg from '@/public/svg/intro/speed.svg';
 import workmanshipImg from '@/public/svg/intro/workmanship.svg';
 import customizableImg from '@/public/svg/intro/customizable.svg';
 import managementImg from '@/public/svg/intro/management.svg';
+import Feature from '@/components/home/Feature/Feature';
 
 export default function Home() {
   const cardTitle =
@@ -57,7 +58,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <Intro />
-        <CardList content={item} title={cardTitle} />
+        <Feature content={item} title={cardTitle} />
 
         <WeOffer />
         <Partners />

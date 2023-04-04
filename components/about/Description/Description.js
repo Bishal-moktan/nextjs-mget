@@ -10,19 +10,46 @@ import Image from 'next/image';
 
 const Description = () => {
   const content = [
-    // {
-    //   desc: 'Despite the growing demand for clean and renewable energy, many individuals and businesses face barriers in adopting solar power systems, including lack of access to financing, lack of understanding of the technology and benefits, and difficulty in navigating the complex process of design, installation, and maintenance. As a solar power company, Mgetenergy aim to address these challenges and make it easy for our customers to access and utilize solar power, in order to promote a sustainable future and reduce dependence on fossil fuels.',
-    //   img: firstImage,
-    // },
     {
+      title: (
+        <h2 className={styles.title}>
+          {' '}
+          <span>The Future is Bright with Solar Power: </span> Unlock the
+          Potential of Renewable Energy
+        </h2>
+      ),
+      desc: 'Despite the growing demand for clean and renewable energy, many individuals and businesses face barriers in adopting solar power systems, including lack of access to financing, lack of understanding of the technology and benefits, and difficulty in navigating the complex process of design, installation, and maintenance. As a solar power company, Mgetenergy aim to address these challenges and make it easy for our customers to access and utilize solar power, in order to promote a sustainable future and reduce dependence on fossil fuels.',
+      img: firstImage,
+    },
+    {
+      title: (
+        <h2 className={styles.title}>
+          {' '}
+          <span>Powering Your Life with Solar Energy: </span> Unlock the Harness
+          the Sun's Energy for a Brighter Future
+        </h2>
+      ),
       desc: 'Mgetenergy designs, installs, and maintains systems that convert sunlight into electricity. These systems are made up of solar panels, an inverter, and other electrical components. The solar panels are typically installed on rooftops or in open areas and convert sunlight into direct current (DC) electricity. The inverter then converts the DC electricity into alternating current (AC) electricity, which is the type of electricity that is used in homes and businesses.',
       img: secondImage,
     },
     {
+      title: (
+        <h2 className={styles.title}>
+          {' '}
+          <span>Solar Energy: </span> A Sustainable Solution for a Greener
+          Tomorrow
+        </h2>
+      ),
       desc: 'Mgetenergy will typically conduct a site assessment to determine the best location and orientation for the solar panels to optimize energy production. Then design the system and install the panels, wiring, and other electrical components. After installation, the Mgetenergy will typically provide ongoing maintenance and monitoring to ensure the system is operating at optimal efficiency.',
       img: thirdImage,
     },
     {
+      title: (
+        <h2 className={styles.title}>
+          {' '}
+          Save Money and Save the Planet with Solar Energy
+        </h2>
+      ),
       desc: 'In addition to designing and installing solar power systems, Mgetenergy also provide services such as energy storage solutions, energy management systems and consulting on energy efficiency. We also offer financing options - power purchase agreements (PPAs) to help customers afford the initial cost of the system.Mgetenergy help’s to promote a greener future and empower communities to produce their own electricity, improving energy independence and reducing environmental impact. ',
       img: fourthImage,
     },
@@ -46,9 +73,8 @@ const Description = () => {
               </div>
             )}
             <div className={styles.content}>
+              {item.title}
               <p>{item.desc}</p>
-              {/* 
-              <button className={styles.btn}>Read more</button> */}
             </div>
           </div>
         );

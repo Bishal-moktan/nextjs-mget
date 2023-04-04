@@ -1,0 +1,34 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--color-orange);
+  box-shadow: var(--light-shadow);
+  padding: 2rem;
+  border-radius: var(--radius);
+}
+
+.icon {
+  width: 4rem;
+  height: fit-content;
+}
+
+.icon > img {
+  width: 100%;
+  height: inherit;
+}
+
+/* ========================== MEDIA QUERIES FOR SMALL DEVICES =====================  */
+
+@media screen and (max-width: 700px) {
+  .card {
+    flex-direction: column;
+  }
+}

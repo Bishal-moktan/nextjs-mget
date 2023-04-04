@@ -17,7 +17,7 @@
 .img__container {
   flex: 2;
   width: 30rem;
-  height: 30rem;
+  height: 25rem;
   position: relative;
 }
 
@@ -43,8 +43,14 @@
 .content {
   flex: 3;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-align: justify;
+}
+
+.title span {
+  color: var(--color-orange);
+  font-weight: bold;
 }
 
 /* =========================== FOR SMALL DEVICES =======================  */

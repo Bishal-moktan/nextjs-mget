@@ -28,7 +28,6 @@ const Partners = () => {
       <div className="container">
         <div className={styles.header}>
           <h2>Work Done</h2>
-          <div className={styles.underline}></div>
         </div>
 
         <div className={styles.container__client_images}>

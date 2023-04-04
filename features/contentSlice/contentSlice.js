@@ -9,8 +9,7 @@ const initialState = {
   solutions,
   services,
   isSidebarOpen: false,
-  title:
-    'Empowering the World with Solar Energy: Maxoptimus Green Energy Tech Pvt Ltd',
+  title: 'Empowering the World with Solar Energy',
   activeContent: 0,
 };
 

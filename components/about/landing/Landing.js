@@ -4,7 +4,7 @@ const Landing = () => {
   return (
     <div className={styles.landing__section}>
       <div className={styles.landing__section__info}>
-        <h1>Who are we?</h1>
+        <h1>About Us</h1>
       </div>
     </div>
   );
