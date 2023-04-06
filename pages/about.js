@@ -25,7 +25,7 @@ const About = () => {
       <main>
         <Landing />
         <AboutSection />
-        <ImageSection />
+        {/* <ImageSection /> */}
         <Description />
         <AboutContent />
         <CTA />
