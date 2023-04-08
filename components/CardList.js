@@ -8,13 +8,15 @@ const CardList = ({ content, title }) => {
         {content.map((item, index) => {
           return (
             <div className={styles.card} key={index}>
-              <header>
-                <h2>{item.title}</h2>
-              </header>
-              <div className={styles.icon}>
-                <Image src={item.icon} height={'auto'} width={'auto'} />
+              <div className={styles.left}>
+                <div className={styles.icon}>
+                  <Image src={item.icon} height={'auto'} width={'auto'} />
+                </div>
+                <header>
+                  <h3>{item.title}</h3>
+                </header>
               </div>
-              <div className="content">{item.info}</div>
+              <div className={styles.content}>{item.info}</div>
             </div>
           );
         })}
