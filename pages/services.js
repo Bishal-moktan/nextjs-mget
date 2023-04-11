@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import { FaCheckCircle } from 'react-icons/fa';
 import styles from '@/styles/Services.module.css';
-import ScrollToTop from '@/components/ScrollToTop';
-import Accordian from '@/components/Accordian';
+import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
+import Accordian from '@/components/Accordian/Accordian';
 import phases from '@/public/svg/services/phases.svg';
 import feasibility from '@/public/svg/services/feasibility.svg';
 import construction from '@/public/svg/services/construction.svg';
@@ -13,9 +13,13 @@ import decommissioning from '@/public/svg/services/decommissioning.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
+import CollapseSideBar from '@/components/CollapseSideBar/CollapseSideBar';
+import SideBar from '@/components/sidebar/sidebar';
 
 const Services = () => {
-  const { metaContent, title } = useSelector((store) => store.content);
+  const { metaContent, title, services } = useSelector(
+    (store) => store.content
+  );
 
   const description = [
     {
@@ -479,17 +483,6 @@ const Services = () => {
     },
   ];
 
-  const services = [
-    {
-      title: 'Residential Solar',
-      path: 'services/residentialSolar',
-    },
-    {
-      title: 'Commercial & Industrial Solar',
-      path: 'services/commercialIndustrialSolar',
-    },
-  ];
-
   return (
     <>
       <Head>
@@ -498,22 +491,15 @@ const Services = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>
-      <main className="container">
+      <main className={`${styles.services}`}>
         <div className={styles.title}>
           <h2>Services Offerred</h2>
         </div>
         {description.map((content, index) => {
           return <Accordian key={index} {...content} />;
         })}
-        <ul>
-          {services.map((item, index) => {
-            return (
-              <Link href={item.path} key={index}>
-                <li className={styles.customLink}>{item.title}</li>
-              </Link>
-            );
-          })}
-        </ul>
+        <CollapseSideBar name="Services" />
+        <SideBar items={services} name="Services" />
         <ScrollToTop />
       </main>
     </>

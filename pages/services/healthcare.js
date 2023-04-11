@@ -1,17 +1,17 @@
 import Head from 'next/head';
 import image from '@/public/svg/health.svg';
-import Landing from '@/components/Landing';
-import Scroll from '@/components/ScrollToTop';
-import Lists from '@/components/Lists';
-import CardList from '@/components/CardList';
+import Landing from '@/components/Landing/Landing';
+import Scroll from '@/components/ScrollToTop/ScrollToTop';
+import Lists from '@/components/Lists/Lists';
+import CardList from '@/components/CardList/CardList';
 
 import solarpanel from '@/public/svg/services/housing/solarpanel.svg';
 import inverter from '@/public/svg/services/housing/inverter.svg';
 import battery from '@/public/svg/services/housing/battery.svg';
 import monitoring from '@/public/svg/services/housing/monitoring.svg';
 import energy from '@/public/svg/services/institute/energy.svg';
-import Accordian from '@/components/Accordian';
-import Paragraph from '@/components/Paragraph';
+import Accordian from '@/components/Accordian/Accordian';
+import Paragraph from '@/components/Paragraph/Paragraph';
 import { useSelector } from 'react-redux';
 
 const Agriculture = () => {

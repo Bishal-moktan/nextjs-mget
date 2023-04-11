@@ -1,4 +1,4 @@
-import styles from '@/styles/Partners.module.css';
+import styles from './Partners.module.css';
 import image1 from '@/public/images/client/partner1.webp';
 import image2 from '@/public/images/client/partner2.webp';
 import image3 from '@/public/images/client/partner3.webp';

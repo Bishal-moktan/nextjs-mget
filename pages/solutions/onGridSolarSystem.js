@@ -1,5 +1,5 @@
-import Content from '@/components/Content';
-import Scroll from '@/components/ScrollToTop';
+import Content from '@/components/Content/Content';
+import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import SideBar from '@/components/sidebar/sidebar';
 import Head from 'next/head';
 import { useSelector } from 'react-redux';
@@ -73,7 +73,12 @@ const OnGridSolarSystem = () => {
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        <Content title="On Grid Solar System" description={content} />
+        <Content
+          title="On Grid Solar System"
+          description={content}
+          items={solutions}
+          name="Solutions"
+        />
         <SideBar items={solutions} name="Solutions" />
 
         <Scroll />

@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import DOMPurify from 'isomorphic-dompurify';
 import { fetchAllPost } from '@/features/postSlice/postSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import Loading from '@/components/Loading';
+import Loading from '@/components/Loading/Loading';
 import { logoutUser } from '@/features/authSlice/authSlice';
 import { useRouter } from 'next/router';
 

@@ -1,4 +1,4 @@
-import styles from '@/styles/LandingForm.module.css';
+import styles from './LandingForm.module.css';
 import image from '@/public/images/about/about1.webp';
 import Image from 'next/image';
 

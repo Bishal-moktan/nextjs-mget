@@ -1,15 +1,15 @@
 import Head from 'next/head';
 import image from '@/public/svg/industry.svg';
-import Landing from '@/components/Landing';
-import CardList from '@/components/CardList';
-import Paragraph from '@/components/Paragraph';
+import Landing from '@/components/Landing/Landing';
+import CardList from '@/components/CardList/CardList';
+import Paragraph from '@/components/Paragraph/Paragraph';
 
 import solarpanel from '@/public/svg/services/housing/solarpanel.svg';
 import inverter from '@/public/svg/services/housing/inverter.svg';
 import monitoring from '@/public/svg/services/housing/monitoring.svg';
 import mounting from '@/public/svg/services/industry/mounting.svg';
 import wiring from '@/public/svg/services/industry/wiring.svg';
-import Scroll from '@/components/ScrollToTop';
+import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import { useSelector } from 'react-redux';
 
 const Industry = () => {

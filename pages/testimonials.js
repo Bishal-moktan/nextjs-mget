@@ -1,7 +1,7 @@
-import Testinomials from '@/components/Testimonials';
+import Testinomials from '@/components/Testimonials/Testimonials';
 import Head from 'next/head';
 import { testimonials } from '@/components/data/testimonials';
-import Scroll from '@/components/ScrollToTop';
+import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import { useEffect, useState } from 'react';
 import styles from '@/styles/Testimonials.module.css';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';

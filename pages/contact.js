@@ -1,4 +1,4 @@
-import LandingForm from '@/components/LandingForm';
+import LandingForm from '@/components/LandingForm/LandingForm';
 import Head from 'next/head';
 import { useSelector } from 'react-redux';
 

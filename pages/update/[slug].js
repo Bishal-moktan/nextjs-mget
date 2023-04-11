@@ -12,7 +12,7 @@ import { toast } from 'react-toastify';
 import { fetchSinglePost, updateBlog } from '@/features/postSlice/postSlice';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import Unauthorized from '@/components/Unauthorized';
+import Unauthorized from '@/components/Unauthorized/Unauthorized';
 
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 

@@ -1,6 +1,6 @@
-import Content from '@/components/Content';
+import Content from '@/components/Content/Content';
 import Head from 'next/head';
-import ScrollToTop from '@/components/ScrollToTop';
+import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
 import { useSelector } from 'react-redux';
 import SideBar from '@/components/sidebar/sidebar';
 
@@ -86,7 +86,12 @@ const HybridSolarPump = () => {
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        <Content title={'Hybrid Solar Pump'} description={content} />
+        <Content
+          title={'Hybrid Solar Pump'}
+          description={content}
+          items={solutions}
+          name="Solutions"
+        />
         <SideBar items={solutions} name="Solutions" />
 
         <ScrollToTop />

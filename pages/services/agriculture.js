@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import image from '@/public/svg/agriculture.svg';
-import Landing from '@/components/Landing';
-import Paragraph from '@/components/Paragraph';
-import Scroll from '@/components/ScrollToTop';
+import Landing from '@/components/Landing/Landing';
+import Paragraph from '@/components/Paragraph/Paragraph';
+import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import { useSelector } from 'react-redux';
 
 const Agriculture = () => {

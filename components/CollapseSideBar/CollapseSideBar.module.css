@@ -1,0 +1,16 @@
+.sidebar {
+  font-size: 2rem;
+  cursor: pointer;
+  position: fixed;
+  top: 12rem;
+  background-color: var(--color-orange);
+  left: 0;
+  padding: 1rem;
+  border-radius: var(--radius);
+}
+
+.icons_lists {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}

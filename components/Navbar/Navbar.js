@@ -8,11 +8,11 @@ import { FaTwitter } from 'react-icons/fa';
 
 import { FaBars } from 'react-icons/fa';
 import { GrLinkedin } from 'react-icons/gr';
-import styles from '@/styles/Navbar.module.css';
+import styles from './Navbar.module.css';
 import logo from '@/public/images/logo-dark.png';
 import Link from 'next/link';
 import { useState } from 'react';
-import DropDown from './DropDown';
+import DropDown from '../DropDown/DropDown';
 import { useSelector } from 'react-redux';
 
 const Navbar = () => {

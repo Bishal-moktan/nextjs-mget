@@ -1,7 +1,7 @@
-import Content from '@/components/Content';
-import Lists from '@/components/Lists';
-import Paragraph from '@/components/Paragraph';
-import Scroll from '@/components/ScrollToTop';
+import Content from '@/components/Content/Content';
+import Lists from '@/components/Lists/Lists';
+import Paragraph from '@/components/Paragraph/Paragraph';
+import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import SideBar from '@/components/sidebar/sidebar';
 import Head from 'next/head';
 import { useSelector } from 'react-redux';
@@ -94,7 +94,12 @@ const SolarWaterPump = () => {
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        <Content title={'Solar Water Pump'} description={content} />
+        <Content
+          title={'Solar Water Pump'}
+          description={content}
+          items={solutions}
+          name="Solutions"
+        />
         <SideBar items={solutions} name="Solutions" />
 
         <Scroll />

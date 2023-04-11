@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from '@/styles/DropDown.module.css';
+import styles from './DropDown.module.css';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { useState } from 'react';
 import { changeActive } from '@/features/contentSlice/contentSlice';

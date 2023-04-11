@@ -1,5 +1,5 @@
 import { MdKeyboardArrowUp } from 'react-icons/md';
-import styles from '@/styles/ScrollToTop.module.css';
+import styles from './ScrollToTop.module.css';
 
 const Scroll = () => {
   return (

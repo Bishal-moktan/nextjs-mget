@@ -1,8 +1,8 @@
 import Carousel from '@/components/about/carousel/Carousel';
-import Partners from '@/components/Partners';
+import Partners from '@/components/Partners/Partners';
 import Head from 'next/head';
 import AboutContent from '@/components/about/aboutContent/AboutContent';
-import Scroll from '@/components/ScrollToTop';
+import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import { useSelector } from 'react-redux';
 import AboutLanding from '@/components/about/aboutLanding/AboutLanding';
 import ImageSection from '@/components/about/ImageSection/ImageSection';

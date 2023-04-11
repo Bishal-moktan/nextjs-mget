@@ -1,7 +1,7 @@
-import Content from '@/components/Content';
+import Content from '@/components/Content/Content';
 import Head from 'next/head';
 import { FaCheckCircle } from 'react-icons/fa';
-import ScrollToTop from '@/components/ScrollToTop';
+import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
 import { useSelector } from 'react-redux';
 import SideBar from '@/components/sidebar/sidebar';
 
@@ -166,9 +166,13 @@ const OffGridSolarSystem = () => {
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        <Content title="Off Grid Solar System" description={content} />
+        <Content
+          title="Off Grid Solar System"
+          description={content}
+          items={solutions}
+          name="Solutions"
+        />
         <SideBar items={solutions} name="Solutions" />
-
         <ScrollToTop />
       </main>
     </>

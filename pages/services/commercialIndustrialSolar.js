@@ -1,5 +1,5 @@
-import Content from '@/components/Content';
-import Scroll from '@/components/ScrollToTop';
+import Content from '@/components/Content/Content';
+import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import SideBar from '@/components/sidebar/sidebar';
 import Head from 'next/head';
 import { FaCheckCircle } from 'react-icons/fa';

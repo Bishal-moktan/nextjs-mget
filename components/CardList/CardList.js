@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from '@/styles/List.module.css';
+import styles from './List.module.css';
 const CardList = ({ content, title }) => {
   return (
     <article className="container">

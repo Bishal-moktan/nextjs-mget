@@ -11,28 +11,6 @@
   margin-left: 3rem;
 }
 
-.icon {
-  font-size: 2rem;
-  cursor: pointer;
-  position: fixed;
-  top: 10rem;
-  animation: beat 1s infinite;
-}
-
-@keyframes beat {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.2);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
 .btn {
   margin-bottom: 1rem;
 }

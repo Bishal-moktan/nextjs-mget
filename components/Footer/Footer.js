@@ -8,7 +8,7 @@ import { SlLocationPin } from 'react-icons/sl';
 import { AiOutlineClockCircle } from 'react-icons/ai';
 import Link from 'next/link';
 import logo from '@/public/images/logo-dark.png';
-import styles from '@/styles/Footer.module.css';
+import styles from './Footer.module.css';
 
 const Footer = () => {
   return (

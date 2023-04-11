@@ -1,15 +1,15 @@
 import Head from 'next/head';
 import image from '@/public/svg/institute.svg';
-import Landing from '@/components/Landing';
+import Landing from '@/components/Landing/Landing';
 
 import inverter from '@/public/svg/services/housing/inverter.svg';
 import battery from '@/public/svg/services/housing/battery.svg';
 import solarpanel from '@/public/svg/services/housing/solarpanel.svg';
 import energy from '@/public/svg/services/institute/energy.svg';
-import Paragraph from '@/components/Paragraph';
-import CardList from '@/components/CardList';
-import Lists from '@/components/Lists';
-import Scroll from '@/components/ScrollToTop';
+import Paragraph from '@/components/Paragraph/Paragraph';
+import CardList from '@/components/CardList/CardList';
+import Lists from '@/components/Lists/Lists';
+import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import { useSelector } from 'react-redux';
 
 const Institute = () => {

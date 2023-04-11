@@ -1,5 +1,5 @@
-import styles from '@/styles/AccordianSection.module.css';
-import Accordian from './Accordian';
+import Accordian from '../Accordian/Accordian';
+import styles from './AccordianSection.module.css';
 
 const AccordianSection = () => {
   const accordianContent = [

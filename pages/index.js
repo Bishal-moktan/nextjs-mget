@@ -1,14 +1,14 @@
-import ScrollToTop from '@/components/ScrollToTop';
+import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
 import HeroSection from '@/components/home/HeroSection/HeroSection';
 import Head from 'next/head';
 import { useSelector } from 'react-redux';
 import Intro from '@/components/home/Intro/Intro';
 import WeOffer from '@/components/home/weOffer/WeOffer';
-import Partners from '@/components/Partners';
+import Partners from '@/components/Partners/Partners';
 import Blog from '@/components/home/Blog/Blog';
 import Testimonials from '@/components/home/testimonials/Testimonials';
 import AboutContent from '@/components/about/aboutContent/AboutContent';
-import CardList from '@/components/CardList';
+import CardList from '@/components/CardList/CardList';
 import experienceImg from '@/public/svg/intro/experience.svg';
 import speedImg from '@/public/svg/intro/speed.svg';
 import workmanshipImg from '@/public/svg/intro/workmanship.svg';

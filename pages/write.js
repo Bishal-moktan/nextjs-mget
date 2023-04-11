@@ -10,7 +10,7 @@ import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { postBlog } from '@/features/postSlice/postSlice';
-import Unauthorized from '@/components/Unauthorized';
+import Unauthorized from '@/components/Unauthorized/Unauthorized';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 

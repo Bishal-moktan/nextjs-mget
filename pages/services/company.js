@@ -1,16 +1,16 @@
 import Head from 'next/head';
 import image from '@/public/svg/company.svg';
-import Landing from '@/components/Landing';
-import Paragraph from '@/components/Paragraph';
-import Lists from '@/components/Lists';
-import CardList from '@/components/CardList';
+import Landing from '@/components/Landing/Landing';
+import Paragraph from '@/components/Paragraph/Paragraph';
+import Lists from '@/components/Lists/Lists';
+import CardList from '@/components/CardList/CardList';
 
 import costSaving from '@/public/svg/services/company/costSaving.svg';
 import brand from '@/public/svg/services/company/brand.svg';
 import energy from '@/public/svg/services/company/energy.svg';
 import environment from '@/public/svg/services/company/environment.svg';
 import government from '@/public/svg/services/company/government.svg';
-import Scroll from '@/components/ScrollToTop';
+import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import { useSelector } from 'react-redux';
 
 const Company = () => {

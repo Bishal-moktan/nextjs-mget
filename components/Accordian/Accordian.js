@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
-import styles from '@/styles/Accordian.module.css';
+import styles from './Accordian.module.css';
 
 const Accordian = ({ title, info }) => {
   const [showInfo, setShowInfo] = useState(false);

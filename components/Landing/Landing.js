@@ -1,4 +1,4 @@
-import styles from '@/styles/Landing.module.css';
+import styles from './Landing.module.css';
 import Image from 'next/image';
 
 const Landing = ({ page, image, landingContent }) => {

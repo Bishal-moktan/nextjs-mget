@@ -1,30 +1,16 @@
 import Head from 'next/head';
 import { FaCheckCircle } from 'react-icons/fa';
-import styles from '@/styles/Services.module.css';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
+import CollapseSideBar from '@/components/CollapseSideBar/CollapseSideBar';
+import SideBar from '@/components/sidebar/sidebar';
+import styles from '@/styles/Solutions.module.css';
 
 const solutions = () => {
-  const { metaContent, title } = useSelector((store) => store.content);
+  const { metaContent, title, solutions } = useSelector(
+    (store) => store.content
+  );
 
-  const solutions = [
-    {
-      title: 'On-grid Solar System',
-      path: 'solutions/onGridSolarSystem',
-    },
-    {
-      title: 'Off-grid Solar System',
-      path: 'solutions/offGridSolarSystem',
-    },
-    {
-      title: 'Hybrid Solar System',
-      path: 'solutions/hybridSolarPump',
-    },
-    {
-      title: 'Solar Water Pump',
-      path: 'solutions/solarWaterPump',
-    },
-  ];
   return (
     <>
       <Head>
@@ -33,7 +19,7 @@ const solutions = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>
-      <main className="container">
+      <main className={styles.container}>
         <div className={styles.title}>
           <h2>Solutions Offerred</h2>
         </div>
@@ -98,15 +84,8 @@ const solutions = () => {
           disadvantages, and the most suitable type depends on the energy needs,
           location, and budget of the user.
         </p>
-        <ul>
-          {solutions.map((item, index) => {
-            return (
-              <Link href={item.path} key={index}>
-                <li className={styles.customLink}>{item.title}</li>
-              </Link>
-            );
-          })}
-        </ul>
+        <CollapseSideBar name="Solutions" />
+        <SideBar items={solutions} name="Solutions" />
       </main>
     </>
   );

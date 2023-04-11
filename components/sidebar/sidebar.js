@@ -42,7 +42,7 @@ const SideBar = ({ items, name }) => {
                 index === activeContent && `${styles.active_btn}`
               }`}
             >
-              {item.title}
+              {item.icon} {item.title}
             </Link>
           );
         })}
