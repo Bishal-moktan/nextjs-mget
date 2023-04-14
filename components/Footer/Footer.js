@@ -161,6 +161,12 @@ const Footer = () => {
             Copyright &copy; {new Date().getFullYear()} Maxoptimus Green Energy
             Technology Pvt Ltd . All rights reserved
           </p>
+          <p>
+            {' '}
+            <Link className="text_light" href={'/privacy-policy'}>
+              Privacy Policy
+            </Link>
+          </p>
         </div>
       </div>
     </footer>

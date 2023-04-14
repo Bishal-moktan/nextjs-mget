@@ -8,7 +8,7 @@ const initialState = {
   metaContent,
   solutions,
   services,
-  mainUrl: 'https://nextjs-mget.vercel.app/',
+  mainUrl: 'https://nextjs-mget.vercel.app',
   isSidebarOpen: false,
   title: 'Empowering the World with Solar Energy',
   activeContent: 0,

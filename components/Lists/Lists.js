@@ -1,10 +1,11 @@
 import { FaCheckCircle } from 'react-icons/fa';
 
-const Lists = ({ content, title }) => {
+const Lists = ({ content, title, subtitle }) => {
   return (
     <article className="container">
-      <p>{title}</p>
-      <ul className="lists">
+      <h2>{title}</h2>
+      <p>{subtitle ? subtitle : ''}</p>
+      <ul className="">
         {content.map((item, index) => {
           return (
             <li className="list" key={index}>

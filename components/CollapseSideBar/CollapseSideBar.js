@@ -1,17 +1,17 @@
 import styles from './CollapseSideBar.module.css';
+import { MdKeyboardArrowRight } from 'react-icons/md';
+import { useDispatch, useSelector } from 'react-redux';
 import {
-  MdKeyboardArrowRight,
-  MdOutlineFactory,
-  MdOutlineSolarPower,
-} from 'react-icons/md';
-import { GiSolarPower } from 'react-icons/gi';
-import { useDispatch } from 'react-redux';
-import { FaCarBattery, FaSolarPanel } from 'react-icons/fa';
-import { BsHouseDoor } from 'react-icons/bs';
-import { openSidebar } from '@/features/contentSlice/contentSlice';
+  changeActive,
+  openSidebar,
+} from '@/features/contentSlice/contentSlice';
+import Link from 'next/link';
 
 const CollapseSideBar = ({ name }) => {
   const dispatch = useDispatch();
+  const { solutions, services, activeContent } = useSelector(
+    (store) => store.content
+  );
   const handleOpen = () => {
     dispatch(openSidebar());
   };
@@ -23,27 +23,43 @@ const CollapseSideBar = ({ name }) => {
       <div className={styles.icons_lists}>
         {name === 'Solutions' ? (
           <>
-            <div className={styles.icon}>
-              <GiSolarPower />
-            </div>
-            <div className={styles.icon}>
-              <MdOutlineSolarPower />
-            </div>
-            <div className={styles.icon}>
-              <FaSolarPanel />
-            </div>
-            <div className={styles.icon}>
-              <FaCarBattery />
-            </div>
+            {solutions.map((item, index) => {
+              const { icon, path } = item;
+              return (
+                <div className={styles.icon} key={index}>
+                  <Link
+                    href={path}
+                    className={`${styles.link} ${
+                      activeContent === index ? styles.active : null
+                    }`}
+                    onClick={() => dispatch(changeActive(index))}
+                  >
+                    {' '}
+                    {icon}
+                  </Link>
+                </div>
+              );
+            })}
           </>
         ) : (
           <>
-            <div className={styles.icon}>
-              <BsHouseDoor />
-            </div>
-            <div className={styles.icon}>
-              <MdOutlineFactory />
-            </div>
+            {services.map((item, index) => {
+              const { icon, path } = item;
+              return (
+                <div className={styles.icon} key={index}>
+                  <Link
+                    href={path}
+                    className={`${styles.link} ${
+                      activeContent === index ? styles.active : null
+                    }`}
+                    onClick={() => dispatch(changeActive(index))}
+                  >
+                    {' '}
+                    {icon}
+                  </Link>
+                </div>
+              );
+            })}
           </>
         )}
       </div>

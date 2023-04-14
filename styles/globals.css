@@ -77,12 +77,13 @@ h5 {
   color: var(--color-black) !important;
 }
 
-.container {
-  width: var(--container-width-lg);
-}
-
 .margin {
   margin: 1rem 0;
+}
+
+.orange {
+  color: var(--color-orange);
+  font-weight: bold;
 }
 
 strong {

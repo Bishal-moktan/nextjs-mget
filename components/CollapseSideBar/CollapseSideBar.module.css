@@ -14,3 +14,16 @@
   flex-direction: column;
   margin-top: 1rem;
 }
+
+.link {
+  color: var(--color-black);
+  transition: var(--transition);
+}
+
+.link:hover {
+  color: var(--color-white);
+}
+
+.active {
+  color: white;
+}

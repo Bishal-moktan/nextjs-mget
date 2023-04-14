@@ -33,7 +33,7 @@ const AboutContent = () => {
           </tr>
           <tr>
             <td>Krishna Singh </td>
-            <td>- Founder - Director</td>
+            <td>- Co-Founder - Director</td>
           </tr>
         </tbody>
       </table>
