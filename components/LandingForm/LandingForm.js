@@ -375,7 +375,7 @@ const LandingForm = () => {
           <div className={styles.officeInfo}>
             <AiOutlineClockCircle className={styles.contact_icon} />
             <span className="text_light"> 09:30am - 5:30pm</span>
-            <p className="text_light">Monday to Saturday</p>
+            <p kkkkkkkkclassName="text_light">Monday to Saturday</p>
             <div className={styles.status}>
               <h3>{isOfficeOpened ? 'Open' : 'Closed'}</h3>
               <div style={bg} className={styles.circle}></div>

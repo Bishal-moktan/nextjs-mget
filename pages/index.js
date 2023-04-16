@@ -5,10 +5,7 @@ import { useSelector } from 'react-redux';
 import Intro from '@/components/home/Intro/Intro';
 import WeOffer from '@/components/home/weOffer/WeOffer';
 import Partners from '@/components/Partners/Partners';
-import Blog from '@/components/home/Blog/Blog';
 import Testimonials from '@/components/home/testimonials/Testimonials';
-import AboutContent from '@/components/about/aboutContent/AboutContent';
-import CardList from '@/components/CardList/CardList';
 import experienceImg from '@/public/svg/intro/experience.svg';
 import speedImg from '@/public/svg/intro/speed.svg';
 import workmanshipImg from '@/public/svg/intro/workmanship.svg';
@@ -63,10 +60,8 @@ export default function Home() {
         <HeroSection />
         <Intro />
         <Feature content={item} title={cardTitle} />
-
         <WeOffer />
         <Partners />
-        {/* <Blog /> */}
         <Testimonials />
         <ScrollToTop />
       </main>

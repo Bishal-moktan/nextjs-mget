@@ -9,12 +9,12 @@ const Feature = ({ content, title }) => {
         {content.map((item, index) => {
           return (
             <div className={styles.card} key={index}>
+              <header className={styles.header}>
+                <h3>{item.title} </h3>
+              </header>
               <div className={styles.icon}>
                 <Image src={item.icon} height={'auto'} width={'auto'} />
               </div>
-              <header className={styles.header}>
-                <h3>{item.title}: </h3>
-              </header>
               <div className={styles.content}>{item.info}</div>
             </div>
           );
