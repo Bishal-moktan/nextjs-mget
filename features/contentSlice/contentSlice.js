@@ -3,11 +3,13 @@ import { createSlice } from '@reduxjs/toolkit';
 import metaContent from '@/data/metaContent';
 import solutions from '@/data/solutions';
 import services from '@/data/services';
+import { checkTime } from '@/utils/checkTime';
 
 const initialState = {
   metaContent,
   solutions,
   services,
+  isOfficeOpened: checkTime(),
   mainUrl: 'https://nextjs-mget.vercel.app',
   isSidebarOpen: false,
   title: 'Empowering the World with Solar Energy',

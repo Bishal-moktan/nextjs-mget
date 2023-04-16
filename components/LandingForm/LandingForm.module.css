@@ -4,15 +4,15 @@
 
 .landingForm__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 55% 40%;
   gap: 3rem;
   color: var(--color-black);
   padding: 0.7rem;
 }
 
-.landingForm__image > img {
-  width: 40rem;
-  height: 40rem;
+.map > iframe {
+  width: 100%;
+  height: 30rem;
   border-radius: 1rem;
 }
 
@@ -22,7 +22,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .landingForm__container_form h2 {
@@ -46,6 +46,18 @@
 
 .input_box {
   position: relative;
+  flex: 1;
+}
+
+.radios input[type='checkbox'] {
+  height: 1rem;
+  width: 1rem;
+}
+
+.single_radio {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .input_box label {
@@ -55,6 +67,7 @@
   transition: all 250ms ease;
   color: #757575;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .input:focus ~ label,
@@ -69,6 +82,7 @@
   font-size: 1rem;
   width: 100%;
   border-radius: 1rem;
+  background: #f6f7f9;
 }
 
 .landingForm__container_form button {
@@ -100,10 +114,52 @@
   );
 }
 
+.contact_info {
+  margin: 2rem 0 1rem;
+}
+
+.contact_info h2 {
+  font-weight: 600;
+}
+
+.contact_icon {
+  margin-right: 0.5rem;
+}
+
+.officeInfo {
+  margin: 1rem 0;
+}
+
+.status {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.status h3 {
+  margin-left: 3rem;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
 /* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
 
 @media screen and (max-width: 990px) {
   .landingForm__container {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .landingForm__container_form {
+    padding: 1rem;
+  }
+  .input_box label {
+    font-size: 0.8rem;
   }
 }

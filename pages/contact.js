@@ -14,7 +14,6 @@ const Contact = () => {
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        {/* <Landing page="Contact" />p */}
         <LandingForm />
       </main>
     </>
