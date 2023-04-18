@@ -158,7 +158,7 @@
 
   .toggle_btn {
     display: block;
-    top: 1.5rem;
+    top: 0.7rem;
   }
 
   .nav_links {
@@ -170,5 +170,13 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .img_container > img {
+    height: 3rem;
+    width: 11rem;
+    object-fit: fill;
   }
 }
