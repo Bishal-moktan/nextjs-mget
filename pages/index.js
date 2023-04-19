@@ -11,7 +11,7 @@ import speedImg from '@/public/svg/intro/speed.svg';
 import workmanshipImg from '@/public/svg/intro/workmanship.svg';
 import customizableImg from '@/public/svg/intro/customizable.svg';
 import managementImg from '@/public/svg/intro/management.svg';
-import Feature from '@/components/home/Feature/Feature';
+import CardList from '@/components/CardList/CardList';
 
 export default function Home() {
   const cardTitle =
@@ -20,27 +20,27 @@ export default function Home() {
     {
       title: 'Experience and expertise',
       icon: experienceImg,
-      info: 'Mgetenergy has extensive experience( its 10 year +) and expertise in the solar EPC industry.',
+      info: '10+ years of extensive experience and expertise in the solar EPC industry',
     },
     {
       title: 'Efficiency and speed',
       icon: speedImg,
-      info: 'Mgetenergy has proven track record of delivering projects on time and within budget.',
+      info: 'Proven track records of delivering project on time and within budget',
     },
     {
       title: 'Quality workmanship',
       icon: workmanshipImg,
-      info: 'Mgetenrgy is known for delivering high-quality workmanship and utilizing industry-best practices.',
+      info: 'Known for delivering high quality workmanship and utilizing industry best practices',
     },
     {
       title: 'Customizable solutions',
       icon: customizableImg,
-      info: 'Mgetenrgy offers custom solutions for customers based on their specific needs and requirements.',
+      info: 'Offers custom solutions to customer based on their specific needs and requirements',
     },
     {
       title: 'Strong project management',
       icon: managementImg,
-      info: 'Mgetenergy has a strong project   management team that can effectively oversee and manage solar projects from start to finish.',
+      info: 'A team that can effectively manage and oversee solar projects from start to finish',
     },
   ];
   const { metaContent, title, mainUrl, keywords } = useSelector(
@@ -59,7 +59,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <Intro />
-        <Feature content={item} title={cardTitle} />
+        <CardList content={item} title={cardTitle} />
         <WeOffer />
         <Partners />
         <Testimonials />
