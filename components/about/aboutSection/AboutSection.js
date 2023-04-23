@@ -7,7 +7,10 @@ const AboutSection = () => {
     <section className="aboutSection">
       <div className={`container ${styles.aboutSection__container}`}>
         <div className={styles.aboutSection__image}>
-          <Image src={image} alt="about section" />
+          <Image
+            src={image}
+            alt="503 kw ongrid solar power system installed at Tecumseh Products India Pvt Ltd - BALLABGARH FARIDABAD- HARYANA"
+          />
         </div>
         <div className={styles.aboutSection__description}>
           <p className={styles.textLight}>

@@ -1,11 +1,7 @@
-import Carousel from '@/components/about/carousel/Carousel';
-import Partners from '@/components/Partners/Partners';
 import Head from 'next/head';
 import AboutContent from '@/components/about/aboutContent/AboutContent';
 import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import { useSelector } from 'react-redux';
-import AboutLanding from '@/components/about/aboutLanding/AboutLanding';
-import ImageSection from '@/components/about/ImageSection/ImageSection';
 import Description from '@/components/about/Description/Description';
 import Landing from '@/components/about/landing/Landing';
 import AboutSection from '@/components/about/aboutSection/AboutSection';
@@ -25,7 +21,6 @@ const About = () => {
       <main>
         <Landing />
         <AboutSection />
-        {/* <ImageSection /> */}
         <Description />
         <AboutContent />
         <CTA />

@@ -68,16 +68,16 @@ const Navbar = () => {
         {/* social media links */}
 
         <div className={styles.navbar_top_socials}>
-          <a href="https://www.facebook.com" target="_blank">
+          <a href="https://www.facebook.com/mgetenergy" target="_blank">
             <FaFacebook className="fb_icon" />
           </a>
-          <a href="https://www.twitter.com" target="_blank">
+          <a href="https://twitter.com/MGETEnergy" target="_blank">
             <FaTwitter className="twitter_icon" />
           </a>
-          <a href="https://www.linkedin.com" target="_blank">
+          <a href="https://www.linkedin.com/company/mgetenergy" target="_blank">
             <GrLinkedin className="linkedin_icon" />
           </a>
-          <a href="https://www.linkedin.com" target="_blank">
+          <a href="https://www.youtube.com/@mgetenergy" target="_blank">
             <FaYoutube className="youtube_icon" />
           </a>
         </div>

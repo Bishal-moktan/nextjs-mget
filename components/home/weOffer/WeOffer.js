@@ -12,7 +12,10 @@ const WeOffer = () => {
       <Link href={'/solutions'}>
         <div className={`${styles.common__container} ${styles.solutions}`}>
           <div className={styles.image}>
-            <Image src={solutionImg} />
+            <Image
+              src={solutionImg}
+              alt="15 KW ONGRID SOLAR POWER SYSTEM INSTALLED AT DLF FARM, SOUTHERN DRIVE, CHHATARPUR, DELHI"
+            />
           </div>
           <div className={styles.content}>
             <div className={styles.header}>
@@ -29,7 +32,10 @@ const WeOffer = () => {
       <Link href={'/services'}>
         <div className={`${styles.common__container} ${styles.services}`}>
           <div className={styles.image}>
-            <Image src={serviceImg} />
+            <Image
+              src={serviceImg}
+              alt="40 KW ONGRID SOLAR POWER SYSTEM INSTALLED AT LIBERAL TRADERS PVT LTD, B-84/1 , OKHLA PHASE 2, OKHLA IND AREA, NEW DELHI 110020"
+            />
           </div>
           <div className={styles.content}>
             <div className={styles.header}>
@@ -46,7 +52,10 @@ const WeOffer = () => {
       <Link href={'/contact'}>
         <div className={`${styles.common__container} ${styles.cta}`}>
           <div className={styles.image}>
-            <Image src={ctaImg} />
+            <Image
+              src={ctaImg}
+              alt="400 KW ONGRID SOLAR PPOWER SYSTEM INSTALLED AT MAGICRETE BUILDING SOLUTIONS- JHAJJHAR- HARYANA ON TIN SHED (METRO SHEET)"
+            />
           </div>
           <div className={styles.content}>
             <div className={styles.header}>

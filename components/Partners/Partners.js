@@ -32,64 +32,112 @@ const Partners = () => {
 
         <div className={styles.container__client_images}>
           <div className={styles.image}>
-            <Image src={image2} alt="client" />
+            <Image src={image2} alt="GAS AUTHORITY OF INDIA LTD - GAIL" />
           </div>
           <div className={styles.image}>
-            <Image src={image1} alt="client" />
+            <Image src={image1} alt="INDIAN AIRFORCE" />
           </div>
           <div className={styles.image}>
-            <Image src={image3} alt="client" />
+            <Image src={image3} alt="INLAND WATERWAYS AUTHORITY OF INDIA" />
           </div>
           <div className={styles.image}>
-            <Image src={image4} alt="client" />
+            <Image src={image4} alt="Indian Oil Corporation" />
           </div>
           <div className={styles.image}>
-            <Image src={image5} alt="client" />
+            <Image
+              src={image5}
+              alt="NARMADA HYDRO-ELECTRIC DEVELOPMENT CORPORATION"
+            />
           </div>
           <div className={styles.image}>
-            <Image src={image6} alt="client" />
+            <Image
+              src={image6}
+              alt="Nuclear Power Corporation of India Limited"
+            />
           </div>
           <div className={styles.image}>
-            <Image src={image7} alt="client" />
+            <Image
+              src={image7}
+              alt="Shivam Diagnostics & Cancer Research Institute - DELHI"
+            />
           </div>
           <div className={styles.image}>
-            <Image src={image10} alt="client" />
+            <Image
+              src={image10}
+              alt="NXP INDIA PVT LTD, SECTOR 16A , NOIDA, UTTAR PRADESH"
+            />
           </div>
           <div className={styles.image}>
-            <Image src={image11} alt="client" />
+            <Image
+              src={image11}
+              alt="KAPIL MUNI AGRO FOODS PVT LTD, BEWAR MAINPURI"
+            />
           </div>
           <div className={styles.image}>
-            <Image src={image12} alt="client" />
+            <Image
+              src={image12}
+              alt="BEBE FOODS, SITE V , GREATER NOIDA, UTTAR PRADESH"
+            />
           </div>
           <div className={styles.image}>
-            <Image src={image13} alt="Efab powers" />
+            <Image
+              src={image13}
+              alt="E-FAB POWER CONTROLS PVT LTD, SITE V , GREATER NOIDA, UTTAR PRADESH"
+            />
           </div>
           <div className={styles.image}>
-            <Image src={image14} alt="client" />
+            <Image
+              src={image14}
+              alt={`Directorate of Geology & Mining, 	Government of Maharashtra				
+27 "KHANIJ BHAVAN", CEMENT ROAD, SHIVAJI NAGAR,				
+NAGPUR- 440010, MAHARASHTRA`}
+            />
           </div>
           <div className={styles.image}>
-            <Image src={image15} alt="client" />
+            <Image
+              src={image15}
+              alt="Magicrete Building Solutions- JHAJJHAR HARYANA"
+            />
           </div>
           <div className={styles.image}>
-            <Image src={image16} alt="client" />
+            <Image
+              src={image16}
+              alt="LIBRAL TRADERS PVT LTD, OKHLA PHASE 2 NEW DELHI"
+            />
           </div>
           <div className={styles.image}>
-            <Image src={image17} alt="client" />
+            <Image
+              src={image17}
+              alt="RAGHUVEER SINGH RAJKIYA MAHAVIDYALAY - LALITPUR, UTTAR PRADESH"
+            />
           </div>
           <div className={styles.image}>
-            <Image src={image18} alt="client" />
+            <Image
+              src={image18}
+              alt="KAPIL MMUNI CHILDRENS ACADEMY- BEWAR MAINPURI - UTTAR PRADESH"
+            />
           </div>
           <div className={styles.image}>
-            <Image src={tecumseh} alt="client" />
+            <Image
+              src={tecumseh}
+              alt="Tecumseh Products India Pvt Ltd - BALLABGARH FARIDABAD- HARYANA"
+            />
           </div>
           <div className={styles.image}>
-            <Image src={lodha} alt="client" />
+            <Image
+              src={lodha}
+              alt="MACROTECH DEVELOPERS- MUMBAI, MAHARASHTRA"
+            />
           </div>
           <div className={styles.image}>
-            <Image src={k_raheja} alt="client" />
+            <Image src={k_raheja} alt="K RAHEJA CORP" />
           </div>
           <div className={styles.image}>
-            <Image src={kissui} alt="client" />
+            <Image
+              src={kissui}
+              alt="KISSUI METALIKS & STEELS PVT LTD							
+ BAHADURGARH, HARYANA"
+            />
           </div>
         </div>
       </div>

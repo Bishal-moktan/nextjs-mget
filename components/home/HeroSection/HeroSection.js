@@ -2,9 +2,12 @@ import Link from 'next/link';
 import styles from './HeroSection.module.css';
 
 export default function App() {
+  const altTextBG =
+    '325 kw ongrid solar power system installed at Tecumseh Products India Pvt Ltd - BALLABGARH FARIDABAD- HARYANA ON TIN SHED (METRO SHEET)';
   return (
     <>
       <div className={styles.heroSection}>
+        <span role="img" aria-label={altTextBG}></span>
         <div className={`${styles.content__container}`}>
           <div className={styles.container__fluid}>
             <div className={styles.content}>

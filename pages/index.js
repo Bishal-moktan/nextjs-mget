@@ -12,10 +12,10 @@ import workmanshipImg from '@/public/svg/intro/workmanship.svg';
 import customizableImg from '@/public/svg/intro/customizable.svg';
 import managementImg from '@/public/svg/intro/management.svg';
 import CardList from '@/components/CardList/CardList';
+import Why from '@/components/home/Why/Why';
 
 export default function Home() {
-  const cardTitle =
-    '  The unique offering that sets Mgetenergy apart from our competitors is:';
+  const cardTitle = 'Why MGET Energy?';
   const item = [
     {
       title: 'Experience and expertise',
@@ -59,7 +59,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <Intro />
-        <CardList content={item} title={cardTitle} />
+        <Why content={item} title={cardTitle} />
         <WeOffer />
         <Partners />
         <Testimonials />

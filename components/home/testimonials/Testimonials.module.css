@@ -10,12 +10,16 @@
 }
 .header h2 {
   width: fit-content;
+  position: relative;
 }
 
 .header h2::after {
   content: '';
-  display: block;
-  width: 4rem;
+  position: absolute;
+  left: 0;
+  bottom: -0.4rem;
+  width: 100%;
+  transform: scaleX(0.3);
   height: 0.3rem;
   background: var(--color-orange);
 }
