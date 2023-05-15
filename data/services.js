@@ -1,15 +1,16 @@
 import { BsHouseDoor } from 'react-icons/bs';
 import { MdOutlineFactory } from 'react-icons/md';
+import routes from './routes';
 
 const services = [
   {
     title: 'Residential Solar',
-    path: '/services/residentialSolar',
+    path: routes.residential,
     icon: <BsHouseDoor />,
   },
   {
     title: 'Commercial & Industrial Solar',
-    path: '/services/commercialIndustrialSolar',
+    path: routes.commercial,
     icon: <MdOutlineFactory />,
   },
 ];

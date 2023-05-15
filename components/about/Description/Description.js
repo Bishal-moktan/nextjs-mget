@@ -67,33 +67,30 @@ const Description = () => {
         '175 KW  ongrid solar power system installed at Tecumseh Products India Pvt Ltd - BALLABGARH FARIDABAD- HARYANA ON RCC ROOFTOP',
     },
     {
-      desc: 'What sets Mgetenrgy solar power system company apart from others is our commitment to providing personalized, high-quality service to each and every customer. We understand that every home and business has unique energy needs, and we work closely with our customers to design custom solar power solutions that meet those needs.',
+      desc: 'What sets Mgetenrgy solar power system company apart from others is our commitment to providing personalized, high-quality service to each and every customer. We understand that every home and business has unique energy needs, and we work closely with our customers to design custom solar power solutions that meet those needs.  Our mission at Mgetenergy is to provide reliable, sustainable, and cost-effective solar power solutions to homes and businesses, while reducing dependence on fossil fuels and promoting a greener future. We believe that solar power system should be accessible to everyone and our goal is to make that a reality. Our flagship service is providing solar power solution be it ongrid, offgrid, hybrid any size be it 1KW to utility scale.',
       img: fifthImage,
       altText:
         '175 KW  ongrid solar power system installed at Tecumseh Products India Pvt Ltd - BALLABGARH FARIDABAD- HARYANA ON RCC ROOFTOP',
-    },
-    {
-      desc: 'Our mission at Mgetenergy is to provide reliable, sustainable, and cost-effective solar power solutions to homes and businesses, while reducing dependence on fossil fuels and promoting a greener future. We believe that solar power system should be accessible to everyone and our goal is to make that a reality. Our flagship service is providing solar power solution be it ongrid, offgrid, hybrid any size be it 1KW to utility scale.',
-      img: sixthImage,
-      altText:
-        '400 KW ONGRID SOLAR PPOWER SYSTEM INSTALLED AT MAGICRETE BUILDING SOLUTIONS- JHAJJHAR- HARYANA ON TIN SHED (METRO SHEET)',
     },
   ];
   return (
     <div className={`container ${styles.description}`}>
       {content.map((item, index) => {
         return (
-          <div className={styles.item} key={index}>
-            {item?.img && (
-              <div className={styles.img__container}>
-                <Image src={item?.img} alt={item?.altText} />
+          <>
+            <hr className={styles.line} />
+            <div className={styles.item} key={index}>
+              {item?.img && (
+                <div className={styles.img__container}>
+                  <Image src={item?.img} alt={item?.altText} />
+                </div>
+              )}
+              <div className={styles.content}>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
               </div>
-            )}
-            <div className={styles.content}>
-              {item.title}
-              <p>{item.desc}</p>
             </div>
-          </div>
+          </>
         );
       })}
     </div>

@@ -1,6 +1,5 @@
 .aboutSection__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 5rem;
   margin: 4rem auto;
 }
@@ -8,6 +7,7 @@
 .aboutSection__image {
   width: 100%;
   height: 50vh;
+  flex: 1;
 }
 
 .aboutSection__image > img {
@@ -19,25 +19,33 @@
 }
 
 .aboutSection__description {
-  display: flex;
-  align-items: center;
+  flex: 1;
+  border-radius: 2rem;
 }
 
 .aboutSection__description p {
   margin: 1rem;
   font-size: 1rem;
+  line-height: 2rem;
   text-align: justify;
 }
 
 .textLight span {
-  color: var(--color-orange);
-  font-weight: bold;
+  color: var(--color-white);
+  border-radius: 50%;
+  background-color: var(--color-orange);
+  padding: 0.5rem 1rem;
+  font-size: 1.8rem;
+}
+
+.strong {
+  color: var(--color-black);
 }
 
 /* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
 
 @media screen and (max-width: 990px) {
   .aboutSection__container {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 }

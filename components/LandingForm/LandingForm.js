@@ -1,14 +1,123 @@
 import styles from './LandingForm.module.css';
-import image from '@/public/images/about/about1.webp';
-import Image from 'next/image';
 import Link from 'next/link';
 import { AiOutlineClockCircle } from 'react-icons/ai';
 import { BsEnvelope } from 'react-icons/bs';
 import { FiPhoneCall } from 'react-icons/fi';
 import { useSelector } from 'react-redux';
+import { useRef, useState } from 'react';
+import { toast } from 'react-toastify';
+import axios from 'axios';
+import { useRouter } from 'next/router';
 
+const API_PATH = 'http://localhost/test/contact.php';
 const LandingForm = () => {
   const { isOfficeOpened } = useSelector((store) => store.content);
+  const [loading, setLoading] = useState(false);
+  const formIntialState = {
+    name: '',
+    email: '',
+    phone: '',
+    address: '',
+    city: '',
+    postalCode: '',
+    country: '',
+    message: '',
+    help: [
+      { name: 'help[]', title: 'General Inquiry', isChecked: false },
+      { name: 'help[]', title: 'Solar Panel Installation', isChecked: false },
+      { name: 'help[]', title: 'Solar Panel Maintenance', isChecked: false },
+      { name: 'help[]', title: 'Solar Panel Repair', isChecked: false },
+      { name: 'help[]', title: 'Solar Battery Storage', isChecked: false },
+      { name: 'help[]', title: 'Other', isChecked: false },
+    ],
+    reference: [
+      { name: 'reference[]', title: 'Internet search', isChecked: false },
+      { name: 'reference[]', title: 'Social media', isChecked: false },
+      {
+        name: 'reference[]',
+        title: 'Referral from a friend or family member',
+        isChecked: false,
+      },
+      {
+        name: 'reference[]',
+        title: 'Referral from a business or organization',
+        isChecked: false,
+      },
+      { name: 'reference[]', title: 'Other', isChecked: false },
+    ],
+  };
+  const [formData, setFormData] = useState(formIntialState);
+  const router = useRouter();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    const selectedHelps = [];
+    for (let item of formData.help) {
+      if (item.isChecked) {
+        selectedHelps.push(item.title);
+      }
+    }
+    const selectedReference = [];
+    for (let item of formData.reference) {
+      if (item.isChecked) {
+        selectedReference.push(item.title);
+      }
+    }
+    const { help, reference, ...finalFormData } = formData;
+    finalFormData.help = selectedHelps;
+    finalFormData.reference = selectedReference;
+    axios({
+      method: 'post',
+      url: `${API_PATH}`,
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      data: finalFormData,
+    })
+      .then((result) => {
+        if (result.statusText === 'OK') {
+          toast.success('Thank you for contacting us!', {
+            position: 'bottom-left',
+          });
+        }
+        setLoading(false);
+        setFormData(formIntialState);
+      })
+      .catch((error) => {
+        setLoading(false);
+        setFormData(formIntialState);
+        toast.warn('Something went wrong', {
+          position: 'bottom-left',
+        });
+      })
+      .finally(() => router.replace('/'));
+  };
+
+  const handleChangeText = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+  };
+
+  const handleCheckboxChangeHelp = (event) => {
+    const { value, checked } = event.target;
+    setFormData((prevFormData) => {
+      const newData = prevFormData.help.map((item) =>
+        item.title === value ? { ...item, isChecked: checked } : item
+      );
+      return { ...prevFormData, help: newData };
+    });
+  };
+
+  const handleCheckboxChangeReference = (event) => {
+    const { value, checked } = event.target;
+    setFormData((prevFormData) => {
+      const newData = prevFormData.reference.map((item) =>
+        item.title === value ? { ...item, isChecked: checked } : item
+      );
+      return { ...prevFormData, reference: newData };
+    });
+  };
 
   // bg color for office opened or not
   const bg = {
@@ -21,314 +130,162 @@ const LandingForm = () => {
         <div className={styles.landingForm__container_form}>
           <h5>GET IN TOUCH</h5>
           <h2>Submit Enquiry For Solar Project</h2>
-          <form className={styles.form}>
-            <div class={styles.input_box}>
+          <form className={styles.form} onSubmit={handleSubmit}>
+            <div className={styles.input_box}>
               <input
                 type="text"
                 required
                 placeholder=" "
                 id="name"
+                name="name"
                 className={styles.input}
+                onChange={handleChangeText}
               />
               <label htmlFor="name">Name</label>
             </div>
 
-            <div class={styles.input_box}>
+            <div className={styles.input_box}>
               <input
                 type="email"
                 required
                 placeholder=" "
                 id="email"
+                name="email"
                 className={styles.input}
+                onChange={handleChangeText}
               />
               <label htmlFor="email">Email</label>
             </div>
 
             <div className={styles.form_inputs}>
-              <div class={styles.input_box}>
+              <div className={styles.input_box}>
                 <input
                   type="tel"
                   required
                   placeholder=" "
                   id="number"
+                  name="phone"
                   className={styles.input}
+                  onChange={handleChangeText}
                 />
                 <label htmlFor="number">Phone Number</label>
               </div>
-              <div class={styles.input_box}>
+              <div className={styles.input_box}>
                 <input
                   type="text"
                   required
                   placeholder=" "
                   id="address"
+                  name="address"
                   className={styles.input}
+                  onChange={handleChangeText}
                 />
                 <label htmlFor="address">Address</label>
               </div>
             </div>
             <div className={styles.form_inputs}>
-              <div class={styles.input_box}>
+              <div className={styles.input_box}>
                 <input
                   type="text"
                   required
                   placeholder=" "
                   id="city"
+                  name="city"
                   className={styles.input}
+                  onChange={handleChangeText}
                 />
                 <label htmlFor="city">City</label>
               </div>
-              <div class={styles.input_box}>
+              <div className={styles.input_box}>
                 <input
                   type="number"
                   required
                   placeholder=" "
                   id="postalCode"
+                  name="postalCode"
                   className={styles.input}
+                  onChange={handleChangeText}
                 />
                 <label htmlFor="postalCode">Postal Code</label>
               </div>
             </div>
 
-            <div class={styles.input_box}>
+            <div className={styles.input_box}>
               <input
                 type="text"
                 required
                 placeholder=" "
                 id="country"
+                name="country"
                 className={styles.input}
+                onChange={handleChangeText}
               />
               <label htmlFor="country">Country</label>
             </div>
 
-            <div class={styles.radios}>
+            <div className={styles.radios}>
               <p>
                 {' '}
                 What can we help you with? (Please select one or more options):
               </p>
-              <div className={styles.single_radio}>
-                <input
-                  type="checkbox"
-                  required
-                  placeholder=" "
-                  id="General Inquiry"
-                  value="General Inquiry"
-                  className={styles.input}
-                />
-                <label htmlFor="General Inquiry">General Inquiry</label>
-              </div>
-              <div className={styles.single_radio}>
-                <input
-                  type="checkbox"
-                  required
-                  placeholder=" "
-                  id="Solar Panel Installation"
-                  value="Solar Panel Installation"
-                  className={styles.input}
-                />
-                <label htmlFor="Solar Panel Installation">
-                  Solar Panel Installation
-                </label>
-              </div>
-              <div className={styles.single_radio}>
-                <input
-                  type="checkbox"
-                  required
-                  placeholder=" "
-                  id="Solar Panel Maintenance
-"
-                  value="Solar Panel Maintenance
-"
-                  className={styles.input}
-                />
-                <label
-                  htmlFor="Solar Panel Maintenance
-"
-                >
-                  Solar Panel Maintenance
-                </label>
-              </div>
-              <div className={styles.single_radio}>
-                <input
-                  type="checkbox"
-                  required
-                  placeholder=" "
-                  id="Solar Panel Repair
-"
-                  value="Solar Panel Repair
-"
-                  className={styles.input}
-                />
-                <label
-                  htmlFor="Solar Panel Repair
-"
-                >
-                  Solar Panel Repair
-                </label>
-              </div>
-              <div className={styles.single_radio}>
-                <input
-                  type="checkbox"
-                  required
-                  placeholder=" "
-                  id="Solar Battery Storage
-
-"
-                  value="Solar Battery Storage
-
-"
-                  className={styles.input}
-                />
-                <label
-                  htmlFor="Solar Battery Storage
-
-"
-                >
-                  Solar Battery Storage
-                </label>
-              </div>
-              <div className={styles.single_radio}>
-                <input
-                  type="checkbox"
-                  required
-                  placeholder=" "
-                  id="Other
-
-
-"
-                  value="Other
-
-
-"
-                  className={styles.input}
-                />
-                <label
-                  htmlFor="Other
-
-
-"
-                >
-                  Other
-                </label>
-              </div>
+              {formData.help.map((item, index) => {
+                return (
+                  <div className={styles.single_radio} key={index}>
+                    <input
+                      type="checkbox"
+                      placeholder=" "
+                      name={item.name}
+                      onChange={handleCheckboxChangeHelp}
+                      checked={item.isChecked}
+                      id={`${item.name}_${index}`}
+                      value={item.title}
+                      className={styles.input}
+                    />
+                    <label htmlFor={`${item.name}_${index}`}>
+                      {item.title}
+                    </label>
+                  </div>
+                );
+              })}
             </div>
 
-            <div class={styles.input_box}>
+            <div className={styles.input_box}>
               <textarea
                 rows="5"
                 required
                 placeholder=" "
                 id="message"
+                name="message"
                 className={styles.input}
+                onChange={handleChangeText}
               ></textarea>
               <label htmlFor="message">Your message here</label>
             </div>
 
-            <div class={styles.radios}>
+            <div className={styles.radios}>
               <p>
                 {' '}
                 How did you hear about us? (Please select one or more options):
               </p>
-              <div className={styles.single_radio}>
-                <input
-                  type="checkbox"
-                  required
-                  placeholder=" "
-                  id="Internet search
-"
-                  value="Internet search
-"
-                  className={styles.input}
-                />
-                <label
-                  htmlFor="Internet search
-"
-                >
-                  {' '}
-                  Internet search
-                </label>
-              </div>
-              <div className={styles.single_radio}>
-                <input
-                  type="checkbox"
-                  required
-                  placeholder=" "
-                  id="Social media
-"
-                  value="Social media
-"
-                  className={styles.input}
-                />
-                <label
-                  htmlFor="Social media
-"
-                >
-                  Social media
-                </label>
-              </div>
-              <div className={styles.single_radio}>
-                <input
-                  type="checkbox"
-                  required
-                  placeholder=" "
-                  id="Referral from a friend or family member
-"
-                  value="Referral from a friend or family member
-"
-                  className={styles.input}
-                />
-                <label
-                  htmlFor="Referral from a friend or family member
-"
-                >
-                  Referral from a friend or family member
-                </label>
-              </div>
-              <div className={styles.single_radio}>
-                <input
-                  type="checkbox"
-                  required
-                  placeholder=" "
-                  id="Referral from a business or organization
-
-"
-                  value="Referral from a business or organization
-
-"
-                  className={styles.input}
-                />
-                <label
-                  htmlFor="Referral from a business or organization
-
-"
-                >
-                  Referral from a business or organization
-                </label>
-              </div>
-
-              <div className={styles.single_radio}>
-                <input
-                  type="checkbox"
-                  required
-                  placeholder=" "
-                  id="Other
-
-
-"
-                  value="Other
-
-
-"
-                  className={styles.input}
-                />
-                <label
-                  htmlFor="Other
-
-
-"
-                >
-                  Other
-                </label>
-              </div>
+              {formData.reference.map((item, index) => {
+                return (
+                  <div className={styles.single_radio} key={index}>
+                    <input
+                      type="checkbox"
+                      placeholder=" "
+                      onChange={handleCheckboxChangeReference}
+                      name={item.name}
+                      checked={item.isChecked}
+                      id={`${item.name}_${index}`}
+                      value={item.title}
+                      className={styles.input}
+                    />
+                    <label htmlFor={`${item.name}_${index}`}>
+                      {item.title}
+                    </label>
+                  </div>
+                );
+              })}
             </div>
 
             <p>
@@ -336,7 +293,9 @@ const LandingForm = () => {
               regarding your inquiry
             </p>
 
-            <button>Submit Now</button>
+            <button disabled={loading}>
+              {loading ? 'Sumbitting' : 'Submit Now'}
+            </button>
           </form>
         </div>
         <div className={styles.map}>
@@ -368,14 +327,14 @@ const LandingForm = () => {
           </div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14035.071692973914!2d77.5413084!3d28.4262588!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cc030df032359%3A0x67dfe352f861e0f6!2sMaxoptimus%20Green%20Energy%20Technology%20Private%20Limited!5e0!3m2!1sen!2sin!4v1681651990325!5m2!1sen!2sin"
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
           <div className={styles.officeInfo}>
             <AiOutlineClockCircle className={styles.contact_icon} />
             <span className="text_light"> 09:30am - 5:30pm</span>
-            <p kkkkkkkkclassName="text_light">Monday to Saturday</p>
+            <p className="text_light">Monday to Saturday</p>
             <div className={styles.status}>
               <h3>{isOfficeOpened ? 'Open' : 'Closed'}</h3>
               <div style={bg} className={styles.circle}></div>

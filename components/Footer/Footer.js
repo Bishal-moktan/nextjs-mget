@@ -7,10 +7,12 @@ import { FiPhoneCall } from 'react-icons/fi';
 import { SlLocationPin } from 'react-icons/sl';
 import { AiOutlineClockCircle } from 'react-icons/ai';
 import Link from 'next/link';
-import logo from '@/public/images/logo-dark.png';
+import logo from '@/public/images/main-logo.svg';
 import styles from './Footer.module.css';
+import { useSelector } from 'react-redux';
 
 const Footer = () => {
+  const { routes } = useSelector((store) => store.content);
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -42,22 +44,22 @@ const Footer = () => {
             <h3>Quick links</h3>
             <ul>
               <li>
-                <Link className="text_light" href={'/about'}>
+                <Link className="text_light" href={routes.about}>
                   About us
                 </Link>
               </li>
               <li>
-                <Link className="text_light" href={'/solutions'}>
+                <Link className="text_light" href={routes.solutions}>
                   Solutions
                 </Link>
               </li>
               <li>
-                <Link className="text_light" href={'/services'}>
+                <Link className="text_light" href={routes.services}>
                   Services
                 </Link>
               </li>
               <li>
-                <Link className="text_light" href={'/testimonials'}>
+                <Link className="text_light" href={routes.testimonials}>
                   Testimonials
                 </Link>
               </li>
@@ -67,7 +69,7 @@ const Footer = () => {
                 </Link> */}
               </li>
               <li>
-                <Link className="text_light" href={'/contact'}>
+                <Link className="text_light" href={routes.contact}>
                   Contact
                 </Link>
               </li>
@@ -77,32 +79,32 @@ const Footer = () => {
             <h3>Services</h3>
             <ul>
               <li>
-                <Link className="text_light" href={'/services/housing'}>
+                <Link className="text_light" href={routes.housing}>
                   Solar for Housing
                 </Link>
               </li>
               <li>
-                <Link className="text_light" href={'/services/industry'}>
+                <Link className="text_light" href={routes.industry}>
                   Solar for Industries
                 </Link>
               </li>
               <li>
-                <Link className="text_light" href={'/services/agriculture'}>
+                <Link className="text_light" href={routes.residential}>
                   Solar for Agriculture
                 </Link>
               </li>
               <li>
-                <Link className="text_light" href={'/services/healthcare'}>
+                <Link className="text_light" href={routes.healthCare}>
                   Solar for Healthcare
                 </Link>
               </li>
               <li>
-                <Link className="text_light" href={'/services/company'}>
+                <Link className="text_light" href={routes.company}>
                   Solar for IT industry
                 </Link>
               </li>
               <li>
-                <Link className="text_light" href={'/services/institute'}>
+                <Link className="text_light" href={routes.institute}>
                   Solar for Institutes
                 </Link>
               </li>
@@ -166,7 +168,7 @@ const Footer = () => {
           </p>
           <p>
             {' '}
-            <Link className="text_light" href={'/privacy-policy'}>
+            <Link className="text_light" href={routes.privacyPolicy}>
               Privacy Policy
             </Link>
           </p>

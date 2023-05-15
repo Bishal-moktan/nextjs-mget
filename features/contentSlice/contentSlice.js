@@ -4,11 +4,13 @@ import metaContent from '@/data/metaContent';
 import solutions from '@/data/solutions';
 import services from '@/data/services';
 import { checkTime } from '@/utils/checkTime';
+import routes from '@/data/routes';
 
 const initialState = {
   metaContent,
   solutions,
   services,
+  routes,
   isOfficeOpened: checkTime(),
   mainUrl: 'https://nextjs-mget.vercel.app',
   isSidebarOpen: false,

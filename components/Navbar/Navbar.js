@@ -9,7 +9,7 @@ import { FaTwitter } from 'react-icons/fa';
 import { FaBars } from 'react-icons/fa';
 import { GrLinkedin } from 'react-icons/gr';
 import styles from './Navbar.module.css';
-import logo from '@/public/images/logo-dark.png';
+import logo from '@/public/images/main-logo.svg';
 import Link from 'next/link';
 import { useState } from 'react';
 import DropDown from '../DropDown/DropDown';
@@ -19,7 +19,7 @@ const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
   const [rotate, setRotate] = useState(false);
 
-  const { solutions, services } = useSelector((store) => store.content);
+  const { solutions, services, routes } = useSelector((store) => store.content);
   return (
     <nav className={styles.navbar} id="nav">
       {/* navbar top  */}
@@ -99,7 +99,7 @@ const Navbar = () => {
           </div>
 
           <div className={styles.logo}>
-            <Link href={'/'} className={styles.img_container}>
+            <Link href={routes.home} className={styles.img_container}>
               <Image
                 src={logo}
                 alt="mgetenergy logo"
@@ -115,25 +115,29 @@ const Navbar = () => {
                 : styles.nav_links
             }
           >
-            <Link href="/" className={styles.links}>
+            <Link href={routes.home} className={styles.links}>
               HOME
             </Link>
-            <Link href="/about" className={styles.links}>
+            <Link href={routes.about} className={styles.links}>
               ABOUT US
             </Link>
             <DropDown
               name={'SOLUTIONS'}
               options={solutions}
-              path={'/solutions'}
+              path={routes.solutions}
             />
-            <DropDown name={'SERVICES'} options={services} path={'/services'} />
-            <Link href="/testimonials" className={styles.links}>
+            <DropDown
+              name={'SERVICES'}
+              options={services}
+              path={routes.services}
+            />
+            <Link href={routes.testimonials} className={styles.links}>
               TESTIMONIALS
             </Link>
             {/* <Link href="/blogs" className={styles.links}>
               BLOGS
             </Link> */}
-            <Link href="/contact" className={styles.links}>
+            <Link href={routes.contact} className={styles.links}>
               CONTACT US
             </Link>
           </div>

@@ -1,7 +1,4 @@
-import { FaCheckCircle } from 'react-icons/fa';
-import { Link } from 'next/link';
 import styles from './AboutContent.module.css';
-import Image from 'next/image';
 
 const AboutContent = () => {
   return (
