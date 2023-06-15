@@ -12,7 +12,13 @@ const Accordian = ({ title, info }) => {
           {showInfo ? <AiOutlineMinus /> : <AiOutlinePlus />}
         </button>
       </header>
-      {showInfo && <p>{info}</p>}
+      <div
+        className={
+          showInfo ? `${styles.wrapper} ${styles.show}` : styles.wrapper
+        }
+      >
+        <p className={styles.content}>{info}</p>
+      </div>
     </article>
   );
 };

@@ -38,3 +38,18 @@
   align-self: center;
   min-width: 2rem;
 }
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 500ms;
+}
+
+.show {
+  grid-template-rows: 1fr;
+}
+
+.content {
+  min-height: 0;
+}

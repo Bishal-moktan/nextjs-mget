@@ -1,0 +1,44 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.image {
+  height: 33vh;
+}
+
+.image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.content {
+  margin: 0.5rem 1rem;
+}
+
+.content > p {
+  color: var(--color-light);
+}
+
+.readMore {
+  color: var(--color-orange);
+  margin: 0 1rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.readMore > span {
+  font-weight: 900;
+}
+
+@media (max-width: 900px) {
+  .image {
+    height: 40vh;
+  }
+}

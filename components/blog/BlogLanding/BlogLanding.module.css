@@ -1,4 +1,4 @@
-.landing__section {
+.container {
   background: url('../../../public/images/blog/LandingBG.webp');
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,12 +10,17 @@
   text-align: center;
 }
 
-.landing__section__info h1 {
+.content {
   position: relative;
   color: var(--color-white);
 }
 
-.landing__section__info h1::after {
+.content h1 {
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+}
+
+.content::after {
   content: '';
   position: absolute;
   top: 0;
@@ -24,7 +29,7 @@
   width: 0.3rem;
   background: var(--color-white);
 }
-.landing__section__info h1::before {
+.content::before {
   content: '';
   position: absolute;
   top: 0;

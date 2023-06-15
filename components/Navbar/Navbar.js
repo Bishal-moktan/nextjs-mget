@@ -134,9 +134,9 @@ const Navbar = () => {
             <Link href={routes.testimonials} className={styles.links}>
               TESTIMONIALS
             </Link>
-            {/* <Link href="/blogs" className={styles.links}>
+            <Link href="/blogs" className={styles.links}>
               BLOGS
-            </Link> */}
+            </Link>
             <Link href={routes.contact} className={styles.links}>
               CONTACT US
             </Link>
