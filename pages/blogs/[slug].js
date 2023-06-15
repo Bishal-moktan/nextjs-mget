@@ -37,7 +37,7 @@ const SinglePost = () => {
               height={400}
             />
           </div>
-          <ReactMarkdown children={singlePost.body} />
+          <ReactMarkdown children={singlePost?.body} />
         </div>
         <div className={styles.otherPosts}>
           <h3>Other Posts</h3>
