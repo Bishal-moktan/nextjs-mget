@@ -23,7 +23,8 @@ const SinglePost = () => {
   const singlePost = posts.filter((post) => post.slug === slug)[0];
   const images = singlePost?.image.split(',');
   const otherPosts = posts.filter(
-    (post) => post.category === singlePost.category && post.id !== singlePost.id
+    (post) =>
+      post.category === singlePost?.category && post.id !== singlePost?.id
   );
 
   return (
