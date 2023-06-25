@@ -5,7 +5,7 @@ const CTA = () => {
   return (
     <section className={styles.cta}>
       <div className={`container ${styles.cta__container}`}>
-        <div className="text">
+        <div className={styles.text}>
           <h4>PLAN TO INSTALL SOLAR</h4>
           <h1>Know more, Get Free Consultation!</h1>
         </div>

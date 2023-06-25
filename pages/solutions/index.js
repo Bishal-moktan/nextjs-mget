@@ -1,15 +1,13 @@
 import Head from 'next/head';
 import { FaCheckCircle } from 'react-icons/fa';
-import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import CollapseSideBar from '@/components/CollapseSideBar/CollapseSideBar';
 import SideBar from '@/components/sidebar/sidebar';
 import styles from '@/styles/Solutions.module.css';
+import solutions from '@/data/solutions';
 
-const solutions = () => {
-  const { metaContent, title, solutions } = useSelector(
-    (store) => store.content
-  );
+const Solutions = () => {
+  const { metaContent, title } = useSelector((store) => store.content);
 
   return (
     <>
@@ -90,4 +88,4 @@ const solutions = () => {
     </>
   );
 };
-export default solutions;
+export default Solutions;

@@ -1,11 +1,9 @@
 import Image from 'next/image';
-
 import ClientIcon from '@/public/icons/ClientIcon';
 import EmailIcon from '@/public/icons/EmailIcon';
 import TrustIcon from '@/public/icons/TrustIcon';
 import { FaFacebook, FaYoutube } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
-
 import { FaBars } from 'react-icons/fa';
 import { GrLinkedin } from 'react-icons/gr';
 import styles from './Navbar.module.css';
@@ -13,13 +11,14 @@ import logo from '@/public/images/main-logo.svg';
 import Link from 'next/link';
 import { useState } from 'react';
 import DropDown from '../DropDown/DropDown';
-import { useSelector } from 'react-redux';
+import routes from '@/data/routes';
+import solutions from '@/data/solutions';
+import services from '@/data/services';
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
   const [rotate, setRotate] = useState(false);
 
-  const { solutions, services, routes } = useSelector((store) => store.content);
   return (
     <nav className={styles.navbar} id="nav">
       {/* navbar top  */}

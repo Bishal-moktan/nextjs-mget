@@ -6,12 +6,12 @@ import {
   openSidebar,
 } from '@/features/contentSlice/contentSlice';
 import Link from 'next/link';
+import services from '@/data/services';
+import solutions from '@/data/solutions';
 
 const CollapseSideBar = ({ name }) => {
   const dispatch = useDispatch();
-  const { solutions, services, activeContent } = useSelector(
-    (store) => store.content
-  );
+  const { activeContent } = useSelector((store) => store.content);
   const handleOpen = () => {
     dispatch(openSidebar());
   };

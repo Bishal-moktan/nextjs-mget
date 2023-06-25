@@ -33,6 +33,22 @@
   align-items: center;
 }
 
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category {
+  background-color: #fbddb9;
+  color: #dc831b;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5rem;
+}
+
+.date {
+  color: var(--color-light);
+}
+
 .readMore > span {
   font-weight: 900;
 }

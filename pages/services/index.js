@@ -11,13 +11,13 @@ import testing from '@/public/svg/services/testing.svg';
 import maintenance from '@/public/svg/services/maintenance.svg';
 import decommissioning from '@/public/svg/services/decommissioning.svg';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import CollapseSideBar from '@/components/CollapseSideBar/CollapseSideBar';
 import SideBar from '@/components/sidebar/sidebar';
+import services from '@/data/services';
 
 const Services = () => {
-  const { metaContent, title, services } = useSelector(
+  const { metaContent, title } = useSelector(
     (store) => store.content
   );
 

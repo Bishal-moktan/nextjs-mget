@@ -156,6 +156,33 @@ strong {
   margin-top: 7rem;
 }
 
+.custom-navigation-button-prev,
+.custom-navigation-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-orange);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.custom-navigation-button-prev {
+  left: 10px;
+}
+
+.custom-navigation-button-next {
+  right: 10px;
+}
+
 /* ========================== FOR SWIPER JS ===========================  */
 
 /* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */

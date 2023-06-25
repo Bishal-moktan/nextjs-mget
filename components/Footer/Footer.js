@@ -9,10 +9,9 @@ import { AiOutlineClockCircle } from 'react-icons/ai';
 import Link from 'next/link';
 import logo from '@/public/images/main-logo.svg';
 import styles from './Footer.module.css';
-import { useSelector } from 'react-redux';
+import routes from '@/data/routes';
 
 const Footer = () => {
-  const { routes } = useSelector((store) => store.content);
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -64,9 +63,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                {/* <Link className="text_light" href={'/blogs'}>
+                <Link className="text_light" href={'/blogs'}>
                   Blog
-                </Link> */}
+                </Link>
               </li>
               <li>
                 <Link className="text_light" href={routes.contact}>
@@ -89,7 +88,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link className="text_light" href={routes.residential}>
+                <Link className="text_light" href={routes.agriculture}>
                   Solar for Agriculture
                 </Link>
               </li>

@@ -6,8 +6,6 @@
 
 .post {
   flex: 3;
-  border-radius: var(--radius);
-  border-top: 2px solid var(--color-orange);
   padding: 0 1rem;
 }
 
@@ -19,10 +17,10 @@
   color: var(--color-light);
 }
 
-.image {
-  margin: 1rem 0;
+.slider {
   width: 63.5vw;
   height: 60vh;
+  margin: 1rem 0;
 }
 
 .image > img {
@@ -41,12 +39,33 @@
   padding: 1rem;
 }
 
+.category {
+  background-color: #fbddb9;
+  color: #dc831b;
+  padding: 0.3rem 0.8rem;
+  margin-top: 1rem;
+  border-radius: 5rem;
+  width: max-content;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (max-width: 900px) {
+  .heading {
+    flex-direction: column;
+  }
   .singlePost {
     flex-direction: column;
   }
 
   .image {
     width: 85vw;
+  }
+
+  .slider {
+    width: 80vw;
   }
 }

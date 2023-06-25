@@ -11,7 +11,6 @@
 
 .img__container {
   width: 15rem;
-  display: flex;
 }
 
 .img__container > img {
