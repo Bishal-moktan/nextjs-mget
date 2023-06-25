@@ -63,7 +63,7 @@ const SinglePost = () => {
             }}
             className={styles.slider}
           >
-            {images.map((img, index) => {
+            {images?.map((img, index) => {
               return (
                 <SwiperSlide className={styles.image} key={index}>
                   <Image
