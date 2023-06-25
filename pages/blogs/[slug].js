@@ -86,7 +86,7 @@ const SinglePost = () => {
         </div>
         <div className={styles.otherPosts}>
           <h3>Similar Posts</h3>
-          {otherPosts.map((post) => (
+          {otherPosts?.map((post) => (
             <BlogCard post={post} key={post.id} />
           ))}
         </div>
