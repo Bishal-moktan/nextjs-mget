@@ -58,7 +58,7 @@ const SinglePost = () => {
             </div>
             <div className={styles.catContainer}>
               <div className={styles.categories}>
-                {categories.map((category, index) => {
+                {categories?.map((category, index) => {
                   return (
                     <div className={styles.category} key={index}>
                       {category}
