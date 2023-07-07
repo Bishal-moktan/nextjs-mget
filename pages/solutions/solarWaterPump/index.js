@@ -3,11 +3,12 @@ import Lists from '@/components/Lists/Lists';
 import Paragraph from '@/components/Paragraph/Paragraph';
 import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import SideBar from '@/components/sidebar/sidebar';
+import solutions from '@/data/solutions';
 import Head from 'next/head';
 import { useSelector } from 'react-redux';
 
 const SolarWaterPump = () => {
-  const { metaContent, solutions } = useSelector((store) => store.content);
+  const { metaContent } = useSelector((store) => store.content);
 
   const para = [
     'A solar water pump is a type of pump that is powered by solar energy, rather than traditional fossil fuel-based energy. The main components of a solar water pump include solar panels, a solar pump controller, and a water pump. The solar panels convert sunlight into DC electricity, which is then sent to the solar pump controller. The solar pump controller regulates the flow of electricity to the water pump, ensuring that the water pump is able to operate efficiently. The water pump is responsible for pumping water from a well, lake, or other water source to a storage tank or other location.',

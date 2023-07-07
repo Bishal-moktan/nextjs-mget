@@ -3,7 +3,6 @@ import BlogCard from '../BlogCard/BlogCard';
 import styles from './BlogContainer.module.css';
 import { useEffect, useState } from 'react';
 import { fetchBlogPosts } from '@/features/blogSlice/blogSlice';
-import { AiOutlineReload } from 'react-icons/ai';
 
 const BlogContainer = () => {
   const [mounted, setMounted] = useState(false);
@@ -42,7 +41,7 @@ const BlogContainer = () => {
         </div>
         {showLoadMore && !loading && (
           <div className={styles.loadmore} onClick={handleOnClick}>
-            <AiOutlineReload className={styles.reloadIcon} /> Load More
+            Load More Blogs
           </div>
         )}
         {loading && (

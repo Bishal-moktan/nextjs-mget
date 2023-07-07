@@ -3,9 +3,10 @@ import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import SideBar from '@/components/sidebar/sidebar';
 import Head from 'next/head';
 import { useSelector } from 'react-redux';
+import solutions from '@/data/solutions';
 
 const OnGridSolarSystem = () => {
-  const { metaContent, solutions } = useSelector((store) => store.content);
+  const { metaContent } = useSelector((store) => store.content);
 
   const content = (
     <div>

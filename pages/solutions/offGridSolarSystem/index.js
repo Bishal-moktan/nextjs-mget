@@ -4,9 +4,10 @@ import { FaCheckCircle } from 'react-icons/fa';
 import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
 import { useSelector } from 'react-redux';
 import SideBar from '@/components/sidebar/sidebar';
+import solutions from '@/data/solutions';
 
 const OffGridSolarSystem = () => {
-  const { metaContent, solutions } = useSelector((store) => store.content);
+  const { metaContent } = useSelector((store) => store.content);
 
   const content = (
     <div>

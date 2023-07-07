@@ -22,18 +22,16 @@ const AboutContent = () => {
           solution. We look forward to working with you!
         </p>
       </div>
-      <table>
-        <tbody>
-          <tr>
-            <td>Bhupendra Singh </td>
-            <td>- Founder - CTO</td>
-          </tr>
-          <tr>
-            <td>Krishna Singh </td>
-            <td>- Co-Founder - Director</td>
-          </tr>
-        </tbody>
-      </table>
+      <div>
+        <div className={styles.nameContainer}>
+          <span className={styles.name}>Bhupendra Singh </span>
+          <em className={styles.position}>Founder - CTO</em>
+        </div>
+        <div className={styles.nameContainer}>
+          <span className={styles.name}>Krishna Singh </span>
+          <em className={styles.position}> Co-Founder - Director</em>
+        </div>
+      </div>
       <p className={styles.margin}>
         Mission: Our mission is to provide reliable, sustainable, and
         cost-effective solar power solutions to homes and businesses, while

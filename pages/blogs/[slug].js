@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
 import styles from '@/styles/SinglePost.module.css';
-import BlogCard from '@/components/blog/BlogCard/BlogCard';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 // import Swiper core and required modules
 import { Navigation, Autoplay } from 'swiper';
@@ -14,6 +13,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
+import SimilarPosts from '@/components/blog/SimilarPosts/SimilarPosts';
 
 const SinglePost = () => {
   const { metaContent, title } = useSelector((store) => store.content);
@@ -22,10 +22,25 @@ const SinglePost = () => {
   const { slug } = router.query;
   const singlePost = posts.filter((post) => post.slug === slug)[0];
   const images = singlePost?.image.split(',');
-  const otherPosts = posts.filter(
-    (post) =>
-      post.category === singlePost?.category && post.id !== singlePost?.id
-  );
+  const categories = singlePost?.category.split(',');
+
+  const isPresent = (arr, element) => {
+    for (let e of arr) {
+      if (e === element) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  const otherPosts = posts.filter((post) => {
+    if (post.id === singlePost?.id) return;
+    for (let category of post.category.split(',')) {
+      if (isPresent(categories, category)) {
+        return post;
+      }
+    }
+  });
 
   return (
     <>
@@ -40,13 +55,21 @@ const SinglePost = () => {
           <div className={styles.heading}>
             <div className="text">
               <h1>{singlePost?.title}</h1>
-              <span>
+            </div>
+            <div className={styles.catContainer}>
+              <div className={styles.categories}>
+                {categories.map((category, index) => {
+                  return (
+                    <div className={styles.category} key={index}>
+                      {category}
+                    </div>
+                  );
+                })}
+              </div>
+              <span className={styles.date}>
                 {' '}
                 {moment(singlePost?.createdAt).format('dddd, MMMM Do YYYY')}
               </span>
-            </div>
-            <div>
-              <p className={styles.category}>{singlePost?.category}</p>
             </div>
           </div>
 
@@ -82,12 +105,15 @@ const SinglePost = () => {
               <AiOutlineRight />
             </div>
           </Swiper>
-          <ReactMarkdown children={singlePost?.body} />
+          <ReactMarkdown
+            children={singlePost?.body}
+            className={styles.description}
+          />
         </div>
         <div className={styles.otherPosts}>
           <h3>Similar Posts</h3>
           {otherPosts?.map((post) => (
-            <BlogCard post={post} key={post.id} />
+            <SimilarPosts post={post} key={post?.id} />
           ))}
         </div>
       </div>

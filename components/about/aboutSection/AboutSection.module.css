@@ -30,14 +30,6 @@
   text-align: justify;
 }
 
-.textLight span {
-  color: var(--color-white);
-  border-radius: 50%;
-  background-color: var(--color-orange);
-  padding: 0.5rem 1rem;
-  font-size: 1.8rem;
-}
-
 .strong {
   color: var(--color-black);
 }

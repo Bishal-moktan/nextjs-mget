@@ -28,6 +28,21 @@
   object-fit: cover;
 }
 
+.nameContainer {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.name {
+  color: var(--color-white);
+  background: var(--color-orange);
+  font-size: 1.2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+
 /* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
 
 @media screen and (max-width: 990px) {

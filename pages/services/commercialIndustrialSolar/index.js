@@ -1,12 +1,13 @@
 import Content from '@/components/Content/Content';
 import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import SideBar from '@/components/sidebar/sidebar';
+import services from '@/data/services';
 import Head from 'next/head';
 import { FaCheckCircle } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 
 const commercialIndustrialSolar = () => {
-  const { metaContent, services } = useSelector((store) => store.content);
+  const { metaContent } = useSelector((store) => store.content);
 
   const content = (
     <div>

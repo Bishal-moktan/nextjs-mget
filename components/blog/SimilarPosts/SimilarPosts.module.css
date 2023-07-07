@@ -25,12 +25,13 @@
 }
 
 .header > h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   letter-spacing: -1px;
 }
 
 .description {
   line-height: normal;
+  font-size: 0.9rem;
 }
 
 .readMore {
@@ -38,6 +39,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  font-size: 0.9rem;
 }
 
 .info {
@@ -50,9 +52,9 @@
   gap: 0.2rem;
 }
 
-.category,
-.date {
+.category {
   font-size: 0.8rem;
+  letter-spacing: -0.2px;
 }
 
 .category {

@@ -1,16 +1,15 @@
-import Image from 'next/image';
-import styles from './BlogCard.module.css';
+import styles from './SimilarPosts.module.css';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 import Link from 'next/link';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import moment from 'moment';
+import Image from 'next/image';
 
-const BlogCard = ({ post }) => {
-  const { image, title, body, slug, created_at, category } = post;
+const SimilarPosts = ({ post }) => {
+  const { image, title, body, slug, category } = post;
   const images = image.split(',');
   const categories = category.split(',');
-
-  const description = body.substring(0, 135).concat('...');
+  const description = body.substring(0, 150).concat('...');
   return (
     <div className={styles.card}>
       <div className={styles.image}>
@@ -26,14 +25,14 @@ const BlogCard = ({ post }) => {
         <div className={styles.header}>
           <h2>{title}</h2>
           <div className={styles.categories}>
-            {categories.slice(0, 3).map((category, index) => {
+            {categories.slice(0, 2).map((category, index) => {
               return (
                 <p className={styles.category} key={index}>
                   {category}
                 </p>
               );
             })}
-            {categories?.length > 3 && <p className={styles.category}>...</p>}
+            {categories?.length > 2 && <p className={styles.category}>...</p>}
           </div>
         </div>
         <div className={styles.description}>
@@ -45,13 +44,9 @@ const BlogCard = ({ post }) => {
               <span> Read More</span> <MdKeyboardArrowRight />
             </div>
           </Link>
-          <p className={styles.date}>
-            {' '}
-            {moment(created_at).format('MMMM Do YYYY')}{' '}
-          </p>
         </div>
       </div>
     </div>
   );
 };
-export default BlogCard;
+export default SimilarPosts;

@@ -7,7 +7,7 @@ const AboutSection = () => {
     <div className={`container ${styles.aboutSection__container}`}>
       <div className={styles.aboutSection__description}>
         <p className={styles.textLight}>
-          <span>W</span>elcome to
+          Welcome to
           <strong className={styles.strong}>
             {' '}
             Maxoptimus Green Energy Technology Pvt Ltd- Mgetenergy,{' '}

@@ -3,9 +3,10 @@ import Head from 'next/head';
 import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
 import { useSelector } from 'react-redux';
 import SideBar from '@/components/sidebar/sidebar';
+import solutions from '@/data/solutions';
 
 const HybridSolarPump = () => {
-  const { metaContent, solutions } = useSelector((store) => store.content);
+  const { metaContent } = useSelector((store) => store.content);
   const content = (
     <div>
       <p className="margin">
