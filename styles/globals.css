@@ -17,7 +17,8 @@
   --color-black: #101010;
   --color-light: #444;
   --color-orange: #f18f1d;
-  --light-orange: #f6b568;
+  --light-orange: #fbddb9;
+  --dark-orange: #dc831b;
   --light-green: #33a933;
   --color-green: #009300;
   --color-dark-green: #034503;
@@ -196,6 +197,9 @@ strong {
 /* ========================== MEDIA QUERIES FOR SMALL DEVICES =====================  */
 
 @media screen and (max-width: 600px) {
+  body {
+    overflow: hidden;
+  }
   .container {
     width: var(--container-width-sm);
   }

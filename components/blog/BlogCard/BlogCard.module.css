@@ -56,8 +56,8 @@
 }
 
 .category {
-  background-color: #fbddb9;
-  color: #dc831b;
+  background-color: var(--light-orange);
+  color: var(--dark-orange);
   padding: 0.1rem 0.5rem;
   border-radius: 5rem;
   max-width: fit-content;

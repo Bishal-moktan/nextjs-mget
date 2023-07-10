@@ -1,4 +1,6 @@
 import styles from './Team.module.css';
+import { IoBulbOutline } from 'react-icons/io5';
+import { GoGoal } from 'react-icons/go';
 
 const Team = () => {
   return (
@@ -6,7 +8,7 @@ const Team = () => {
       <div className={styles.teamContainer}>
         <div className={styles.team}>
           <div className={styles.title}>
-            <h2>Our Teams</h2>
+            <h2>Founders</h2>
           </div>
           <div className={styles.nameWrapper}>
             <div className={styles.nameContainer}>
@@ -21,15 +23,22 @@ const Team = () => {
         </div>
       </div>
       <div className="container">
-        <p className={styles.margin}>
-          Mission: Our mission is to provide reliable, sustainable, and
-          cost-effective solar power solutions to homes and businesses, while
-          reducing dependence on fossil fuels and promoting a greener future.
+        <p className={styles.para}>
+          <div className={styles.icon}>
+            <GoGoal />
+          </div>
+          <span> Mission: </span> Our mission is to provide reliable,
+          sustainable, and cost-effective solar power solutions to homes and
+          businesses, while reducing dependence on fossil fuels and promoting a
+          greener future.
         </p>
-        <p className={styles.margin}>
-          Vision :Our vision is to become a leading provider of clean energy,
-          and empower communities through the widespread adoption of solar power
-          systems, to achieve a sustainable future for all
+        <p className={styles.para}>
+          <div className={styles.icon}>
+            <IoBulbOutline />
+          </div>
+          <span> Vision: </span>Our vision is to become a leading provider of
+          clean energy, and empower communities through the widespread adoption
+          of solar power systems, to achieve a sustainable future for all
         </p>
       </div>
     </>
