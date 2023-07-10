@@ -14,6 +14,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 import SimilarPosts from '@/components/blog/SimilarPosts/SimilarPosts';
+import CTA from '@/components/about/cta/CTA';
 
 const SinglePost = () => {
   const { metaContent, title } = useSelector((store) => store.content);
@@ -117,6 +118,7 @@ const SinglePost = () => {
           ))}
         </div>
       </div>
+      <CTA />
     </>
   );
 };

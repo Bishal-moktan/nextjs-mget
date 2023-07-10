@@ -76,3 +76,10 @@
     height: 40vh;
   }
 }
+
+@media (max-width: 600px) {
+  .category,
+  .date {
+    font-size: 0.7rem;
+  }
+}

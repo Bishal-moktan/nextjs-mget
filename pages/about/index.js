@@ -6,6 +6,7 @@ import Description from '@/components/about/Description/Description';
 import Landing from '@/components/about/landing/Landing';
 import AboutSection from '@/components/about/aboutSection/AboutSection';
 import CTA from '@/components/about/cta/CTA';
+import Team from '@/components/about/Team/Team';
 
 const About = () => {
   const { metaContent, title } = useSelector((store) => store.content);
@@ -23,6 +24,7 @@ const About = () => {
         <AboutSection />
         <Description />
         <AboutContent />
+        <Team />
         <CTA />
         <Scroll />
       </main>

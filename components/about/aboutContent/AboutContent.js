@@ -22,26 +22,6 @@ const AboutContent = () => {
           solution. We look forward to working with you!
         </p>
       </div>
-      <div>
-        <div className={styles.nameContainer}>
-          <span className={styles.name}>Bhupendra Singh </span>
-          <em className={styles.position}>Founder - CTO</em>
-        </div>
-        <div className={styles.nameContainer}>
-          <span className={styles.name}>Krishna Singh </span>
-          <em className={styles.position}> Co-Founder - Director</em>
-        </div>
-      </div>
-      <p className={styles.margin}>
-        Mission: Our mission is to provide reliable, sustainable, and
-        cost-effective solar power solutions to homes and businesses, while
-        reducing dependence on fossil fuels and promoting a greener future.
-      </p>
-      <p className={styles.margin}>
-        Vision :Our vision is to become a leading provider of clean energy, and
-        empower communities through the widespread adoption of solar power
-        systems, to achieve a sustainable future for all
-      </p>
     </div>
   );
 };

@@ -115,3 +115,15 @@
     width: 80vw;
   }
 }
+
+@media (max-width: 600px) {
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 0.5rem;
+  }
+
+  .category {
+    font-size: 0.7rem;
+  }
+}
