@@ -23,7 +23,7 @@ const BlogContainer = ({ posts }) => {
   const { loading, totalPosts } = useSelector((store) => store.blog);
   const showLoadMore = posts?.length < +totalPosts;
 
-  if (posts.length === 0) {
+  if (posts.length === 0 && !loading) {
     return (
       <div className={styles.noPost}>
         <div className={styles.icon}>

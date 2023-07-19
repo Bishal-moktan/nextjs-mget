@@ -7,17 +7,16 @@
 
 .noPost {
   display: flex;
-  height: 75vh;
   width: 100%;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1rem;
+  padding: 4rem 0;
 }
 
 .icon {
-  width: 20rem;
-  height: 20rem;
+  width: 15rem;
+  height: 15rem;
 }
 
 .icon > img {
