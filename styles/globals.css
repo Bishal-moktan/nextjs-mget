@@ -151,12 +151,6 @@ strong {
   }
 }
 
-.unauthorized {
-  text-align: center;
-  height: 90vh;
-  margin-top: 7rem;
-}
-
 .custom-navigation-button-prev,
 .custom-navigation-button-next {
   position: absolute;
@@ -182,6 +176,10 @@ strong {
 
 .custom-navigation-button-next {
   right: 10px;
+}
+
+.blogLanding {
+  position: relative;
 }
 
 /* ========================== FOR SWIPER JS ===========================  */

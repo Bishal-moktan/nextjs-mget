@@ -3,11 +3,12 @@ import BlogCard from '../BlogCard/BlogCard';
 import styles from './BlogContainer.module.css';
 import { useEffect, useState } from 'react';
 import { fetchBlogPosts } from '@/features/blogSlice/blogSlice';
+import notFound from '@/public/icons/notFound.svg';
+import Image from 'next/image';
 
-const BlogContainer = () => {
+const BlogContainer = ({ posts }) => {
   const [mounted, setMounted] = useState(false);
   const [offSet, setOffSet] = useState(0);
-
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchBlogPosts(offSet));
@@ -19,13 +20,16 @@ const BlogContainer = () => {
     setOffSet((prev) => prev + 6);
   };
 
-  const { posts, loading, totalPosts } = useSelector((store) => store.blog);
+  const { loading, totalPosts } = useSelector((store) => store.blog);
   const showLoadMore = posts?.length < +totalPosts;
 
-  if (posts === null) {
+  if (posts.length === 0) {
     return (
       <div className={styles.noPost}>
-        <h2>No posts found</h2>
+        <div className={styles.icon}>
+          <Image src={notFound} alt="No data found" />
+        </div>
+        <h2>No matching post!</h2>
       </div>
     );
   }
