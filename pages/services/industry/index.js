@@ -10,10 +10,12 @@ import monitoring from '@/public/svg/services/housing/monitoring.svg';
 import mounting from '@/public/svg/services/industry/mounting.svg';
 import wiring from '@/public/svg/services/industry/wiring.svg';
 import Scroll from '@/components/ScrollToTop/ScrollToTop';
-import { useSelector } from 'react-redux';
 
 const Industry = () => {
-  const { metaContent } = useSelector((store) => store.content);
+  const keywords =
+    'Solar power system, Commercial and industrial (C&I) applications, Solar panels, Renewable energy, Electricity, Rooftop systems, Ground-mounted systems, Carport systems, Inverter, Mounting system, Electrical wiring, Switchgear, Monitoring system, Reduce electricity bills, Carbon footprint, Reliable electricity, Property value, Solar energy.';
+  const metaDescription =
+    'Learn about the components and benefits of a solar power system for commercial and industrial applications. Discover how solar panels, inverters, and monitoring systems work together to generate renewable electricity, reduce electricity bills, and lower the carbon footprint of businesses. Explore different types of solar power systems, including rooftop, ground-mounted, and carport systems, and understand the considerations for installation and permits. Harness the power of solar energy to increase property value and provide a reliable source of electricity during power outages.';
 
   const landingContent =
     'A solar power system for commercial and industrial (C&I) applications is a renewable energy system that uses solar panels to generate electricity for commercial and industrial buildings. The system works by capturing the energy from the sun through solar panels and converting it into usable electricity that can power commercial and industrial appliances, lighting, and other electrical devices.There are different types of solar power systems available for commercial and industrial applications, including rooftop systems, ground-mounted systems, and carport systems. Rooftop systems are mounted on the roof of a building, ground-mounted systems are installed on the ground near the building, and carport systems are installed in parking lots to provide shade for cars while generating electricity.';
@@ -61,7 +63,8 @@ const Industry = () => {
     <>
       <Head>
         <title>SOLAR FOR INDUSTRY</title>
-        <meta name="description" content={metaContent} />
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>

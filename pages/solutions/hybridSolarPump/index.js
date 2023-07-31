@@ -1,12 +1,14 @@
 import Content from '@/components/Content/Content';
 import Head from 'next/head';
 import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
-import { useSelector } from 'react-redux';
 import SideBar from '@/components/sidebar/sidebar';
 import solutions from '@/data/solutions';
 
 const HybridSolarPump = () => {
-  const { metaContent } = useSelector((store) => store.content);
+  const metaDescription =
+    'Discover the benefits of a hybrid solar power system that combines on-grid and off-grid technology. Learn how solar panels, inverters, batteries, and charge controllers work together to provide a reliable and environmentally friendly supply of electricity, even during power outages. Find out how net metering and grid-tie incentives make hybrid systems cost-effective and scalable for homes and businesses. ';
+  const keywords =
+    'Hybrid solar power system, Solar panels, Inverter, Charge controller, Batteries, DC electricity, AC electricity, Net metering, Grid-tie incentives, Renewable energy, Carbon footprint, Climate change, Scalable, Energy independence, Power outages, Energy storage, Environmentally friendly, Cost-effective.';
   const content = (
     <div>
       <p className="margin">
@@ -82,7 +84,9 @@ const HybridSolarPump = () => {
     <>
       <Head>
         <title>HYBRID SOLAR PUMP INSTALLATION</title>
-        <meta name="description" content={metaContent} />
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={keywords} />
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>

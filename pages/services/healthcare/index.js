@@ -12,10 +12,13 @@ import monitoring from '@/public/svg/services/housing/monitoring.svg';
 import energy from '@/public/svg/services/institute/energy.svg';
 import Accordian from '@/components/Accordian/Accordian';
 import Paragraph from '@/components/Paragraph/Paragraph';
-import { useSelector } from 'react-redux';
 
 const Agriculture = () => {
-  const { metaContent } = useSelector((store) => store.content);
+  const keywords =
+    'Healthcare, Hospitals, Solar power system, Cost Savings, Reliability, Environmental Benefits, Energy Independence, Improved Reputation, Tax Incentives, Solar Panels, Inverter, Battery Storage, Energy Management System, Monitoring System, Grid-Tied, Stand-Alone, Hybrid, Roof-Mounted, Ground-Mounted, Solar Carport, Energy Requirements, Available Space, Local Climate, Building Structure, Electrical Grid, Maintenance Requirements, Budget.';
+
+  const metaDescription =
+    'Learn why healthcare and hospitals should consider switching to solar power systems, including cost savings, reliability, environmental benefits, and improved reputation. Understand the components of a solar power system and the types available for healthcare facilities. Consider key factors such as energy requirements, available space, climate, building structure, and maintenance before installing a solar power system. Consult a professional solar installer for a successful implementation. Harness the benefits of solar energy to power critical medical equipment and services while reducing operating expenses and carbon footprint.';
 
   const landingContent =
     'A solar power system for commercial and industrial (C&I) applications is a renewable energy system that uses solar panels to generate electricity for commercial and industrial buildings.';
@@ -153,7 +156,8 @@ const Agriculture = () => {
     <>
       <Head>
         <title>SOLAR FOR HEALTHCARE</title>
-        <meta name="description" content={metaContent} />
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>

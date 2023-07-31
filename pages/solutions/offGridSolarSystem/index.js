@@ -2,12 +2,16 @@ import Content from '@/components/Content/Content';
 import Head from 'next/head';
 import { FaCheckCircle } from 'react-icons/fa';
 import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
-import { useSelector } from 'react-redux';
 import SideBar from '@/components/sidebar/sidebar';
 import solutions from '@/data/solutions';
 
 const OffGridSolarSystem = () => {
-  const { metaContent } = useSelector((store) => store.content);
+
+  const metaDescription =
+    'Explore the benefits and components of off-grid solar power systems, offering cost-effective and sustainable solutions for remote areas. Learn about site assessment, equipment selection, battery storage, and grid integration to ensure reliable energy generation';
+
+  const keywords =
+    'Off-grid solar power system, Solar panels, Charge controller, Batteries, Inverter, Generator, Direct current (DC) electricity, Alternating current (AC) electricity, Remote areas, Stand-alone power system, Emergency power, Smart off-grid system, Mobile app control, Financing options, Rural communities, Agriculture applications, Energy storage, Microgrid system, Site assessment, Maintenance plan, Grid integration, Sustainable energy, Reliable power generation, Cost-effective solutions, Training programs, Safety standards, Environmental impact, Renewable energy, High-quality equipment, Power usage patterns.';
 
   const content = (
     <div>
@@ -162,7 +166,8 @@ const OffGridSolarSystem = () => {
     <>
       <Head>
         <title>OFF GRID SOLAR POWER SYSTEM INSTALLATION</title>
-        <meta name="description" content={metaContent} />
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>

@@ -4,11 +4,13 @@ import SideBar from '@/components/sidebar/sidebar';
 import services from '@/data/services';
 import Head from 'next/head';
 import { FaCheckCircle } from 'react-icons/fa';
-import { useSelector } from 'react-redux';
 
 const commercialIndustrialSolar = () => {
-  const { metaContent } = useSelector((store) => store.content);
+  const keywords =
+    'Solar power solution, Commercial and industrial (C&I), Solar panels, Rooftop installation, Ground-mounted installation, Inverter, Direct current (DC) electricity, Alternating current (AC) electricity, Excess electricity, Battery storage, Net metering, Net billing, Cost savings, Energy independence, Environmental benefits, Increased energy efficiency, Sustainability, Grid-Tied Solar Systems, Off-Grid Solar Systems, Hybrid Solar Systems, Solar Carport Systems.';
 
+  const metaDescription =
+    'Explore the advantages of solar power solutions for commercial and industrial (C&I) use, from cost savings and energy independence to improved sustainability and reduced environmental impact. Understand the different types of C&I solar power systems, such as grid-tied, off-grid, hybrid, and solar carport systems, and learn how they can help businesses and industrial facilities meet their energy needs while reducing their reliance on traditional utility companies.';
   const content = (
     <div>
       <p>
@@ -128,7 +130,8 @@ const commercialIndustrialSolar = () => {
     <>
       <Head>
         <title>COMMERCIAL AND INDUSTRIAL SOLAR SYSTEM INSTALLATION</title>
-        <meta name="description" content={metaContent} />
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>

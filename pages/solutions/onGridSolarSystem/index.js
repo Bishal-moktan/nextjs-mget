@@ -2,11 +2,14 @@ import Content from '@/components/Content/Content';
 import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import SideBar from '@/components/sidebar/sidebar';
 import Head from 'next/head';
-import { useSelector } from 'react-redux';
 import solutions from '@/data/solutions';
 
 const OnGridSolarSystem = () => {
-  const { metaContent } = useSelector((store) => store.content);
+  const metaDescription =
+    'Generate clean and renewable energy with an on-grid solar power system! Reduce or even eliminate electricity bills, and help fight climate change. Learn more about the cost-effective and reliable benefits of on-grid solar power systems.';
+
+  const keywords =
+    'On-grid solar power system, Solar panels, Inverter, Bi-directional meter, Utility power grid, AC electricity, DC electricity, Excess energy, Electricity bills, Grid-tie inverters, Renewable energy, Carbon footprint, Fossil fuel-based power systems, Clean energy, Climate change, Cost-effective, Reliability, Environmentally friendly, Off-grid systems, Energy savings.';
 
   const content = (
     <div>
@@ -69,7 +72,9 @@ const OnGridSolarSystem = () => {
     <>
       <Head>
         <title>ON GRID SOLAR POWER SYSTEM INSTALLATION</title>
-        <meta name="description" content={metaContent} />
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={keywords} />
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>

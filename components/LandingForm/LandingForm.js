@@ -4,7 +4,7 @@ import { AiOutlineClockCircle } from 'react-icons/ai';
 import { BsEnvelope } from 'react-icons/bs';
 import { FiPhoneCall } from 'react-icons/fi';
 import { useSelector } from 'react-redux';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import { useRouter } from 'next/router';

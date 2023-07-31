@@ -4,11 +4,13 @@ import SideBar from '@/components/sidebar/sidebar';
 import services from '@/data/services';
 import Head from 'next/head';
 import { FaCheckCircle } from 'react-icons/fa';
-import { useSelector } from 'react-redux';
 
 const ResidentialSolar = () => {
-  const { metaContent } = useSelector((store) => store.content);
+  const keywords =
+    'Solar power solution, Residential properties, Solar panels, Electricity generation, Inverter, Direct current (DC) electricity, Alternating current (AC) electricity, Excess electricity, Battery storage, Net metering, Cost savings, Energy independence, Environmental benefits, Low maintenance, Increased property value, Grid-Tied Solar Systems, Off-Grid Solar Systems.';
 
+  const metaDescription =
+    'Discover the benefits of residential solar power systems, from cost savings and energy independence to environmental benefits and increased property value. Understand the differences between grid-tied and off-grid systems and learn how solar panels, inverters, and net metering play a role in harnessing clean and renewable energy for residential properties.';
   const content = (
     <div>
       <p>
@@ -91,7 +93,8 @@ const ResidentialSolar = () => {
     <>
       <Head>
         <title>RESIDENTIAL SOLAR SYSTEM INSTALLATION</title>
-        <meta name="description" content={metaContent} />
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>

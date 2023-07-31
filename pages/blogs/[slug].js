@@ -15,6 +15,7 @@ import 'swiper/css/navigation';
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 import SimilarPosts from '@/components/blog/SimilarPosts/SimilarPosts';
 import CTA from '@/components/about/cta/CTA';
+import Scroll from '@/components/ScrollToTop/ScrollToTop';
 
 const SinglePost = () => {
   const { metaContent, title } = useSelector((store) => store.content);
@@ -46,8 +47,8 @@ const SinglePost = () => {
   return (
     <>
       <Head>
-        <title>Blog - {singlePost?.title}</title>
-        <meta name="description" content={metaContent} />
+        <title>{singlePost?.title}</title>
+        <meta name="description" content={singlePost?.body} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>
@@ -119,6 +120,7 @@ const SinglePost = () => {
         </div>
       </div>
       <CTA />
+      <Scroll />
     </>
   );
 };

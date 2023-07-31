@@ -6,12 +6,10 @@ import { checkTime } from '@/utils/checkTime';
 const initialState = {
   metaContent,
   isOfficeOpened: checkTime(),
-  mainUrl: 'https://nextjs-mget.vercel.app',
+  mainUrl: 'https://www.mgetenergy.com/',
   isSidebarOpen: false,
   title: 'Empowering the World with Solar Energy',
   activeContent: 0,
-  keywords:
-    'solar panel installation, solar installation, solar panel installation cost, solar installer near me, solar panel installation cost in india, solar panel home installation, how to install solar panels at home, solar installation companies, solar planar installer near me, solar rooftop installer, solar rooftop installation',
 };
 
 const contentSlice = createSlice({

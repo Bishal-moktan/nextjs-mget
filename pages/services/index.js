@@ -17,9 +17,12 @@ import SideBar from '@/components/sidebar/sidebar';
 import services from '@/data/services';
 
 const Services = () => {
-  const { metaContent, title } = useSelector(
-    (store) => store.content
-  );
+  const { title } = useSelector((store) => store.content);
+
+  const metaDescription =
+    'Discover the different phases of a solar power system project, from design and engineering to procurement, construction, commissioning, and maintenance. Learn how each phase plays a crucial role in ensuring the successful installation and operation of the solar power system, as well as the safe decommissioning at the end of its life.';
+  const keywords =
+    'Design phase, Solar power system installation, Site assessment, Feasibility study, Energy consumption analysis, System sizing, Equipment selection, System layout, Permits, Schematics, Commissioning, Testing, Procurement, Construction, Solar panels, Inverter, Charge controller, Batteries, Electrical components, Energy production, Safety features, Financial analysis, Quality control, Maintenance, Monitoring, Repairs, Decommissioning, Dismantling, Restoration.';
 
   const description = [
     {
@@ -487,7 +490,8 @@ const Services = () => {
     <>
       <Head>
         <title>{title} - Services</title>
-        <meta name="description" content={metaContent} />
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>

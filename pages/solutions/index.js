@@ -7,13 +7,18 @@ import styles from '@/styles/Solutions.module.css';
 import solutions from '@/data/solutions';
 
 const Solutions = () => {
-  const { metaContent, title } = useSelector((store) => store.content);
+  const { title } = useSelector((store) => store.content);
+  const metaDescription =
+    'Discover the unique features and applications of the most common types of solar power systems, including grid-tied, off-grid, hybrid, water heating, pool heating, water pumping and street lighting systems. Find the best system to meet your energy needs, location and budget.';
 
+  const keywords =
+    'solar, systems, grid, water, energy, power, panels, types, heating, electricity';
   return (
     <>
       <Head>
         <title>{title} - Solutions</title>
-        <meta name="description" content={metaContent} />
+        <meta name="keywords" content={keywords} />
+        <meta name="description" content={metaDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>

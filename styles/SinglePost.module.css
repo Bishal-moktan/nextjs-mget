@@ -2,6 +2,7 @@
   display: flex;
   margin-top: 1rem;
   gap: 1rem;
+  height: fit-content;
 }
 
 .post {
@@ -58,7 +59,6 @@
 }
 
 .description {
-  /* max-width: 50vw; */
   margin: 0 auto;
   letter-spacing: 0.5px;
   word-spacing: 1px;

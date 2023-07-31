@@ -9,10 +9,13 @@ import monitoring from '@/public/svg/services/housing/monitoring.svg';
 import CardList from '@/components/CardList/CardList';
 import Paragraph from '@/components/Paragraph/Paragraph';
 import Scroll from '@/components/ScrollToTop/ScrollToTop';
-import { useSelector } from 'react-redux';
 
 const Housing = () => {
-  const { metaContent } = useSelector((store) => store.content);
+  const metaDescription =
+    'Discover how a solar power system can benefit housing units by generating renewable electricity through solar panels. Learn about on-grid and off-grid systems, and how solar panels, inverters, batteries, and monitoring systems work together to power household appliances and reduce electricity bills. Find out how solar energy can help reduce the carbon footprint of residential homes and increase property value. Considerations for installation, permits, and the amount of sunlight received are also discussed. Harness the power of solar energy for sustainable and cost-effective electricity in your housing unit.';
+
+  const keywords =
+    'Solar power system, Housing unit, Renewable energy, Solar panels, Electricity, On-grid systems, Off-grid systems, Inverter, Batteries, Charge controller, Monitoring system, Reduce electricity bills, Carbon footprint, Increased property value.';
 
   const title = 'Solar For Housing';
   const landingContent =
@@ -56,7 +59,8 @@ const Housing = () => {
     <>
       <Head>
         <title>SOLAR FOR HOUSING</title>
-        <meta name="description" content={metaContent} />
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>

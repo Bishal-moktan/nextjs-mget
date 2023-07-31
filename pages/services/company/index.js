@@ -11,10 +11,13 @@ import energy from '@/public/svg/services/company/energy.svg';
 import environment from '@/public/svg/services/company/environment.svg';
 import government from '@/public/svg/services/company/government.svg';
 import Scroll from '@/components/ScrollToTop/ScrollToTop';
-import { useSelector } from 'react-redux';
 
 const Company = () => {
-  const { metaContent } = useSelector((store) => store.content);
+  const keywords =
+    'IT industry, solar power system, electricity demand, cost savings, greener environment, data center, traditional sources of energy, grid-tied, off-grid, energy usage patterns, budget, sustainability, brand reputation, environmental benefits, government incentives, reliable source of electricity, carbon footprint, operating expenses, fossil fuels, climate change.';
+
+  const metaDescription =
+    'Discover the benefits of installing a solar power system in the IT industry, including cost savings, environmental benefits, energy security, and brand reputation. Explore the two main types of solar power systems for IT companies: grid-tied and off-grid, and how they can be customized to meet specific energy needs. Learn why data centers should adopt solar power to save on expenses, reduce their carbon footprint, improve brand image, and take advantage of government incentives. By harnessing solar energy, IT companies and data centers can contribute to a greener future and enhance their bottom line.';
 
   const landingContent =
     'In an IT industry, the use of computer equipment and other electronics can lead to a significant demand for electricity. By installing a solar power system, IT companies can reduce their dependence on traditional sources of energy, save money on electricity bills, and contribute to a cleaner and greener environment. The system can be designed to meet the specific energy needs of the industry, taking into account factors such as building size, energy usage patterns, and budget.';
@@ -105,7 +108,8 @@ const Company = () => {
     <>
       <Head>
         <title>SOLAR FOR COMPANY</title>
-        <meta name="description" content={metaContent} />
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>

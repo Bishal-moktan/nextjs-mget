@@ -42,12 +42,8 @@
   line-height: 2rem;
 }
 
-.content h3 {
-  line-height: 2.5rem;
+.content h2 {
   margin-bottom: 1rem;
-}
-
-.title span {
   color: var(--color-orange);
   font-weight: bold;
 }
