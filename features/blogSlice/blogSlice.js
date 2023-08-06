@@ -1,3 +1,4 @@
+import { url } from '@/data/baseUrl';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -6,17 +7,15 @@ const initialState = {
   error: null,
   posts: [],
   totalPosts: null,
+  post: {},
 };
-
-// const url = 'http://localhost/server/server.php';
-const url = 'https://mget-demo.000webhostapp.com/server.php';
 
 // fetch post
 export const fetchBlogPosts = createAsyncThunk(
   'blog/fetchBlogPosts',
   async (payload, thunkAPI) => {
     try {
-      const res = await axios(`${url}?offset=${payload}`);
+      const res = await axios(`${url}/server.php?offset=${payload}`);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue('something went wrong');
@@ -27,7 +26,15 @@ export const fetchBlogPosts = createAsyncThunk(
 const BlogSlice = createSlice({
   name: 'blog',
   initialState,
-  reducers: {},
+  reducers: {
+    addPost(state, action) {
+      state.posts = action.payload.posts;
+      state.totalPosts = action.payload.totalCount;
+    },
+    singlePost(state, action) {
+      state.post = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchBlogPosts.pending, (state) => {
@@ -48,5 +55,7 @@ const BlogSlice = createSlice({
       });
   },
 });
+
+export const { addPost } = BlogSlice.actions;
 
 export default BlogSlice.reducer;

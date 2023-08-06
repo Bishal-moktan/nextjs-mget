@@ -16,9 +16,10 @@ import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 import SimilarPosts from '@/components/blog/SimilarPosts/SimilarPosts';
 import CTA from '@/components/about/cta/CTA';
 import Scroll from '@/components/ScrollToTop/ScrollToTop';
+import { wrapper } from '@/store/store';
+import axios from 'axios';
 
 const SinglePost = () => {
-  const { metaContent, title } = useSelector((store) => store.content);
   const { posts } = useSelector((store) => store.blog);
   const router = useRouter();
   const { slug } = router.query;
@@ -124,4 +125,5 @@ const SinglePost = () => {
     </>
   );
 };
+
 export default SinglePost;

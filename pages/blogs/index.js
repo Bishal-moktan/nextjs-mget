@@ -5,8 +5,13 @@ import Head from 'next/head';
 import { useSelector } from 'react-redux';
 import styles from '@/styles/Blog.module.css';
 import { useState } from 'react';
+import { addPost } from '@/features/blogSlice/blogSlice';
+import { wrapper } from '@/store/store';
+import axios from 'axios';
+import { url } from '@/data/baseUrl';
 
 const Blog = () => {
+  // console.log(data);
   const { title, metaContent } = useSelector((store) => store.content);
   const [searchResult, setSearchResult] = useState([]);
   return (
@@ -27,4 +32,12 @@ const Blog = () => {
     </>
   );
 };
+
+export const getServerSideProps = wrapper.getServerSideProps(
+  (store) => async () => {
+    const res = await axios(`${url}/server.php?offset=${0}`);
+    store.dispatch(addPost(res.data));
+  }
+);
+
 export default Blog;
