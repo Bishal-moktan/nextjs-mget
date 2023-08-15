@@ -68,7 +68,11 @@ const Description = () => {
             <div className={styles.item} key={index}>
               {item?.img && (
                 <div className={styles.img__container}>
-                  <Image src={item?.img} alt={item?.altText} />
+                  <Image
+                    sizes="(min-width: 1000px) 33.35vw, 100vw"
+                    src={item?.img}
+                    alt={item?.altText}
+                  />
                 </div>
               )}
               <div className={styles.content}>

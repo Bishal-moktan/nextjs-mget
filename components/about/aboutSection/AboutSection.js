@@ -26,6 +26,7 @@ const AboutSection = () => {
         <Image
           src={image}
           alt="503 kw ongrid solar power system installed at Tecumseh Products India Pvt Ltd - BALLABGARH FARIDABAD- HARYANA"
+          sizes="(min-width: 1000px) 33.35vw, 100vw"
         />
       </div>
     </div>

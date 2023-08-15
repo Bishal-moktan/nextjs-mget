@@ -9,7 +9,7 @@ import { GrLinkedin } from 'react-icons/gr';
 import styles from './Navbar.module.css';
 import logo from '@/public/images/main-logo.svg';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import DropDown from '../DropDown/DropDown';
 import routes from '@/data/routes';
 import solutions from '@/data/solutions';
@@ -18,6 +18,11 @@ import services from '@/data/services';
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
   const [rotate, setRotate] = useState(false);
+  useEffect(() => {
+    if (!showLinks) {
+      setRotate(false);
+    }
+  }, [showLinks]);
 
   return (
     <nav className={styles.navbar} id="nav">
@@ -98,7 +103,11 @@ const Navbar = () => {
           </div>
 
           <div className={styles.logo}>
-            <Link href={routes.home} className={styles.img_container}>
+            <Link
+              onClick={() => setShowLinks((prev) => !prev)}
+              href={routes.home}
+              className={styles.img_container}
+            >
               <Image
                 src={logo}
                 alt="mgetenergy logo"
@@ -114,10 +123,18 @@ const Navbar = () => {
                 : styles.nav_links
             }
           >
-            <Link href={routes.home} className={styles.links}>
+            <Link
+              onClick={() => setShowLinks((prev) => !prev)}
+              href={routes.home}
+              className={styles.links}
+            >
               HOME
             </Link>
-            <Link href={routes.about} className={styles.links}>
+            <Link
+              onClick={() => setShowLinks((prev) => !prev)}
+              href={routes.about}
+              className={styles.links}
+            >
               ABOUT US
             </Link>
             <DropDown
@@ -130,13 +147,25 @@ const Navbar = () => {
               options={services}
               path={routes.services}
             />
-            <Link href={routes.testimonials} className={styles.links}>
+            <Link
+              onClick={() => setShowLinks((prev) => !prev)}
+              href={routes.testimonials}
+              className={styles.links}
+            >
               TESTIMONIALS
             </Link>
-            <Link href="/blogs" className={styles.links}>
+            <Link
+              onClick={() => setShowLinks((prev) => !prev)}
+              href="/blogs"
+              className={styles.links}
+            >
               BLOGS
             </Link>
-            <Link href={routes.contact} className={styles.links}>
+            <Link
+              onClick={() => setShowLinks((prev) => !prev)}
+              href={routes.contact}
+              className={styles.links}
+            >
               CONTACT US
             </Link>
           </div>

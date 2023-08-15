@@ -9,7 +9,7 @@ const Card = ({ img, name, info, description }) => {
         <div className={styles.content}>{description}</div>
         <div className={styles.info}>
           <div className={styles.image}>
-            <Image src={img} alt={name} />
+            <Image src={img} alt={name} sizes="80px" />
           </div>
           <div className={styles.desc}>
             <p className="margin">{name}</p>

@@ -15,6 +15,7 @@ const WeOffer = () => {
             <Image
               src={solutionImg}
               alt="15 KW ONGRID SOLAR POWER SYSTEM INSTALLED AT DLF FARM, SOUTHERN DRIVE, CHHATARPUR, DELHI"
+              sizes="(min-width: 1000px) 33.35vw, 100vw"
             />
           </div>
           <div className={styles.content}>
@@ -35,6 +36,7 @@ const WeOffer = () => {
             <Image
               src={serviceImg}
               alt="40 KW ONGRID SOLAR POWER SYSTEM INSTALLED AT LIBERAL TRADERS PVT LTD, B-84/1 , OKHLA PHASE 2, OKHLA IND AREA, NEW DELHI 110020"
+              sizes="(min-width: 1000px) 33.35vw, 100vw"
             />
           </div>
           <div className={styles.content}>
@@ -55,6 +57,7 @@ const WeOffer = () => {
             <Image
               src={ctaImg}
               alt="400 KW ONGRID SOLAR PPOWER SYSTEM INSTALLED AT MAGICRETE BUILDING SOLUTIONS- JHAJJHAR- HARYANA ON TIN SHED (METRO SHEET)"
+              sizes="(min-width: 1000px) 33.35vw, 100vw"
             />
           </div>
           <div className={styles.content}>
