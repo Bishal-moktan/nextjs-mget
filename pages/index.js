@@ -2,12 +2,16 @@ import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
 import HeroSection from '@/components/home/HeroSection/HeroSection';
 import Head from 'next/head';
 import { useSelector } from 'react-redux';
-import Intro from '@/components/home/Intro/Intro';
-import WeOffer from '@/components/home/weOffer/WeOffer';
-import Partners from '@/components/Partners/Partners';
-import Testimonials from '@/components/home/testimonials/Testimonials';
 
 import Why from '@/components/home/Why/Why';
+import dynamic from 'next/dynamic';
+
+const Intro = dynamic(() => import('@/components/home/Intro/Intro'));
+const WeOffer = dynamic(() => import('@/components/home/weOffer/WeOffer'));
+const Partners = dynamic(() => import('@/components/Partners/Partners'));
+const Testimonials = dynamic(() =>
+  import('@/components/home/testimonials/Testimonials')
+);
 
 export default function Home() {
   const keywords =

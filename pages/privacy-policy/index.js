@@ -6,7 +6,7 @@ import styles from '@/styles/PrivacyPolicy.module.css';
 import Scroll from '@/components/ScrollToTop/ScrollToTop';
 
 const PrivacyPolicy = () => {
-  const { metaContent, title, mainUrl } = useSelector((store) => store.content);
+  const { metaContent, title } = useSelector((store) => store.content);
 
   //fisrt list content
   const firstListTitle = 'Information We Collect';

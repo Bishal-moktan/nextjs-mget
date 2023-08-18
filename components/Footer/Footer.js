@@ -22,19 +22,33 @@ const Footer = () => {
             </div>
 
             <div className={styles.icons}>
-              <a href="https://www.facebook.com/mgetenergy" target="_blank">
+              <a
+                href="https://www.facebook.com/mgetenergy"
+                aria-label="Follow us on Facebook"
+                target="_blank"
+              >
                 <FaFacebook className="fb_icon" />
               </a>
-              <a href="https://twitter.com/MGETEnergy" target="_blank">
+              <a
+                href="https://twitter.com/MGETEnergy"
+                target="_blank"
+                aria-label="Follow us on Twitter"
+              >
                 <FaTwitter className="twitter_icon" />
               </a>
               <a
                 href="https://www.linkedin.com/company/mgetenergy"
                 target="_blank"
+                aria-label="Follow us on LinkedIn"
               >
                 <GrLinkedin className="linkedin_icon" />
               </a>
-              <a href="https://www.youtube.com/@mgetenergy" target="_blank">
+
+              <a
+                href="https://www.youtube.com/@mgetenergy"
+                aria-label="Follow us on Youtube"
+                target="_blank"
+              >
                 <FaYoutube className="youtube_icon" />
               </a>
             </div>
@@ -132,13 +146,21 @@ const Footer = () => {
             <ul>
               <li>
                 <FiPhoneCall className={styles.footer__contact_icon} />
-                <Link href="tel:+91 98218 76325" className="text_light">
+                <Link
+                  href="tel:+91 98218 76325"
+                  className="text_light"
+                  aria-label="Our phone number: +91 98218 76325"
+                >
                   +91 98218 76325
                 </Link>
               </li>
               <li>
                 <FiPhoneCall className={styles.footer__contact_icon} />
-                <Link href="tel:+91 98186 66325" className="text_light">
+                <Link
+                  href="tel:+91 98186 66325"
+                  className="text_light"
+                  aria-label="Our phone number: +91 98186 66325"
+                >
                   +91 98186 66325
                 </Link>
               </li>
@@ -147,6 +169,7 @@ const Footer = () => {
                 <Link
                   href="mailto:wecare@mgetenergy.com"
                   className="text_light"
+                  aria-label="Our email: wecare@mgetenergy.com"
                 >
                   wecare@mgetenergy.com
                 </Link>

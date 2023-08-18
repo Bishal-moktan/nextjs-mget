@@ -4,7 +4,7 @@ import styles from './ScrollToTop.module.css';
 const Scroll = () => {
   return (
     <div className={styles.scrollUp}>
-      <a href="#nav">
+      <a href="#nav" aria-label="Go to top of the page">
         <MdKeyboardArrowUp />
       </a>
     </div>
