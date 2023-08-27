@@ -2,10 +2,8 @@ import Image from 'next/image';
 import ClientIcon from '@/public/icons/ClientIcon';
 import EmailIcon from '@/public/icons/EmailIcon';
 import TrustIcon from '@/public/icons/TrustIcon';
-import { FaFacebook, FaYoutube } from 'react-icons/fa';
-import { FaTwitter } from 'react-icons/fa';
-import { FaBars } from 'react-icons/fa';
-import { GrLinkedin } from 'react-icons/gr';
+import { FaFacebook, FaYoutube, FaTwitter, FaBars } from 'react-icons/fa/index';
+import { GrLinkedin } from 'react-icons/gr/index';
 import styles from './Navbar.module.css';
 import logo from '@/public/images/main-logo.svg';
 import Link from 'next/link';
@@ -36,6 +34,7 @@ const Navbar = () => {
             <h4>Email Us</h4>
             <a
               href="mailto:wecare@mgetenergy.com"
+              aria-label="Contact us through our email wecare@mgetenergy.com"
               className={styles.navbar_top_contact}
             >
               wecare@mgetenergy.com
@@ -49,10 +48,18 @@ const Navbar = () => {
           </div>
           <div className={styles.navbar_top_content}>
             <h4>Client Services</h4>
-            <a href="tel:+919821876325" className={styles.navbar_top_contact}>
+            <a
+              href="tel:+919821876325"
+              aria-label="Our contact number +919821876325"
+              className={styles.navbar_top_contact}
+            >
               +91 98218 76325,
             </a>
-            <a href="tel:+919818666325" className={styles.navbar_top_contact}>
+            <a
+              href="tel:+919818666325"
+              aria-label="Our contact number +919818666325"
+              className={styles.navbar_top_contact}
+            >
               {' '}
               98186 66325
             </a>

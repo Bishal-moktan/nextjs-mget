@@ -9,8 +9,11 @@ import dynamic from 'next/dynamic';
 const Intro = dynamic(() => import('@/components/home/Intro/Intro'));
 const WeOffer = dynamic(() => import('@/components/home/weOffer/WeOffer'));
 const Partners = dynamic(() => import('@/components/Partners/Partners'));
-const Testimonials = dynamic(() =>
-  import('@/components/home/testimonials/Testimonials')
+const Testimonials = dynamic(
+  () => import('@/components/home/testimonials/Testimonials'),
+  {
+    ssr: false,
+  }
 );
 
 export default function Home() {

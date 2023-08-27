@@ -8,9 +8,9 @@ import 'swiper/css/navigation';
 // import required modules
 import { Autoplay, Navigation } from 'swiper';
 
+import styles from './Testimonials.module.css';
 import { testimonials } from '@/components/data/testimonials';
 import Card from '../Card/Card';
-import styles from './Testimonials.module.css';
 
 const Testimonials = () => {
   return (

@@ -1,11 +1,10 @@
 import Image from 'next/image';
-import { FaFacebook, FaYoutube } from 'react-icons/fa';
-import { FaTwitter } from 'react-icons/fa';
-import { GrLinkedin } from 'react-icons/gr';
-import { BsEnvelope } from 'react-icons/bs';
-import { FiPhoneCall } from 'react-icons/fi';
-import { SlLocationPin } from 'react-icons/sl';
-import { AiOutlineClockCircle } from 'react-icons/ai';
+import { FaFacebook, FaYoutube, FaTwitter, FaBars } from 'react-icons/fa/index';
+import { GrLinkedin } from 'react-icons/gr/index';
+import { BsEnvelope } from 'react-icons/bs/index';
+import { FiPhoneCall } from 'react-icons/fi/index';
+import { SlLocationPin } from 'react-icons/sl/index';
+import { AiOutlineClockCircle } from 'react-icons/ai/index';
 import Link from 'next/link';
 import logo from '@/public/images/main-logo.svg';
 import styles from './Footer.module.css';
