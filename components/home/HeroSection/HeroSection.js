@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import styles from './HeroSection.module.css';
+import bgImage from '@/public/images/about/about12.webp';
+import Image from 'next/image';
 
 export default function App() {
   const altTextBG =
@@ -7,7 +9,16 @@ export default function App() {
   return (
     <>
       <div className={styles.heroSection}>
-        <span role="img" aria-label={altTextBG}></span>
+        <Image
+          src={bgImage}
+          fill
+          sizes="(min-width: 2400px) 100vw, calc(101.01vw - 24px)"
+          style={{
+            objectFit: 'cover',
+          }}
+          alt={altTextBG}
+          className={styles.backgroundImage}
+        />
         <div className={`${styles.content__container}`}>
           <div className={styles.container__fluid}>
             <div className={styles.content}>

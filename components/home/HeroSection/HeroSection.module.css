@@ -1,10 +1,8 @@
 .heroSection {
-  background: url('../../../public/images/about/about12.webp');
-  background-size: cover;
-  background-position-y: 25%;
   height: 90vh;
   width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 
 .content__container {
@@ -15,6 +13,11 @@
   line-height: normal;
   display: flex;
   align-items: center;
+}
+
+.backgroundImage {
+  position: absolute;
+  z-index: -1;
 }
 
 .content {
