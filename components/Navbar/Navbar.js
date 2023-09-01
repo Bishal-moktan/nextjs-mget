@@ -72,7 +72,7 @@ const Navbar = () => {
           </div>
           <div className={styles.navbar_top_content}>
             <h4>Trusted By</h4>
-            <a className={styles.navbar_top_contact}>400+ Happy Clients</a>
+            <p className={styles.navbar_top_contact}>400+ Happy Clients</p>
           </div>
         </div>
 
