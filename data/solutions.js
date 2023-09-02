@@ -1,6 +1,5 @@
 import { FaCarBattery, FaSolarPanel } from 'react-icons/fa';
 import { GiSolarPower } from 'react-icons/gi';
-import { MdOutlineSolarPower } from 'react-icons/md';
 import routes from './routes';
 
 const solutions = [
@@ -8,16 +7,19 @@ const solutions = [
     title: 'On-grid Solar System',
     path: routes.onGrid,
     icon: <GiSolarPower />,
+    slogan: 'Sun power straight to the grid',
   },
   {
     title: 'Off-grid Solar System',
     path: routes.offgrid,
     icon: <FaCarBattery />,
+    slogan: 'Sunshine, self-sustained',
   },
   {
     title: 'Hybrid Solar System',
     path: routes.hybrid,
     icon: <FaSolarPanel />,
+    slogan: 'Solar and grid unite for power',
   },
   {
     title: 'Solar Water Pump',
@@ -35,6 +37,7 @@ const solutions = [
         />
       </svg>
     ),
+    slogan: 'Pump powered by the sun',
   },
 ];
 

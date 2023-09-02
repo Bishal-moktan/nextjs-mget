@@ -5,7 +5,9 @@ import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import { useEffect, useState } from 'react';
 import styles from '@/styles/Testimonials.module.css';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
+import { navLinksIndex } from '@/data/navbarData';
 
 const Testimonials = () => {
   const { metaContent, title } = useSelector((store) => store.content);
@@ -16,6 +18,12 @@ const Testimonials = () => {
 
   useEffect(() => {
     setContent(testimonials);
+  }, []);
+
+  
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(changeActiveNavLink(navLinksIndex.testimonials));
   }, []);
 
   const indexOfLastItem = currentPage * itemsPerPage;

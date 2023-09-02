@@ -12,15 +12,24 @@ import DropDown from '../DropDown/DropDown';
 import routes from '@/data/routes';
 import solutions from '@/data/solutions';
 import services from '@/data/services';
+import { navLinksIndex } from '@/data/navbarData';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
   const [rotate, setRotate] = useState(false);
+  const { activeNavLink, changeActiveNavLink } = useSelector(
+    (store) => store.content
+  );
   useEffect(() => {
     if (!showLinks) {
       setRotate(false);
     }
   }, [showLinks]);
+
+  const handleNavLinkClick = () => {
+    setShowLinks((prev) => !prev);
+  };
 
   return (
     <nav className={styles.navbar} id="nav">
@@ -127,7 +136,7 @@ const Navbar = () => {
 
           <div className={styles.logo}>
             <Link
-              onClick={() => setShowLinks((prev) => !prev)}
+              onClick={handleNavLinkClick}
               href={routes.home}
               className={styles.img_container}
             >
@@ -147,16 +156,24 @@ const Navbar = () => {
             }
           >
             <Link
-              onClick={() => setShowLinks((prev) => !prev)}
+              onClick={handleNavLinkClick}
               href={routes.home}
-              className={styles.links}
+              className={
+                activeNavLink === navLinksIndex.home
+                  ? `${styles.links} ${styles.active}`
+                  : styles.links
+              }
             >
               HOME
             </Link>
             <Link
-              onClick={() => setShowLinks((prev) => !prev)}
+              onClick={handleNavLinkClick}
               href={routes.about}
-              className={styles.links}
+              className={
+                activeNavLink === navLinksIndex.about
+                  ? `${styles.links} ${styles.active}`
+                  : styles.links
+              }
             >
               ABOUT US
             </Link>
@@ -171,23 +188,35 @@ const Navbar = () => {
               path={routes.services}
             />
             <Link
-              onClick={() => setShowLinks((prev) => !prev)}
+              onClick={handleNavLinkClick}
               href={routes.testimonials}
-              className={styles.links}
+              className={
+                activeNavLink === navLinksIndex.testimonials
+                  ? `${styles.links} ${styles.active}`
+                  : styles.links
+              }
             >
               TESTIMONIALS
             </Link>
             <Link
-              onClick={() => setShowLinks((prev) => !prev)}
+              onClick={handleNavLinkClick}
               href="/blogs"
-              className={styles.links}
+              className={
+                activeNavLink === navLinksIndex.blog
+                  ? `${styles.links} ${styles.active}`
+                  : styles.links
+              }
             >
               BLOGS
             </Link>
             <Link
-              onClick={() => setShowLinks((prev) => !prev)}
+              onClick={handleNavLinkClick}
               href={routes.contact}
-              className={styles.links}
+              className={
+                activeNavLink === navLinksIndex.contact
+                  ? `${styles.links} ${styles.active}`
+                  : styles.links
+              }
             >
               CONTACT US
             </Link>

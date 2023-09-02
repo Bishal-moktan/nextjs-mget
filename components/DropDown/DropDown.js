@@ -1,34 +1,47 @@
 import Link from 'next/link';
 import styles from './DropDown.module.css';
 import { MdKeyboardArrowDown } from 'react-icons/md';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { changeActive } from '@/features/contentSlice/contentSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { navLinksIndex } from '@/data/navbarData';
 
 const DropDown = ({ name, options, path }) => {
-  const [show, setShow] = useState(false);
+  const [columns, setColumns] = useState('');
+  const { activeNavLink } = useSelector((store) => store.content);
   const dispatch = useDispatch();
   const handleClick = (index) => {
     dispatch(changeActive(index));
   };
+
+  useEffect(() => {
+    if (options.length > 2) {
+      setColumns('col__2');
+    } else {
+      setColumns('col__1');
+    }
+  }, []);
+
+  const dropDownClass = ` ${styles.dropDown__content} ${styles[columns]} ${styles.show}`;
+
+  const currentNav =
+    name === 'SOLUTIONS' ? navLinksIndex.solutions : navLinksIndex.services;
   return (
-    <div
-      onClick={() => setShow(!show)}
-      className={`${styles.links} ${styles.dropDown}`}
-    >
-      <Link href={path} className={styles.links}>
+    <div className={`${styles.links} ${styles.dropDown}`}>
+      <Link
+        href={path}
+        className={
+          activeNavLink === currentNav
+            ? `${styles.links} ${styles.active}`
+            : styles.links
+        }
+      >
         {name}
         <MdKeyboardArrowDown className={styles.downArrow} />
       </Link>
-      <ul
-        className={
-          show
-            ? `${styles.dropDown__content} ${styles.show}`
-            : styles.dropDown__content
-        }
-      >
+      <ul className={dropDownClass}>
         {options.map((option, index) => {
-          const { title, path } = option;
+          const { title, path, icon, slogan } = option;
           return (
             <li key={index} className={styles.dropDown__item}>
               <Link
@@ -36,7 +49,12 @@ const DropDown = ({ name, options, path }) => {
                 className={styles.links}
                 onClick={() => handleClick(index)}
               >
-                {title}
+                <div className={styles.icon}>{icon}</div>
+                <div>
+                  <h3 className={styles.linkTitle}>{title}</h3>
+
+                  <p className={styles.text_light}>{slogan}</p>
+                </div>
               </Link>
             </li>
           );

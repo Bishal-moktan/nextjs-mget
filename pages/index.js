@@ -1,10 +1,13 @@
 import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
 import HeroSection from '@/components/home/HeroSection/HeroSection';
 import Head from 'next/head';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import Why from '@/components/home/Why/Why';
 import dynamic from 'next/dynamic';
+import { useEffect } from 'react';
+import { navLinksIndex } from '@/data/navbarData';
+import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
 
 const Intro = dynamic(() => import('@/components/home/Intro/Intro'));
 const WeOffer = dynamic(() => import('@/components/home/weOffer/WeOffer'));
@@ -20,7 +23,13 @@ export default function Home() {
   const keywords =
     'Switch to Solar, Sustainable Energy Solution, Solar Power Company, Sustainable Energy Solutions, Carbon Footprint, Energy Bills, Solar Panels, Solar Inverter, Balance of System, High-Quality Materials, Weather Conditions, Solar Energy System, Energy Needs, Solar Energy, Clean Energy, Green Future, Solar Power Systems, Property Value, Go Green, Affordable Power, Reliable Power, Contact MGETENERGY. ';
 
-  const { metaContent, title, mainUrl } = useSelector((store) => store.content);
+  const { metaContent, title, mainUrl } = useSelector(
+    (store) => store.content
+  );
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(changeActiveNavLink(navLinksIndex.home));
+  }, []);
   return (
     <>
       <Head>

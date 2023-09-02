@@ -16,13 +16,11 @@
 }
 
 .dropDown__content {
-  display: flex;
-  flex-direction: column;
-  width: 15rem;
+  display: grid;
   background: white;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.19);
   position: absolute;
-  top: 2rem;
+  top: 3rem;
   left: -2rem;
   z-index: 999;
   padding: 1rem;
@@ -33,9 +31,42 @@
   border-radius: var(--radius);
 }
 
+.col__2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.col__1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
 .links {
+  display: flex;
+  gap: 1rem;
+  font-size: 1rem;
+  color: var(--color-black);
+}
+
+.links:hover {
+  color: var(--color-green);
+}
+.active {
+  color: var(--color-green);
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: var(--color-green);
+}
+
+.linkTitle {
+  font-weight: bold;
+  color: var(--color-green);
+  width: 15rem;
+}
+
+.text_light {
   color: var(--color-light);
-  transition: var(--transition);
 }
 
 .dropDown:hover .dropDown__content {
@@ -55,20 +86,28 @@
   }
 
   .downArrow {
-    position: absolute;
-    top: 0rem;
-    right: -2rem;
+    display: none;
   }
 
   .dropDown__content {
     all: unset;
-    display: none;
-    transition: var(--transition);
+    display: grid;
+    column-gap: 2rem;
+    row-gap: 1rem;
   }
 
-  .show {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  .col__2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .col__1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* ========================== MEDIA QUERIES FOR SMALL DEVICES =====================  */
+@media screen and (max-width: 600px) {
+  .col__2 {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
