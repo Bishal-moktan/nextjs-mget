@@ -103,8 +103,17 @@
 }
 
 .links {
-  color: var(--color-light);
+  font-size: 1rem;
+  color: var(--color-black);
   transition: var(--transition);
+}
+
+.links:hover {
+  color: var(--color-green);
+}
+.active {
+  color: var(--color-green);
+  font-weight: bold;
 }
 
 .dropDown {

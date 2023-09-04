@@ -2,18 +2,24 @@ import BlogContainer from '@/components/blog/BlogContainer/BlogContainer';
 import BlogLanding from '@/components/blog/BlogLanding/BlogLanding';
 import Search from '@/components/blog/Search/Search';
 import Head from 'next/head';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import styles from '@/styles/Blog.module.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { addPost } from '@/features/blogSlice/blogSlice';
 import { wrapper } from '@/store/store';
 import axios from 'axios';
 import { url } from '@/data/baseUrl';
+import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
+import { navLinksIndex } from '@/data/navbarData';
 
 const Blog = () => {
   // console.log(data);
   const { title, metaContent } = useSelector((store) => store.content);
   const [searchResult, setSearchResult] = useState([]);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(changeActiveNavLink(navLinksIndex.blog));
+  }, []);
   return (
     <>
       <Head>

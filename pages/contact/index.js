@@ -1,9 +1,17 @@
 import LandingForm from '@/components/LandingForm/LandingForm';
+import { navLinksIndex } from '@/data/navbarData';
+import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
 import Head from 'next/head';
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Contact = () => {
   const { metaContent, title } = useSelector((store) => store.content);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(changeActiveNavLink(navLinksIndex.contact));
+  }, []);
 
   return (
     <>

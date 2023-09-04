@@ -1,13 +1,21 @@
 import Head from 'next/head';
 import { FaCheckCircle } from 'react-icons/fa';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import CollapseSideBar from '@/components/CollapseSideBar/CollapseSideBar';
 import SideBar from '@/components/sidebar/sidebar';
 import styles from '@/styles/Solutions.module.css';
 import solutions from '@/data/solutions';
+import { useEffect } from 'react';
+import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
+import { navLinksIndex } from '@/data/navbarData';
 
 const Solutions = () => {
   const { title } = useSelector((store) => store.content);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(changeActiveNavLink(navLinksIndex.solutions));
+  }, []);
   const metaDescription =
     'Discover the unique features and applications of the most common types of solar power systems, including grid-tied, off-grid, hybrid, water heating, pool heating, water pumping and street lighting systems. Find the best system to meet your energy needs, location and budget.';
 

@@ -10,6 +10,7 @@ const initialState = {
   isSidebarOpen: false,
   title: 'Empowering the World with Solar Energy',
   activeContent: 0,
+  activeNavLink: 0,
 };
 
 const contentSlice = createSlice({
@@ -25,9 +26,14 @@ const contentSlice = createSlice({
     closeSidebar(state, action) {
       state.isSidebarOpen = false;
     },
+    changeActiveNavLink(state, action) {
+      console.log(action.payload);
+      state.activeNavLink = action.payload;
+    },
   },
 });
 
-export const { changeActive, openSidebar, closeSidebar } = contentSlice.actions;
+export const { changeActive, openSidebar, closeSidebar, changeActiveNavLink } =
+  contentSlice.actions;
 
 export default contentSlice.reducer;

@@ -11,14 +11,21 @@ import testing from '@/public/svg/services/testing.svg';
 import maintenance from '@/public/svg/services/maintenance.svg';
 import decommissioning from '@/public/svg/services/decommissioning.svg';
 import Image from 'next/image';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import CollapseSideBar from '@/components/CollapseSideBar/CollapseSideBar';
 import SideBar from '@/components/sidebar/sidebar';
 import services from '@/data/services';
+import { useEffect } from 'react';
+import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
+import { navLinksIndex } from '@/data/navbarData';
 
 const Services = () => {
   const { title } = useSelector((store) => store.content);
 
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(changeActiveNavLink(navLinksIndex.services));
+  }, []);
   const metaDescription =
     'Discover the different phases of a solar power system project, from design and engineering to procurement, construction, commissioning, and maintenance. Learn how each phase plays a crucial role in ensuring the successful installation and operation of the solar power system, as well as the safe decommissioning at the end of its life.';
   const keywords =
