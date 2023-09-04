@@ -23,6 +23,11 @@
   font-size: 0.7rem;
 }
 
+.email {
+  filter: drop-shadow(1px 1px 1px #000);
+  margin-top: 1px;
+}
+
 .navbar_top_icon {
   width: 2.5rem;
   height: 2.5rem;

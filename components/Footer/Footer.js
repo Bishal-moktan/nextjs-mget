@@ -7,6 +7,7 @@ import { SlLocationPin } from 'react-icons/sl/index';
 import { AiOutlineClockCircle } from 'react-icons/ai/index';
 import Link from 'next/link';
 import logo from '@/public/images/main-logo.svg';
+import email from '@/public/images/footerEmail.png';
 import styles from './Footer.module.css';
 import routes from '@/data/routes';
 
@@ -167,19 +168,13 @@ const Footer = () => {
                 <BsEnvelope className={styles.footer__contact_icon} />
                 <Link
                   href="mailto:wecare@mgetenergy.com"
-                  className="text_light"
-                  aria-label="Our email: wecare@mgetenergy.com"
+                  aria-label="Our email"
                 >
-                  wecare@mgetenergy.com
+                  {/* wecare@mgetenergy.com */}
+                  <Image src={email} className={styles.email} alt="Our email" />
                 </Link>
               </li>
             </ul>
-            {/* <div className={styles.form}>
-              <input type="text" placeholder="Your email address" />
-              <div className={styles.mail_icon}>
-                <SiMinutemailer />
-              </div>
-            </div> */}
           </div>
         </div>
         <div className={styles.footer__bottom}>

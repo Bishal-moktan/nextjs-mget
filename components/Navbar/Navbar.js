@@ -2,6 +2,7 @@ import Image from 'next/image';
 import ClientIcon from '@/public/icons/ClientIcon';
 import EmailIcon from '@/public/icons/EmailIcon';
 import TrustIcon from '@/public/icons/TrustIcon';
+import email from '@/public/images/navEmail.png';
 import { FaFacebook, FaYoutube, FaTwitter, FaBars } from 'react-icons/fa/index';
 import { GrLinkedin } from 'react-icons/gr/index';
 import styles from './Navbar.module.css';
@@ -43,10 +44,11 @@ const Navbar = () => {
             <h4>Email Us</h4>
             <a
               href="mailto:wecare@mgetenergy.com"
-              aria-label="Contact us through our email wecare@mgetenergy.com"
-              className={styles.navbar_top_contact}
+              aria-label="Contact us through our email"
+              className={styles.email}
             >
-              wecare@mgetenergy.com
+              {/* wecare@mgetenergy.com */}
+              <Image src={email} alt="Our email" />
             </a>
           </div>
         </div>
