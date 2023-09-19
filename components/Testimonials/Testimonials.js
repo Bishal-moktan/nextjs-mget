@@ -16,7 +16,11 @@ const Testimonials = ({ testimonials }) => {
             <section key={index} className={styles.testinomials__content}>
               <div className={styles.author}>
                 <div className={styles.author__img}>
-                  <Image src={img} alt={name} height={'auto'} width={'auto'} />
+                  <Image
+                    src={img}
+                    alt={name}
+                    sizes="(min-width: 1000px) 128px, 192px"
+                  />
                 </div>
                 <div className={styles.author__info}>
                   <h2>{name}</h2>
