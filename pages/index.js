@@ -1,7 +1,5 @@
 import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
 // import HeroSection from '@/components/home/HeroSection/HeroSection';
-import logo from '@/public/images/main-logo.svg';
-
 import Head from 'next/head';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -17,8 +15,11 @@ const HeroSection = dynamic(() =>
 const Intro = dynamic(() => import('@/components/home/Intro/Intro'));
 const WeOffer = dynamic(() => import('@/components/home/weOffer/WeOffer'));
 const Partners = dynamic(() => import('@/components/Partners/Partners'));
-const Testimonials = dynamic(() =>
-  import('@/components/home/testimonials/Testimonials')
+const Testimonials = dynamic(
+  () => import('@/components/home/testimonials/Testimonials'),
+  {
+    ssr: false,
+  }
 );
 
 export default function Home() {
@@ -39,7 +40,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
         <link rel="canonical" href={mainUrl} />
-        <link rel="preload" href={logo} as="image" />
       </Head>
       <main>
         <HeroSection />

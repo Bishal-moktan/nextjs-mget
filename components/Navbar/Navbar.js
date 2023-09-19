@@ -142,7 +142,7 @@ const Navbar = () => {
               href={routes.home}
               className={styles.img_container}
             >
-              <Image src={logo} alt="mgetenergy logo" loading="lazy" />
+              <Image src={logo} alt="mgetenergy logo" />
             </Link>
           </div>
           <div
