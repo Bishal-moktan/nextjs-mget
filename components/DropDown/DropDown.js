@@ -50,15 +50,15 @@ const DropDown = ({ name, options, path }) => {
                 onClick={() => handleClick(index)}
               >
                 <div className={styles.icon}>{icon}</div>
-                <div>
+                <div className={styles.link}>
                   <h3 className={styles.linkTitle}>{title}</h3>
-
                   <p className={styles.text_light}>{slogan}</p>
                 </div>
               </Link>
             </li>
           );
         })}
+        <div className={styles.arrow}></div>
       </ul>
     </div>
   );

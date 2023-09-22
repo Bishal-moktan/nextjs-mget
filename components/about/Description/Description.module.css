@@ -7,26 +7,40 @@
 
 .item {
   display: flex;
-  gap: 4rem;
+  gap: 2rem;
+  border-radius: 1rem;
 }
 
 .item:nth-of-type(even) {
+  background-color: #c05700;
   flex-direction: row-reverse;
+  color: white;
+}
+
+.item:nth-of-type(odd) {
+  background-color: #007d01;
+  color: white;
 }
 
 .img__container {
-  flex: 1;
-  width: 30rem;
-  height: 25rem;
+  flex: 1.5;
   position: relative;
-  border-top-left-radius: 5px;
 }
 
 .img__container > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: var(--radius);
+}
+
+.item:nth-of-type(odd) .img__container > img {
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.item:nth-of-type(even) .img__container > img {
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .line {
@@ -38,31 +52,44 @@
 
 .content {
   flex: 1;
-  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
   line-height: 2rem;
+  gap: 1rem;
+}
+
+.content h4 {
+  font-size: 1.8rem;
 }
 
 .content h2 {
-  margin-bottom: 1rem;
-  color: var(--color-orange);
   font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 1;
+  letter-spacing: 1px;
 }
 
-/* =========================== FOR SMALL DEVICES =======================  */
+/* ========================== MEDIA QUERIES FOR MEDIUM DEVICES =====================  */
 
-@media (max-width: 700px) {
+@media screen and (max-width: 990px) {
   .item {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .img__container {
-    width: 25rem;
-    height: 27rem;
   }
 
   .item:nth-child(2n) {
     flex-direction: column;
   }
+  .item:nth-of-type(odd) .img__container > img {
+    border-radius: 0;
+  }
+
+  .item:nth-of-type(even) .img__container > img {
+    border-radius: 0;
+  }
+}
+
+/* =========================== FOR SMALL DEVICES =======================  */
+
+@media (max-width: 700px) {
 }

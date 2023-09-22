@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Open_Sans } from '@next/font/google';
 
-const openSans = Open_Sans({
+const font = Open_Sans({
   weight: ['300', '500', '600'],
   subsets: ['latin'],
 });
@@ -14,7 +14,7 @@ const openSans = Open_Sans({
 function App({ Component, pageProps }) {
   return (
     <>
-      <div className={openSans.className}>
+      <div className={font.className}>
         <Navbar />
         <Component {...pageProps} />
         <Footer />

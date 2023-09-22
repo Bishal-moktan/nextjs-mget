@@ -9,7 +9,7 @@
 }
 
 :root {
-  --container-width-lg: 90%;
+  --container-width-lg: 80%;
   --container-width-md: 85%;
   --container-width-sm: 92%;
   --color-white: #ffffff;
@@ -19,7 +19,7 @@
   --light-orange: #fbddb9;
   --dark-orange: #dc831b;
   --light-green: #33a933;
-  --color-green: #009300;
+  --color-green: #007d01;
   --color-dark-green: #034503;
   --color-light-green: #03c988;
   --color-orangered: #ff4500;
@@ -43,7 +43,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', serif;
   line-height: 1.7;
 }
 
