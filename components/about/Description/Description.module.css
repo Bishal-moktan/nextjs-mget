@@ -12,13 +12,13 @@
 }
 
 .item:nth-of-type(even) {
-  background-color: #c05700;
+  background-color: var(--color-dark-orange);
   flex-direction: row-reverse;
   color: white;
 }
 
 .item:nth-of-type(odd) {
-  background-color: #007d01;
+  background-color: var(--color-dark-green);
   color: white;
 }
 
@@ -59,7 +59,7 @@
   gap: 1rem;
 }
 
-.content h4 {
+.content span {
   font-size: 1.8rem;
 }
 

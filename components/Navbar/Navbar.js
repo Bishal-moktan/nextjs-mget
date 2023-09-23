@@ -61,14 +61,14 @@ const Navbar = () => {
             <h4>Client Services</h4>
             <a
               href="tel:+919821876325"
-              aria-label="Our contact number +919821876325"
+              aria-label="+919821876325"
               className={styles.navbar_top_contact}
             >
               +91 98218 76325,
             </a>
             <a
               href="tel:+919818666325"
-              aria-label="Our contact number +919818666325"
+              aria-label="9818666325"
               className={styles.navbar_top_contact}
             >
               {' '}

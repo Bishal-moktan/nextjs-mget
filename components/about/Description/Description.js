@@ -65,7 +65,7 @@ const Description = () => {
                 </div>
               )}
               <div className={styles.content}>
-                <h4>{item.subtitle}</h4>
+                <span>{item.subtitle}</span>
                 <h2>{item.title}</h2>
                 <p>{item.desc}</p>
               </div>
