@@ -6,8 +6,8 @@ const CTA = () => {
     <section className={styles.cta}>
       <div className={`container ${styles.cta__container}`}>
         <div className={styles.text}>
-          <h4>PLAN TO INSTALL SOLAR</h4>
-          <h1>Know more, Get Free Consultation!</h1>
+          <span>PLAN TO INSTALL SOLAR</span>
+          <h2>Know more, Get Free Consultation!</h2>
         </div>
         <Link href="/contact" className={styles.button}>
           GET IN TOUCH

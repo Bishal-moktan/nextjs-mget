@@ -14,8 +14,13 @@
   color: var(--color-white);
 }
 
-.cta__container h4 {
+.text span {
   color: var(--color-white);
+  font-size: 1.5rem;
+}
+
+.text h2 {
+  font-size: 2.2rem;
 }
 
 .cta__container .button {
@@ -44,10 +49,10 @@
     padding: 2rem;
   }
 
-  .cta__container h4 {
+  .cta__container span {
     font-size: 1rem;
   }
-  .cta__container h1 {
+  .cta__container h2 {
     font-size: 1.9rem;
   }
 }
