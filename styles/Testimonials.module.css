@@ -32,7 +32,7 @@
 .author__info h2 {
   padding-top: 1.5rem;
   font-weight: 600;
-  color: var(--color-orangered);
+  color: var(--color-dark-orange);
 }
 
 .info {
@@ -43,7 +43,7 @@
   cursor: pointer;
   padding: 0.7rem;
   color: var(--color-white);
-  background: var(--color-orangered);
+  background: var(--color-dark-orange);
   font-size: 1rem;
   border-radius: var(--radius);
   transition: var(--transition);
@@ -51,8 +51,8 @@
 
 .btn:hover {
   background-color: var(--color-white);
-  border: 1px solid var(--color-orangered);
-  color: var(--color-orangered);
+  border: 1px solid var(--color-dark-orange);
+  color: var(--color-dark-orange);
   transition: var(--transition);
 }
 
@@ -71,7 +71,7 @@
 }
 
 .active {
-  background-color: var(--color-dark-green);
+  background-color: #004d00;
 }
 
 .prev__btn,
@@ -79,7 +79,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-orangered);
+  background-color: var(--color-dark-orange);
   padding: 0.3rem;
 
   color: var(--color-white);
