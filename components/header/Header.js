@@ -1,12 +1,12 @@
-import styles from './Landing.module.css';
+import styles from './Header.module.css';
 
-const Landing = () => {
+const Header = ({ name }) => {
   return (
     <div className={styles.landing__section}>
       <div className={styles.landing__section__info}>
-        <h1>ABOUT US</h1>
+        <h1>{name}</h1>
       </div>
     </div>
   );
 };
-export default Landing;
+export default Header;

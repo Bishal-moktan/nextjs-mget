@@ -8,19 +8,14 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
 import { navLinksIndex } from '@/data/navbarData';
+import Header from '@/components/header/Header';
 
 const Testimonials = () => {
   const { metaContent, title } = useSelector((store) => store.content);
 
-  const [content, setContent] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(3);
 
-  useEffect(() => {
-    setContent(testimonials);
-  }, []);
-
-  
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(changeActiveNavLink(navLinksIndex.testimonials));
@@ -28,7 +23,7 @@ const Testimonials = () => {
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItem = content.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItem = testimonials.slice(indexOfFirstItem, indexOfLastItem);
 
   const nextPage = () => {
     setCurrentPage((oldPage) => {
@@ -61,10 +56,15 @@ const Testimonials = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>
-      <main>
+      <main className={styles.container}>
+        <Header name={'TESTIMONIALS'} />
         <Testinomials testimonials={currentItem} />
         <div className={styles.btn__container}>
-          <button className={styles.prev__btn} onClick={prevPage}>
+          <button
+            className={styles.prev__btn}
+            onClick={prevPage}
+            aria-label="Previous"
+          >
             <MdKeyboardArrowLeft />
           </button>
           {currentItem.map((item, index) => {
@@ -80,7 +80,11 @@ const Testimonials = () => {
               </button>
             );
           })}
-          <button className={styles.next__btn} onClick={nextPage}>
+          <button
+            className={styles.next__btn}
+            onClick={nextPage}
+            aria-label="Next"
+          >
             <MdKeyboardArrowRight />
           </button>
         </div>

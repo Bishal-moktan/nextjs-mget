@@ -1,5 +1,5 @@
 .landing__section {
-  background: url('../../../public/images/blog/LandingBG.webp');
+  background: url('../../public/images/blog/LandingBG.webp');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;

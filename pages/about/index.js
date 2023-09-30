@@ -3,13 +3,13 @@ import AboutContent from '@/components/about/aboutContent/AboutContent';
 import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import { useDispatch, useSelector } from 'react-redux';
 import Description from '@/components/about/Description/Description';
-import Landing from '@/components/about/landing/Landing';
 import AboutSection from '@/components/about/aboutSection/AboutSection';
 import CTA from '@/components/about/cta/CTA';
 import Team from '@/components/about/Team/Team';
 import { navLinksIndex } from '@/data/navbarData';
 import { useEffect } from 'react';
 import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
+import Header from '@/components/header/Header';
 
 const About = () => {
   const { title } = useSelector((store) => store.content);
@@ -34,7 +34,7 @@ const About = () => {
         <link rel="icon" href="/images/fav.png" />
       </Head>
       <main>
-        <Landing />
+        <Header name={'ABOUT US'} />
         <AboutSection />
         <Description />
         <AboutContent />

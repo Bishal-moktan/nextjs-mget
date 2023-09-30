@@ -22,12 +22,15 @@
   --color-green: #009300;
   --color-dark-green: #007d01;
   --color-dark-orange: #c05700;
+  --color-secondary: #009374;
   --color-fb: #3b5998;
   --color-linkedin: #0a66c2;
   --color-twitter: #00acee;
   --color-youtube: #ff0000;
-  --clr-red-special: #b4345c;
-  --clr-grey-special: #eae6eb;
+  --color-purple: #5602ac;
+  --color-dark-purple: #2b0676;
+  --color-blue: #004dbe;
+  --color-dark-blue: #042d92;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
