@@ -18,7 +18,7 @@
   --color-orange: #f18f1d;
   --light-orange: #fbddb9;
   --dark-orange: #dc831b;
-  --light-green: #b3d3b3;
+  --light-green: #54b754;
   --color-green: #009300;
   --color-dark-green: #007d01;
   --color-dark-orange: #c05700;
@@ -43,7 +43,8 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', serif;
+  /* font-family: 'Open Sans', serif; */
+  font-family: 'Signika', sans-serif;
   line-height: 1.7;
 }
 

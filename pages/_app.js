@@ -4,9 +4,9 @@ import '@/styles/globals.css';
 import { wrapper } from '@/store/store';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Open_Sans } from '@next/font/google';
+import { Signika } from '@next/font/google';
 
-const font = Open_Sans({
+const font = Signika({
   weight: ['300', '500', '600'],
   subsets: ['latin'],
 });
