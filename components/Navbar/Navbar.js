@@ -19,9 +19,7 @@ import { useSelector } from 'react-redux';
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
   const [rotate, setRotate] = useState(false);
-  const { activeNavLink, changeActiveNavLink } = useSelector(
-    (store) => store.content
-  );
+  const { activeNavLink } = useSelector((store) => store.content);
   useEffect(() => {
     if (!showLinks) {
       setRotate(false);

@@ -17,9 +17,9 @@ const Footer = () => {
       <div className="container">
         <div className={styles.footer__top}>
           <div className={styles.footer__socials}>
-            <div className={styles.img__container}>
+            <Link href={'/'} className={styles.img__container}>
               <Image src={logo} alt="logo" className={styles.logo} />
-            </div>
+            </Link>
 
             <div className={styles.icons}>
               <a

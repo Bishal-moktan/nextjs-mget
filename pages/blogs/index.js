@@ -13,7 +13,6 @@ import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
 import { navLinksIndex } from '@/data/navbarData';
 
 const Blog = () => {
-  // console.log(data);
   const { title, metaContent } = useSelector((store) => store.content);
   const [searchResult, setSearchResult] = useState([]);
   const dispatch = useDispatch();
@@ -42,7 +41,7 @@ const Blog = () => {
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) => async () => {
     const res = await axios(`${url}/server.php?offset=${0}`);
-    store.dispatch(addPost(res.data));
+    store.dispatch(addPost(res?.data));
   }
 );
 

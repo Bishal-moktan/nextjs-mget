@@ -6,6 +6,8 @@ export const checkTime = () => {
   } else {
     if (time >= 9 && time <= 17) {
       return true;
+    } else {
+      return false;
     }
   }
 };

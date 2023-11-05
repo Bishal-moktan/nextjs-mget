@@ -1,1 +1,1 @@
-export const url = 'https://mget-demo.000webhostapp.com';
+export const url = 'http://localhost/server/server.php';

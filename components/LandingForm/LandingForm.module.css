@@ -75,7 +75,7 @@
 .input:not(:placeholder-shown).input:not(:focus) ~ label {
   top: -1rem;
   left: 0.8rem;
-  background: var(--clr-grey-special);
+  background: #f1f1f1;
 }
 
 .landingForm__container_form textarea {

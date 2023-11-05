@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Signika } from '@next/font/google';
 
 const font = Signika({
-  weight: ['300', '500', '600'],
+  weight: ['400', '500', '600'],
   subsets: ['latin'],
 });
 
