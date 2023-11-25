@@ -3,8 +3,16 @@ import Head from 'next/head';
 import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
 import SideBar from '@/components/sidebar/sidebar';
 import solutions from '@/data/solutions';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
+import { navLinksIndex } from '@/data/navbarData';
 
 const HybridSolarPump = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(changeActiveNavLink(navLinksIndex.solutions));
+  }, []);
   const metaDescription =
     'Discover the benefits of a hybrid solar power system that combines on-grid and off-grid technology. Learn how solar panels, inverters, batteries, and charge controllers work together to provide a reliable and environmentally friendly supply of electricity, even during power outages. Find out how net metering and grid-tie incentives make hybrid systems cost-effective and scalable for homes and businesses. ';
   const keywords =

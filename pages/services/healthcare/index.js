@@ -12,8 +12,16 @@ import monitoring from '@/public/svg/services/housing/monitoring.svg';
 import energy from '@/public/svg/services/institute/energy.svg';
 import Accordian from '@/components/Accordian/Accordian';
 import Paragraph from '@/components/Paragraph/Paragraph';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
+import { navLinksIndex } from '@/data/navbarData';
 
 const Agriculture = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(changeActiveNavLink(navLinksIndex.services));
+  }, []);
   const keywords =
     'Healthcare, Hospitals, Solar power system, Cost Savings, Reliability, Environmental Benefits, Energy Independence, Improved Reputation, Tax Incentives, Solar Panels, Inverter, Battery Storage, Energy Management System, Monitoring System, Grid-Tied, Stand-Alone, Hybrid, Roof-Mounted, Ground-Mounted, Solar Carport, Energy Requirements, Available Space, Local Climate, Building Structure, Electrical Grid, Maintenance Requirements, Budget.';
 

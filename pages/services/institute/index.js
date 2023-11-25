@@ -10,8 +10,16 @@ import Paragraph from '@/components/Paragraph/Paragraph';
 import CardList from '@/components/CardList/CardList';
 import Lists from '@/components/Lists/Lists';
 import Scroll from '@/components/ScrollToTop/ScrollToTop';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
+import { navLinksIndex } from '@/data/navbarData';
 
 const Institute = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(changeActiveNavLink(navLinksIndex.services));
+  }, []);
   const keywords =
     'Solar power systems, Institutes, Solar panels, Electrical energy, Energy costs, Environmental sustainability, Feasibility study, System size, Design, Funding, Photovoltaic (PV) panels, Inverters, Battery storage, Energy management system, Cost savings, Carbon footprint, Educational opportunities, Renewable energy, Green initiatives, Reliability, Financial incentives.';
 

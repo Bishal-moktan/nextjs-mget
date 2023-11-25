@@ -4,9 +4,16 @@ import { FaCheckCircle } from 'react-icons/fa';
 import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
 import SideBar from '@/components/sidebar/sidebar';
 import solutions from '@/data/solutions';
+import { useDispatch } from 'react-redux';
+import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
+import { navLinksIndex } from '@/data/navbarData';
+import { useEffect } from 'react';
 
 const OffGridSolarSystem = () => {
-
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(changeActiveNavLink(navLinksIndex.solutions));
+  }, []);
   const metaDescription =
     'Explore the benefits and components of off-grid solar power systems, offering cost-effective and sustainable solutions for remote areas. Learn about site assessment, equipment selection, battery storage, and grid integration to ensure reliable energy generation';
 

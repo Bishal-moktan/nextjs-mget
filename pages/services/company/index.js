@@ -11,8 +11,16 @@ import energy from '@/public/svg/services/company/energy.svg';
 import environment from '@/public/svg/services/company/environment.svg';
 import government from '@/public/svg/services/company/government.svg';
 import Scroll from '@/components/ScrollToTop/ScrollToTop';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
+import { navLinksIndex } from '@/data/navbarData';
 
 const Company = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(changeActiveNavLink(navLinksIndex.services));
+  }, []);
   const keywords =
     'IT industry, solar power system, electricity demand, cost savings, greener environment, data center, traditional sources of energy, grid-tied, off-grid, energy usage patterns, budget, sustainability, brand reputation, environmental benefits, government incentives, reliable source of electricity, carbon footprint, operating expenses, fossil fuels, climate change.';
 

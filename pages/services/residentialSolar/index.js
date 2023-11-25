@@ -1,11 +1,19 @@
 import Content from '@/components/Content/Content';
 import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import SideBar from '@/components/sidebar/sidebar';
+import { navLinksIndex } from '@/data/navbarData';
 import services from '@/data/services';
+import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
 import Head from 'next/head';
+import { useEffect } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
+import { useDispatch } from 'react-redux';
 
 const ResidentialSolar = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(changeActiveNavLink(navLinksIndex.services));
+  }, []);
   const keywords =
     'Solar power solution, Residential properties, Solar panels, Electricity generation, Inverter, Direct current (DC) electricity, Alternating current (AC) electricity, Excess electricity, Battery storage, Net metering, Cost savings, Energy independence, Environmental benefits, Low maintenance, Increased property value, Grid-Tied Solar Systems, Off-Grid Solar Systems.';
 

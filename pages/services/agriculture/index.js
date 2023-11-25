@@ -3,8 +3,16 @@ import image from '@/public/svg/agriculture.svg';
 import Landing from '@/components/Landing/Landing';
 import Paragraph from '@/components/Paragraph/Paragraph';
 import Scroll from '@/components/ScrollToTop/ScrollToTop';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
+import { navLinksIndex } from '@/data/navbarData';
 
 const Agriculture = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(changeActiveNavLink(navLinksIndex.services));
+  }, []);
   const keywords =
     'solar power system, agriculture use, solar panels, photovoltaic cells, solar inverter, battery bank, renewable energy, cost savings, fossil fuels, clean energy, reliable source of electricity, greenhouses, water pumps, irrigation systems, lighting systems, temperature control systems, monitoring systems, farming operations, efficiency, climate change.';
 

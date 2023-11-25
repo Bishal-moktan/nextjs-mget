@@ -3,10 +3,18 @@ import Lists from '@/components/Lists/Lists';
 import Paragraph from '@/components/Paragraph/Paragraph';
 import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import SideBar from '@/components/sidebar/sidebar';
+import { navLinksIndex } from '@/data/navbarData';
 import solutions from '@/data/solutions';
+import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
 import Head from 'next/head';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
 const SolarWaterPump = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(changeActiveNavLink(navLinksIndex.solutions));
+  }, []);
   const metaDescription =
     'Power your water supply with a solar water pump! This renewable and clean energy source is low-maintenance and cost-effective, with no emissions or pollutants. Learn about the different types and the advantages of solar water pumps, and configure one to meet your specific water needs.';
 

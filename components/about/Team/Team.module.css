@@ -28,7 +28,7 @@
   width: 100%;
   height: 0.25rem;
   transform: scaleX(0.3);
-  background: var(--color-orange);
+  background: var(--color-dark-orange);
 }
 
 .nameContainer {
@@ -38,7 +38,7 @@
   border-radius: var(--radius);
   text-align: center;
   box-shadow: 0.5px 1px 2px rgba(0, 0, 0, 0.2);
-  background-color: var(--color-blue);
+  background-color: var(--color-light-green);
   color: var(--color-white);
 }
 
@@ -59,23 +59,13 @@
 .para {
   display: flex;
   gap: 0.5rem;
-  background-color: var(--color-purple);
+  background-color: var(--color-dark-orange);
   padding: 1rem;
   margin: 1rem 0;
   font-size: 1.1rem;
   border-radius: var(--radius);
   position: relative;
   color: var(--color-white);
-}
-
-.para::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 0.5rem;
-  background-color: var(--color-dark-purple);
 }
 
 .para span {

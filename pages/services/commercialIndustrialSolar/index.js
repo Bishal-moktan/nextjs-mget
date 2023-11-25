@@ -1,11 +1,19 @@
 import Content from '@/components/Content/Content';
 import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import SideBar from '@/components/sidebar/sidebar';
+import { navLinksIndex } from '@/data/navbarData';
 import services from '@/data/services';
+import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
 import Head from 'next/head';
+import { useEffect } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
+import { useDispatch } from 'react-redux';
 
 const commercialIndustrialSolar = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(changeActiveNavLink(navLinksIndex.services));
+  }, []);
   const keywords =
     'Solar power solution, Commercial and industrial (C&I), Solar panels, Rooftop installation, Ground-mounted installation, Inverter, Direct current (DC) electricity, Alternating current (AC) electricity, Excess electricity, Battery storage, Net metering, Net billing, Cost savings, Energy independence, Environmental benefits, Increased energy efficiency, Sustainability, Grid-Tied Solar Systems, Off-Grid Solar Systems, Hybrid Solar Systems, Solar Carport Systems.';
 

@@ -3,8 +3,16 @@ import Scroll from '@/components/ScrollToTop/ScrollToTop';
 import SideBar from '@/components/sidebar/sidebar';
 import Head from 'next/head';
 import solutions from '@/data/solutions';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
+import { navLinksIndex } from '@/data/navbarData';
 
 const OnGridSolarSystem = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(changeActiveNavLink(navLinksIndex.solutions));
+  }, []);
   const metaDescription =
     'Generate clean and renewable energy with an on-grid solar power system! Reduce or even eliminate electricity bills, and help fight climate change. Learn more about the cost-effective and reliable benefits of on-grid solar power systems.';
 

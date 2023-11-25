@@ -21,7 +21,7 @@
 .box {
   height: 100%;
   width: 10rem;
-  background-color: var(--light-green);
+  background-color: var(--color-light-green);
   border-top-left-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
 }
@@ -54,7 +54,7 @@
 .author__info h2 {
   padding-top: 1.5rem;
   font-weight: 600;
-  color: var(--light-green);
+  color: var(--color-light-green);
 }
 
 .info {
@@ -64,7 +64,7 @@
 }
 
 .icon {
-  color: var(--light-green);
+  color: var(--color-light-green);
   font-size: 2rem;
 }
 

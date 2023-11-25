@@ -9,8 +9,16 @@ import monitoring from '@/public/svg/services/housing/monitoring.svg';
 import CardList from '@/components/CardList/CardList';
 import Paragraph from '@/components/Paragraph/Paragraph';
 import Scroll from '@/components/ScrollToTop/ScrollToTop';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
+import { navLinksIndex } from '@/data/navbarData';
 
 const Housing = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(changeActiveNavLink(navLinksIndex.services));
+  }, []);
   const metaDescription =
     'Discover how a solar power system can benefit housing units by generating renewable electricity through solar panels. Learn about on-grid and off-grid systems, and how solar panels, inverters, batteries, and monitoring systems work together to power household appliances and reduce electricity bills. Find out how solar energy can help reduce the carbon footprint of residential homes and increase property value. Considerations for installation, permits, and the amount of sunlight received are also discussed. Harness the power of solar energy for sustainable and cost-effective electricity in your housing unit.';
 

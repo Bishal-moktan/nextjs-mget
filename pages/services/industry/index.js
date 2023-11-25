@@ -10,8 +10,16 @@ import monitoring from '@/public/svg/services/housing/monitoring.svg';
 import mounting from '@/public/svg/services/industry/mounting.svg';
 import wiring from '@/public/svg/services/industry/wiring.svg';
 import Scroll from '@/components/ScrollToTop/ScrollToTop';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
+import { navLinksIndex } from '@/data/navbarData';
 
 const Industry = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(changeActiveNavLink(navLinksIndex.services));
+  }, []);
   const keywords =
     'Solar power system, Commercial and industrial (C&I) applications, Solar panels, Renewable energy, Electricity, Rooftop systems, Ground-mounted systems, Carport systems, Inverter, Mounting system, Electrical wiring, Switchgear, Monitoring system, Reduce electricity bills, Carbon footprint, Reliable electricity, Property value, Solar energy.';
   const metaDescription =
