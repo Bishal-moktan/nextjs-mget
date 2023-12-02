@@ -121,7 +121,7 @@ const Company = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>
-      <main>
+      <main className="container">
         <Landing
           page={'Solar For IT Industry'}
           image={image}
@@ -130,7 +130,7 @@ const Company = () => {
         <Paragraph para={para1} />
         <Lists content={types} title={typesTitle} />
         <CardList content={cardContent} title={cardTitle} />
-        <Lists content={benefits} title={benefitTitle} />
+        <Lists content={benefits} subtitle={benefitTitle} />
         <Paragraph para={lastPara} />
         <Scroll />
       </main>

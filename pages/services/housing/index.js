@@ -72,7 +72,7 @@ const Housing = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>
-      <main>
+      <main className="container">
         <Landing page={title} image={image} landingContent={landingContent} />
         <CardList content={lists} title={listTitle} />
         <Paragraph para={para} />

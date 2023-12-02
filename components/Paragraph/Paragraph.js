@@ -1,6 +1,6 @@
 const Paragraph = ({ para }) => {
   return (
-    <article className="container">
+    <article>
       {para.map((item, index) => {
         return (
           <p className="margin" key={index}>

@@ -1,5 +1,4 @@
 .landing__section {
-  width: var(--container-width-lg);
   height: 75vh;
   display: grid;
   grid-template-columns: 40% 60%;

@@ -182,6 +182,7 @@ const Navbar = () => {
               options={services}
               path={routes.services}
             />
+
             <Link
               onClick={handleNavLinkClick}
               href={routes.testimonials}
@@ -195,9 +196,20 @@ const Navbar = () => {
             </Link>
             <Link
               onClick={handleNavLinkClick}
+              href={routes.careers}
+              className={
+                activeNavLink === navLinksIndex.careers
+                  ? `${styles.links} ${styles.active}`
+                  : styles.links
+              }
+            >
+              CAREERS
+            </Link>
+            <Link
+              onClick={handleNavLinkClick}
               href="/blogs"
               className={
-                activeNavLink === navLinksIndex.blog
+                activeNavLink === navLinksIndex.blogs
                   ? `${styles.links} ${styles.active}`
                   : styles.links
               }

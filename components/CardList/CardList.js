@@ -4,7 +4,7 @@ const CardList = ({ content, title }) => {
   const firstRow = content.slice(0, 3);
   const secondRow = content.slice(3, content.length);
   return (
-    <article className={`container ${styles.feature}`}>
+    <article className={`${styles.feature}`}>
       <p className="margin">{title}</p>
       <div className={styles.firstRow}>
         {firstRow.map((item, index) => {

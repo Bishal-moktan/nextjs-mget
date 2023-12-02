@@ -16,8 +16,6 @@ import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 import SimilarPosts from '@/components/blog/SimilarPosts/SimilarPosts';
 import CTA from '@/components/about/cta/CTA';
 import Scroll from '@/components/ScrollToTop/ScrollToTop';
-import { wrapper } from '@/store/store';
-import axios from 'axios';
 
 const SinglePost = () => {
   const { posts } = useSelector((store) => store.blog);

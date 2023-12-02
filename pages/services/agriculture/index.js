@@ -50,7 +50,7 @@ const Agriculture = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>
-      <main>
+      <main className="container">
         <Landing
           page={'Solar For Agriculure'}
           image={image}

@@ -6,6 +6,7 @@ const Routes = {
   contact: '/contact',
   privacyPolicy: '/privacy-policy',
   testimonials: '/testimonials',
+  careers: '/careers',
   agriculture: '/services/agriculture',
   commercial: '/services/commercialIndustrialSolar',
   company: '/services/company',

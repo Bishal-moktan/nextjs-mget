@@ -1,10 +1,10 @@
 .singlePost {
   all: unset;
   display: flex;
-  margin-top: 1rem;
+  margin: 1rem 0;
   height: fit-content;
   padding: 0 4rem;
-  gap: 1rem;
+  gap: 2.5rem;
 }
 
 .post {
@@ -60,8 +60,8 @@
 
 .description {
   margin: 0 auto;
-  letter-spacing: 0.5px;
   word-spacing: 1px;
+  font-size: 1.2rem;
 }
 
 .otherPosts {

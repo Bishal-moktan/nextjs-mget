@@ -17,7 +17,7 @@ const Blog = () => {
   const [searchResult, setSearchResult] = useState([]);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(changeActiveNavLink(navLinksIndex.blog));
+    dispatch(changeActiveNavLink(navLinksIndex.blogs));
   }, []);
   return (
     <>
