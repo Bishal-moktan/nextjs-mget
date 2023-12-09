@@ -128,11 +128,17 @@ const Footer = () => {
             <ul>
               <li>
                 <SlLocationPin className={styles.footer__contact_icon} />
-                <span className="text_light">Greater Noida</span>
+                <span className={`text_light ${styles.location}`}>
+                  J26, GROUND FLOOR, SITE V , KASNA INDUSTRIAL AREA, GREATER
+                  NOIDA-201310, UTTAR PRADESH
+                </span>
               </li>
               <li>
                 <SlLocationPin className={styles.footer__contact_icon} />
-                <span className="text_light">Mumbai</span>
+                <span className={`text_light ${styles.location}`}>
+                  B18/A HINDSOURASHTRA INDUSTRIES CO-OP SOC LTD, GR FLOOR,
+                  ANDHERI-KURLA ROAD, ANDHERI- EAST, MUMBAI 400 059, MAHARASHTRA
+                </span>
               </li>
               <li>
                 <AiOutlineClockCircle className="navbar__socials-icon" />
