@@ -179,7 +179,7 @@ const Agriculture = () => {
 
         <CardList content={cartList} title={cardTitle} />
 
-        <div className="container">
+        <div>
           <p className="margin">
             Types of solar power system available for healthcare & hospital
           </p>

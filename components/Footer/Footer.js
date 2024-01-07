@@ -78,7 +78,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link className="text_light" href={'/blogs'}>
-                  Blog
+                  Blogs
                 </Link>
               </li>
               <li>
@@ -129,15 +129,15 @@ const Footer = () => {
               <li>
                 <SlLocationPin className={styles.footer__contact_icon} />
                 <span className={`text_light ${styles.location}`}>
-                  J26, GROUND FLOOR, SITE V , KASNA INDUSTRIAL AREA, GREATER
-                  NOIDA-201310, UTTAR PRADESH
+                  J26, Ground Floor, Site V , Kasna Industrial Area, Greater
+                  Noida-201310, Uttar Pradesh
                 </span>
               </li>
               <li>
                 <SlLocationPin className={styles.footer__contact_icon} />
                 <span className={`text_light ${styles.location}`}>
-                  B18/A HINDSOURASHTRA INDUSTRIES CO-OP SOC LTD, GR FLOOR,
-                  ANDHERI-KURLA ROAD, ANDHERI- EAST, MUMBAI 400 059, MAHARASHTRA
+                  B18/a Hindsourashtra Industries Co-op Soc Ltd, Gr Floor,
+                  Andheri-kurla Road, Andheri- East, Mumbai 400 059, Maharashtra
                 </span>
               </li>
               <li>

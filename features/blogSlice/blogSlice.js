@@ -15,7 +15,7 @@ export const fetchBlogPosts = createAsyncThunk(
   'blog/fetchBlogPosts',
   async (payload, thunkAPI) => {
     try {
-      const res = await axios(`${url}/server.php?offset=${payload}`);
+      const res = await axios(`${url}/server/server.php?offset=${payload}`);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue('something went wrong');

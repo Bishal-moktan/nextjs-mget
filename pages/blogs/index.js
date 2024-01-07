@@ -5,7 +5,7 @@ import Head from 'next/head';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from '@/styles/Blog.module.css';
 import { useEffect, useState } from 'react';
-import { addPost } from '@/features/blogSlice/blogSlice';
+import { addPost, fetchBlogPosts } from '@/features/blogSlice/blogSlice';
 import { wrapper } from '@/store/store';
 import axios from 'axios';
 import { url } from '@/data/baseUrl';
@@ -13,9 +13,10 @@ import { changeActiveNavLink } from '@/features/contentSlice/contentSlice';
 import { navLinksIndex } from '@/data/navbarData';
 
 const Blog = () => {
-  const { title, metaContent } = useSelector((store) => store.content);
+  const { title, metaContent, posts } = useSelector((store) => store.content);
   const [searchResult, setSearchResult] = useState([]);
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(changeActiveNavLink(navLinksIndex.blogs));
   }, []);
@@ -37,12 +38,5 @@ const Blog = () => {
     </>
   );
 };
-
-export const getServerSideProps = wrapper.getServerSideProps(
-  (store) => async () => {
-    const res = await axios(`${url}/server.php?offset=${0}`);
-    store.dispatch(addPost(res?.data));
-  }
-);
 
 export default Blog;

@@ -34,7 +34,7 @@ const SinglePost = () => {
     return false;
   };
 
-  const otherPosts = posts.filter((post) => {
+  const otherPosts = posts.slice(0, 5).filter((post) => {
     if (post.id === singlePost?.id) return;
     for (let category of post.category.split(',')) {
       if (isPresent(categories, category)) {

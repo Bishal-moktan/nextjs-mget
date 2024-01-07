@@ -6,7 +6,7 @@ import { checkTime } from '@/utils/checkTime';
 const initialState = {
   metaContent,
   isOfficeOpened: checkTime(),
-  mainUrl: 'https://www.mgetenergy.com/',
+  mainUrl: 'http://localhost:3000/',
   isSidebarOpen: false,
   title: 'Empowering the World with Solar Energy',
   activeContent: 0,

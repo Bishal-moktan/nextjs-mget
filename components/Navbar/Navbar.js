@@ -194,7 +194,7 @@ const Navbar = () => {
             >
               TESTIMONIALS
             </Link>
-            <Link
+            {/* <Link
               onClick={handleNavLinkClick}
               href={routes.careers}
               className={
@@ -204,7 +204,7 @@ const Navbar = () => {
               }
             >
               CAREERS
-            </Link>
+            </Link> */}
             <Link
               onClick={handleNavLinkClick}
               href="/blogs"

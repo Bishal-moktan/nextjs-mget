@@ -100,9 +100,7 @@ const PrivacyPolicy = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fav.png" />
       </Head>
-      <main className={styles.privacy}>
-        {/* <Landing page="Contact" />p */}
-        {/* <LandingForm /> */}
+      <main className={`container ${styles.privacy}`}>
         <div className={styles.intro}>
           <h2>Introduction</h2>
           <p>
