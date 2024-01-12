@@ -19,6 +19,10 @@ import tecumseh from '@/public/images/client/tecumseh.webp';
 import k_raheja from '@/public/images/client/k_raheja.webp';
 import kissui from '@/public/images/client/kissui.webp';
 import lodha from '@/public/images/client/lodha.webp';
+import steadfast from '@/public/images/client/steadfast.png';
+import arihant from '@/public/images/client/arihant.png';
+import veggie from '@/public/images/client/veggie.jpg';
+import agnitio from '@/public/images/client/agnitio.jpg';
 
 import Image from 'next/image';
 
@@ -172,6 +176,34 @@ NAGPUR- 440010, MAHARASHTRA`}
               src={kissui}
               alt="KISSUI METALIKS & STEELS PVT LTD							
  BAHADURGARH, HARYANA"
+            />
+          </div>
+          <div className={styles.image}>
+            <Image
+              sizes="(min-width: 1000px) 128px, 192px"
+              src={steadfast}
+              alt="STEADFAST MEDISHIELD"
+            />
+          </div>
+          <div className={styles.image}>
+            <Image
+              sizes="(min-width: 1000px) 128px, 192px"
+              src={arihant}
+              alt="Arihant Cold Storage"
+            />
+          </div>
+          <div className={styles.image}>
+            <Image
+              sizes="(min-width: 1000px) 128px, 192px"
+              src={veggie}
+              alt="Veggie TM"
+            />
+          </div>
+          <div className={styles.image}>
+            <Image
+              sizes="(min-width: 1000px) 128px, 192px"
+              src={agnitio}
+              alt="Agnitio"
             />
           </div>
         </div>
