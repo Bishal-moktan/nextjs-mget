@@ -159,20 +159,6 @@ NAGPUR- 440010, MAHARASHTRA`}
           <div className={styles.image}>
             <Image
               sizes="(min-width: 1000px) 128px, 192px"
-              src={lodha}
-              alt="MACROTECH DEVELOPERS- MUMBAI, MAHARASHTRA"
-            />
-          </div>
-          <div className={styles.image}>
-            <Image
-              sizes="(min-width: 1000px) 128px, 192px"
-              src={k_raheja}
-              alt="K RAHEJA CORP"
-            />
-          </div>
-          <div className={styles.image}>
-            <Image
-              sizes="(min-width: 1000px) 128px, 192px"
               src={kissui}
               alt="KISSUI METALIKS & STEELS PVT LTD							
  BAHADURGARH, HARYANA"
